@@ -120,7 +120,7 @@ namespace student{
         kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((2*2) + 1, (2*2)+1));
 
         cv::Mat processROI(filtered, boundingRect); // extract the ROI containing the digit
-
+        
         if (processROI.empty()) return -1;
 
         cv::resize(processROI, processROI, cv::Size(200, 200)); // resize the ROI
@@ -132,8 +132,9 @@ namespace student{
         cv::erode(processROI, processROI, kernel);
 
         ocr->SetImage(processROI.data, processROI.cols, processROI.rows, 3, processROI.step);
-
+	
         int id = std::stoi(ocr->GetUTF8Text());
+
         #if DEBUG_VICTIM_ID
             cv::Point point0 = cv::Point(boundingRect.x, boundingRect.y);
             cv::putText(debug_victim_img, ocr->GetUTF8Text(), point0, cv::FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2, cv::LINE_AA);
@@ -178,13 +179,14 @@ namespace student{
 
         kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((2*2) + 1, (2*2)+1));
         cv::Mat processROI(filtered, boundingRect); // extract the ROI containing the digit
+        
         if (processROI.empty()) return -1;
         cv::resize(processROI, processROI, cv::Size(200, 200)); // resize the ROI
         cv::threshold(processROI, processROI, 100, 255, 0);   // threshold and binarize the image, to suppress some noise
         cv::erode(processROI, processROI, kernel); // apply some filtering
         cv::GaussianBlur(processROI, processROI, cv::Size(5, 5), 2, 2); 
         cv::erode(processROI, processROI, kernel); 
-
+	
         double maxScore = 0;
         int maxIdx = -1;
         for (int j=0; j<templROIs.size(); ++j) {
@@ -201,15 +203,14 @@ namespace student{
               // Match the ROI with the obtained rotated matrix element
               cv::matchTemplate(processROI, dst, result, cv::TM_CCOEFF);
               
-              cv::minMaxLoc(result, nullptr, &score); 
+              cv::minMaxLoc(result, nullptr, &score);
 
               // Compare the score with the others, if it is higher save this as the best match!
               if (score > maxScore) {
                   maxScore = score;
                   maxIdx = j;
               }
-          }
-
+          }          
 
 /* Direct template matching without rotation
             cv::Mat result;
@@ -222,6 +223,7 @@ namespace student{
             }
 */
         }
+
         #if DEBUG_VICTIM_ID
             cv::Point point0 = cv::Point(boundingRect.x, boundingRect.y);
             cv::putText(debug_victim_img, std::to_string(maxIdx + 1), point0, cv::FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2, cv::LINE_AA);

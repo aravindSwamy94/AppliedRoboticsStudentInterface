@@ -30,8 +30,7 @@ add_library(student SHARED
 
 target_link_libraries(student
   ${OpenCV_LIBRARIES}
-  ${Tesseract_LIBRARIES}
-
+  tesseract
 )
 
 

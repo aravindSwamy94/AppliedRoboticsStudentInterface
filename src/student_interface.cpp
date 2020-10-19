@@ -1,4 +1,4 @@
-#pragma once
+
 #include "student_image_elab_interface.hpp"
 #include "student_planning_interface.hpp"
 
@@ -34,7 +34,7 @@ namespace student {
       } // Error to check if the directory is created or nots
       first_flag = false; // open the folder only for the first time.s
     }
-    	    
+
     cv::imshow( topic, img_in); // Show the image in the same topic name
     char c = (char)cv::waitKey(30);
 
