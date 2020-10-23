@@ -16,7 +16,7 @@ namespace student{
         cv::cvtColor(img_in, hsv_img,cv::COLOR_BGR2HSV); // convert the input image to hsv image
 
         cv::Mat blue_mask;    
-        cv::inRange(hsv_img, cv::Scalar(90, 80, 70), cv::Scalar(135, 255, 255), blue_mask); //apply blue mask for the robot detection, given robot will be a blue triangle
+        cv::inRange(hsv_img, cv::Scalar(100, 120, 150), cv::Scalar(135, 255, 255), blue_mask); //apply blue mask for the robot detection, given robot will be a blue triangle
 
         std::vector<std::vector<cv::Point>> contours;    
         cv::findContours(blue_mask, contours,cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE); // find contours to detect the contours on the image
@@ -35,8 +35,7 @@ namespace student{
         bool found=false;
         for(int i=0; i<contours.size(); ++i)
         { 
-            cv::approxPolyDP(contours[i], approx_curve, 30, true); // approximaate the contours to obtain a triangle
-
+            cv::approxPolyDP(contours[i], approx_curve, 30, true); // approximate the contours to obtain a triangle
 
             if (approx_curve.size() != 3) continue; // check if the obtained curve is a triangle 
 
@@ -50,7 +49,7 @@ namespace student{
                 cv::drawContours(contours_img, contours_approx, -1, cv::Scalar(0,0,255), 3, cv::LINE_AA); //debug plot
             #endif
             found=true; // robot found
-            break;      
+            break;
         }
 
 

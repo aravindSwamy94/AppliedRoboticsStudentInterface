@@ -96,7 +96,7 @@ namespace student{
         #endif
         // Find green regions
         cv::Mat green_mask; 
-        cv::inRange(img, cv::Scalar(40, 30, 50), cv::Scalar(85, 255, 180), green_mask); // green mask for victims
+        cv::inRange(img, cv::Scalar(40, 30, 40), cv::Scalar(85, 255, 180), green_mask); // green mask for victims
 
         // Apply some filtering
         cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((1*2) + 1, (1*2)+1)); // Filter the green areas
@@ -153,7 +153,7 @@ namespace student{
         
         // Find green regions
         cv::Mat green_mask;
-        cv::inRange(img, cv::Scalar(40, 30, 50), cv::Scalar(85, 255, 180), green_mask); // green mask for victims
+        cv::inRange(img, cv::Scalar(40, 30, 40), cv::Scalar(85, 255, 180), green_mask); // green mask for victims
 
         // Apply some filtering
         cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((1*2) + 1, (1*2)+1));
@@ -189,14 +189,15 @@ namespace student{
 	
         double maxScore = 0;
         int maxIdx = -1;
+        int rotate_degrees =10;
         for (int j=0; j<templROIs.size(); ++j) {
 
           double score;
           // Reason for this loop is to check if the digit is rotated or not, so checking the digit by rotating 5 degrees in each iteration and finding the best possible match out off all the rotations
-          for (int iter_rotate = 0; iter_rotate < 72; iter_rotate++) {
+          for (int iter_rotate = 0; iter_rotate < 360/rotate_degrees; iter_rotate++) {
               cv::Mat result;
               cv::Point2f src_center(templROIs[j].cols / 2.0F, templROIs[j].rows / 2.0F);// rotating the template for every 5 degree and checking it is obtaining maximum score 
-              cv::Mat rot_mat = getRotationMatrix2D(src_center, iter_rotate * 5, 1.0); // get the roation matrix of the rotated elements
+              cv::Mat rot_mat = getRotationMatrix2D(src_center, iter_rotate * rotate_degrees, 1.0); // get the roation matrix of the rotated elements
               cv::Mat dst;
               cv::warpAffine(templROIs[j], dst, rot_mat, templROIs[j].size()); // Transorm the matrix with the rotation matrix and pass this to the template matching
 
