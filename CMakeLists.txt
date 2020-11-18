@@ -33,6 +33,9 @@ target_link_libraries(student
   tesseract
 )
 
+add_library(dubins
+  src/dubins.cpp
+)
 
 
 
@@ -44,6 +47,15 @@ target_link_libraries(student
 
 
 ## COMPILE DEMO EXECUTABLE
+
+
+add_executable(test_dubins
+  src/test_dubins.cpp
+)
+target_link_libraries(test_dubins dubins)
+
+
+
 add_executable(demo_dilatation_erosion
   src/demo_shape_detection/demo_dilatation_erosion.cpp
 )
