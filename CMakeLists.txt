@@ -25,7 +25,8 @@ add_library(student SHARED
    src/findRobot.cpp
    src/processMap.cpp
    src/loadImage.cpp
-
+   src/clipper.cpp
+   src/planPath.cpp
 )
 
 target_link_libraries(student

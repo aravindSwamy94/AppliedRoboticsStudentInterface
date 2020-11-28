@@ -28,7 +28,6 @@ double mod2pi(double ang){
 	while (ang >= 2*M_PI){
 		ang -= 2*M_PI;
 	}
-
 	return ang;
 }
 
@@ -253,9 +252,3 @@ void dubins_shortest_path(dubinsCurve& curve, double const& x0, double const& y0
 	}
 }
 
-void print_arc(dubinsArc a, string name){
-    cout << "--- " << name << " ---" << endl;
-    cout << "(x0: " << a.x0 << ", y0: " << a.y0 << ", th0: "<< a.th0 << ")" << endl;
-    cout << "(xf: " << a.xf << ", yf: " << a.yf << ", thf: "<< a.thf << ")" << endl;
-    cout << "K: " << a.k << "- s: " << a.s << ")" << endl;
-}
