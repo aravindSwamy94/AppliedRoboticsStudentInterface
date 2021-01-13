@@ -123,9 +123,9 @@ Reference for implementation:  professor_interface.cpp, demo code and opencv lib
 
 ### Victim ID detection:
 
-    This is mainly done to detect the number of Victims, so that the priority to save the victims can be known to the planning algorithm. This involves template matching majorly and the templates were provided in lecture. I have used majorly the opencv template matching methods. But I also implemented the tesseract-ocr method, although the results were weird from them. None of the digits were recognized properly. 
-    
-    I found a logic in internet somewhere about the digit recognition including the orientation. To put it in simple words, each template will be rotated by 5 degrees and then they are set to calculate the score and the maximum of all of that will be be finalized as digits. With this logic, the digits are getting recognized.
+This is mainly done to detect the number of Victims, so that the priority to save the victims can be known to the planning algorithm. This involves template matching majorly and the templates were provided in lecture. I have used majorly the opencv template matching methods. But I also implemented the tesseract-ocr method, although the results were weird from them. None of the digits were recognized properly. 
+
+I found a logic in internet somewhere about the digit recognition including the orientation. To put it in simple words, each template will be rotated by 5 degrees and then they are set to calculate the score and the maximum of all of that will be be finalized as digits. With this logic, the digits are getting recognized.
 
 ```
 Implemented Function:   get_victim_id()
@@ -141,7 +141,7 @@ Reference for implementation:  professor_interface.cpp, demo code and opencv lib
 
 
 ## Find Robot:
-    I directly utilized the function provided by the teaching assistant as I found that implementation was already in the best shape.
+I directly utilized the function provided by the teaching assistant as I found that implementation was already in the best shape.
 
 ```
 Implemented Function:   findRobot()
