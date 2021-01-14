@@ -3,9 +3,8 @@
 
 The technical documentation of the whole code base can be found inside docs folder in html and latex format.
 
-```
-[Technical documentation](https://aravindswamy94.github.io/AppliedRoboticsStudentInterface/html/index.html)
-``` 
+Technical documentation link:(https://aravindswamy94.github.io/AppliedRoboticsStudentInterface/html/index.html)
+
 
 ##Libraries Used
 
