@@ -242,6 +242,10 @@ This local planner is impleementied by solving the dubins curve problem.
 ![RRT Star Results](imgs/results/planPathGlobal2.png)
 
 > Local planner path points
+<<<<<<< HEAD
 
 ![Local planner results ](imgs/results/planPathLocal2.png)
+=======
+>>>>>>> 5bef54ec91dda675010f3ca62140a193910afe6b
 
+![Local planner results ](imgs/results/planPathLocal2.png)
