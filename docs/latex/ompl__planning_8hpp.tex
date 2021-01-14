@@ -1,0 +1,334 @@
+\hypertarget{ompl__planning_8hpp}{}\section{include/ompl\+\_\+planning.hpp File Reference}
+\label{ompl__planning_8hpp}\index{include/ompl\+\_\+planning.\+hpp@{include/ompl\+\_\+planning.\+hpp}}
+
+
+Contains most of the Functions related to O\+M\+PL planer.  
+
+
+{\ttfamily \#include $<$ompl/base/\+Space\+Information.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/base/objectives/\+Path\+Length\+Optimization\+Objective.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/base/objectives/\+State\+Cost\+Integral\+Objective.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/base/objectives/\+Maximize\+Min\+Clearance\+Objective.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/base/spaces/\+Real\+Vector\+State\+Space.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ompl/util/\+Console.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+Informed\+R\+R\+Tstar.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+R\+R\+Tstar.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/base/\+Planner\+Data\+Graph.\+h$>$}\\*
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/graph/adjacency\+\_\+list.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/geometry.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/geometry/geometries/point\+\_\+xy.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/geometry/geometries/polygon.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/geometry/geometries/linestring.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/graph/dijkstra\+\_\+shortest\+\_\+paths.\+hpp$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for ompl\+\_\+planning.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ompl__planning_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{ompl__planning_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classClearanceObjective}{Clearance\+Objective}
+\item 
+class \hyperlink{classValidityChecker}{Validity\+Checker}
+\begin{DoxyCompactList}\small\item\em Class to check if new random state is valid or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bg\+::model\+::d2\+::point\+\_\+xy$<$ double $>$ \hyperlink{ompl__planning_8hpp_a0feb3c557e4cd1e30bb2392478115509}{boost\+\_\+point}
+\item 
+typedef bg\+::model\+::polygon$<$ \hyperlink{ompl__planning_8hpp_a0feb3c557e4cd1e30bb2392478115509}{boost\+\_\+point} $>$ \hyperlink{ompl__planning_8hpp_a7c1db88611e437728d0bf466e8ad93a2}{boost\+\_\+polygon}
+\item 
+typedef boost\+::geometry\+::model\+::linestring$<$ \hyperlink{ompl__planning_8hpp_a0feb3c557e4cd1e30bb2392478115509}{boost\+\_\+point} $>$ \hyperlink{ompl__planning_8hpp_ac034f14303d914bba70fd53ec8fcfe35}{boost\+\_\+linestring}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}{optimal\+Planner} \{ \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}, 
+\hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}
+ \}\begin{DoxyCompactList}\small\item\em Choice of Optimal planner. \end{DoxyCompactList}
+\item 
+enum \hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435}{planning\+Objective} \{ \hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435adebd4fa82a8cedd6098a31aa2989ad99}{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE}, 
+\hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a4e3f19a6486ea60fcec03698295bc123}{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH}, 
+\hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435aa2fd04e89b3f63d92aac21da3e830d6e}{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH}, 
+\hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a6b4f9e0a4cec1bfc91b2dc163dca0cbe}{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO}
+ \}\begin{DoxyCompactList}\small\item\em An enum of the supported optimization objectives. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_acf18dc373a61806d05ab5bf71ae7e70e}{get\+Path\+Length\+Objective} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get path length objective using the space information configured \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_a5a0b977ed1b8de7d5c62fb36bbf60d36}{get\+Threshold\+Path\+Length\+Obj} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get path length objective with threshold using the space information configured \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_aaa51340872e046592aa2f59ceb4b0777}{get\+Clearance\+Objective} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get Obstace clearance objective using the space information configured \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_af1a62bb9eaa93934c58a4d21eeafb3d6}{get\+Path\+Length\+Obj\+With\+Cost\+To\+Go} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get \hyperlink{structPath}{Path} length objective with go to heuristic cost using the space information configured \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_a242e53e3208071455a205daec0352da1}{get\+Balanced\+Objective2} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get balanced objective between \hyperlink{structPath}{Path} length optimization and Object clearance \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_a9b35f2b7377808254748d5fe8f415609}{get\+Balanced\+Objective1} (const ob\+::\+Space\+Information\+Ptr \&si)
+\begin{DoxyCompactList}\small\item\em get balanced objective between \hyperlink{structPath}{Path} length optimization, Object clearance and Multi Optimization \end{DoxyCompactList}\item 
+ob\+::\+Planner\+Ptr \hyperlink{ompl__planning_8hpp_ace8c893484b7db954bc1dd304a217832}{allocate\+Planner} (ob\+::\+Space\+Information\+Ptr si, \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}{optimal\+Planner} planner\+Type)
+\begin{DoxyCompactList}\small\item\em Allocate planner. \end{DoxyCompactList}\item 
+ob\+::\+Optimization\+Objective\+Ptr \hyperlink{ompl__planning_8hpp_a3e0175d952964959806eb2e4b5a3458b}{allocate\+Objective} (const ob\+::\+Space\+Information\+Ptr \&si, \hyperlink{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435}{planning\+Objective} objective\+Type)
+\begin{DoxyCompactList}\small\item\em Allocate objective. \end{DoxyCompactList}\item 
+\hyperlink{ompl__planning_8hpp_a7c1db88611e437728d0bf466e8ad93a2}{boost\+\_\+polygon} \hyperlink{ompl__planning_8hpp_ae9a812e28c680916d034dcf4f3c3b012}{convert\+Polygon\+To\+Boost\+Polygon} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&poly)
+\begin{DoxyCompactList}\small\item\em Convert Polygon To Boost polygon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains most of the Functions related to O\+M\+PL planer. 
+
+\begin{DoxyAuthor}{Author}
+Aravind Swaminathan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10-\/\+Jan-\/2020 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!boost\+\_\+linestring@{boost\+\_\+linestring}}
+\index{boost\+\_\+linestring@{boost\+\_\+linestring}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{boost\+\_\+linestring}{boost_linestring}}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\+::geometry\+::model\+::linestring$<${\bf boost\+\_\+point}$>$ {\bf boost\+\_\+linestring}}\hypertarget{ompl__planning_8hpp_ac034f14303d914bba70fd53ec8fcfe35}{}\label{ompl__planning_8hpp_ac034f14303d914bba70fd53ec8fcfe35}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!boost\+\_\+point@{boost\+\_\+point}}
+\index{boost\+\_\+point@{boost\+\_\+point}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{boost\+\_\+point}{boost_point}}]{\setlength{\rightskip}{0pt plus 5cm}typedef bg\+::model\+::d2\+::point\+\_\+xy$<$double$>$ {\bf boost\+\_\+point}}\hypertarget{ompl__planning_8hpp_a0feb3c557e4cd1e30bb2392478115509}{}\label{ompl__planning_8hpp_a0feb3c557e4cd1e30bb2392478115509}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!boost\+\_\+polygon@{boost\+\_\+polygon}}
+\index{boost\+\_\+polygon@{boost\+\_\+polygon}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{boost\+\_\+polygon}{boost_polygon}}]{\setlength{\rightskip}{0pt plus 5cm}typedef bg\+::model\+::polygon$<${\bf boost\+\_\+point}$>$ {\bf boost\+\_\+polygon}}\hypertarget{ompl__planning_8hpp_a7c1db88611e437728d0bf466e8ad93a2}{}\label{ompl__planning_8hpp_a7c1db88611e437728d0bf466e8ad93a2}
+
+
+\subsection{Enumeration Type Documentation}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!optimal\+Planner@{optimal\+Planner}}
+\index{optimal\+Planner@{optimal\+Planner}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{optimal\+Planner}{optimalPlanner}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf optimal\+Planner}}\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}
+
+
+Choice of Optimal planner. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}}\item[{\em 
+P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}
+}]Informed R\+RT star implementation. \index{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}}\item[{\em 
+P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}
+}]R\+RT Star implementation. \end{description}
+\end{Desc}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!planning\+Objective@{planning\+Objective}}
+\index{planning\+Objective@{planning\+Objective}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{planning\+Objective}{planningObjective}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf planning\+Objective}}\hypertarget{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435}{}\label{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435}
+
+
+An enum of the supported optimization objectives. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE}}\item[{\em 
+O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE\hypertarget{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435adebd4fa82a8cedd6098a31aa2989ad99}{}\label{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435adebd4fa82a8cedd6098a31aa2989ad99}
+}]\hyperlink{structPath}{Path} clearance objective. \index{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH}}\item[{\em 
+O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+P\+A\+T\+H\+L\+E\+N\+G\+TH\hypertarget{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a4e3f19a6486ea60fcec03698295bc123}{}\label{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a4e3f19a6486ea60fcec03698295bc123}
+}]\hyperlink{structPath}{Path} length objective. \index{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH}}\item[{\em 
+O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH\hypertarget{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435aa2fd04e89b3f63d92aac21da3e830d6e}{}\label{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435aa2fd04e89b3f63d92aac21da3e830d6e}
+}]\hyperlink{structPath}{Path} length with threshold based objective. \index{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO@{O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO}}\item[{\em 
+O\+B\+J\+E\+C\+T\+I\+V\+E\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO\hypertarget{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a6b4f9e0a4cec1bfc91b2dc163dca0cbe}{}\label{ompl__planning_8hpp_a536d9a9c9c364afecdce87aaed9c4435a6b4f9e0a4cec1bfc91b2dc163dca0cbe}
+}]Weighted combination obejctive of all the above three or two. \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!allocate\+Objective@{allocate\+Objective}}
+\index{allocate\+Objective@{allocate\+Objective}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{allocate\+Objective(const ob\+::\+Space\+Information\+Ptr \&si, planning\+Objective objective\+Type)}{allocateObjective(const ob::SpaceInformationPtr &si, planningObjective objectiveType)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr allocate\+Objective (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si, }
+\item[{{\bf planning\+Objective}}]{objective\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_a3e0175d952964959806eb2e4b5a3458b}{}\label{ompl__planning_8hpp_a3e0175d952964959806eb2e4b5a3458b}
+
+
+Allocate objective. 
+
+Four objectives of planning 
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information which includes P\+A\+T\+H\+C\+L\+E\+A\+R\+A\+N\+CE, P\+A\+T\+H\+L\+E\+N\+G\+TH, T\+H\+R\+E\+S\+H\+O\+L\+D\+P\+A\+T\+H\+L\+E\+N\+G\+TH, W\+E\+I\+G\+H\+T\+E\+D\+C\+O\+M\+BO \\
+\hline
+{\em objective\+Type} & Type of Objective to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Objective Pointer with corresponding planner 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!allocate\+Planner@{allocate\+Planner}}
+\index{allocate\+Planner@{allocate\+Planner}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{allocate\+Planner(ob\+::\+Space\+Information\+Ptr si, optimal\+Planner planner\+Type)}{allocatePlanner(ob::SpaceInformationPtr si, optimalPlanner plannerType)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Planner\+Ptr allocate\+Planner (
+\begin{DoxyParamCaption}
+\item[{ob\+::\+Space\+Information\+Ptr}]{si, }
+\item[{{\bf optimal\+Planner}}]{planner\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_ace8c893484b7db954bc1dd304a217832}{}\label{ompl__planning_8hpp_ace8c893484b7db954bc1dd304a217832}
+
+
+Allocate planner. 
+
+only two types of planner are considered R\+R\+T$\ast$ and I\+N\+F\+O\+R\+M\+E\+D\+\_\+\+R\+R\+T$\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+{\em planner\+Type} & Type of planner to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Planner Pointer with corresponding planner 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!convert\+Polygon\+To\+Boost\+Polygon@{convert\+Polygon\+To\+Boost\+Polygon}}
+\index{convert\+Polygon\+To\+Boost\+Polygon@{convert\+Polygon\+To\+Boost\+Polygon}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{convert\+Polygon\+To\+Boost\+Polygon(const Polygon \&poly)}{convertPolygonToBoostPolygon(const Polygon &poly)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf boost\+\_\+polygon} convert\+Polygon\+To\+Boost\+Polygon (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polygon} \&}]{poly}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_ae9a812e28c680916d034dcf4f3c3b012}{}\label{ompl__planning_8hpp_ae9a812e28c680916d034dcf4f3c3b012}
+
+
+Convert Polygon To Boost polygon. 
+
+Interface polygon struct is converted to boost polygon for easy operation 
+\begin{DoxyParams}{Parameters}
+{\em poly} & Polygon to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boost polygon object 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Balanced\+Objective1@{get\+Balanced\+Objective1}}
+\index{get\+Balanced\+Objective1@{get\+Balanced\+Objective1}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Balanced\+Objective1(const ob\+::\+Space\+Information\+Ptr \&si)}{getBalancedObjective1(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Balanced\+Objective1 (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_a9b35f2b7377808254748d5fe8f415609}{}\label{ompl__planning_8hpp_a9b35f2b7377808254748d5fe8f415609}
+
+
+get balanced objective between \hyperlink{structPath}{Path} length optimization, Object clearance and Multi Optimization 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Balanced\+Objective2@{get\+Balanced\+Objective2}}
+\index{get\+Balanced\+Objective2@{get\+Balanced\+Objective2}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Balanced\+Objective2(const ob\+::\+Space\+Information\+Ptr \&si)}{getBalancedObjective2(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Balanced\+Objective2 (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_a242e53e3208071455a205daec0352da1}{}\label{ompl__planning_8hpp_a242e53e3208071455a205daec0352da1}
+
+
+get balanced objective between \hyperlink{structPath}{Path} length optimization and Object clearance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Clearance\+Objective@{get\+Clearance\+Objective}}
+\index{get\+Clearance\+Objective@{get\+Clearance\+Objective}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Clearance\+Objective(const ob\+::\+Space\+Information\+Ptr \&si)}{getClearanceObjective(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Clearance\+Objective (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_aaa51340872e046592aa2f59ceb4b0777}{}\label{ompl__planning_8hpp_aaa51340872e046592aa2f59ceb4b0777}
+
+
+get Obstace clearance objective using the space information configured 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Path\+Length\+Objective@{get\+Path\+Length\+Objective}}
+\index{get\+Path\+Length\+Objective@{get\+Path\+Length\+Objective}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Path\+Length\+Objective(const ob\+::\+Space\+Information\+Ptr \&si)}{getPathLengthObjective(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Path\+Length\+Objective (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_acf18dc373a61806d05ab5bf71ae7e70e}{}\label{ompl__planning_8hpp_acf18dc373a61806d05ab5bf71ae7e70e}
+
+
+get path length objective using the space information configured 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Path\+Length\+Obj\+With\+Cost\+To\+Go@{get\+Path\+Length\+Obj\+With\+Cost\+To\+Go}}
+\index{get\+Path\+Length\+Obj\+With\+Cost\+To\+Go@{get\+Path\+Length\+Obj\+With\+Cost\+To\+Go}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Path\+Length\+Obj\+With\+Cost\+To\+Go(const ob\+::\+Space\+Information\+Ptr \&si)}{getPathLengthObjWithCostToGo(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Path\+Length\+Obj\+With\+Cost\+To\+Go (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_af1a62bb9eaa93934c58a4d21eeafb3d6}{}\label{ompl__planning_8hpp_af1a62bb9eaa93934c58a4d21eeafb3d6}
+
+
+get \hyperlink{structPath}{Path} length objective with go to heuristic cost using the space information configured 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}
+\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!get\+Threshold\+Path\+Length\+Obj@{get\+Threshold\+Path\+Length\+Obj}}
+\index{get\+Threshold\+Path\+Length\+Obj@{get\+Threshold\+Path\+Length\+Obj}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}
+\subsubsection[{\texorpdfstring{get\+Threshold\+Path\+Length\+Obj(const ob\+::\+Space\+Information\+Ptr \&si)}{getThresholdPathLengthObj(const ob::SpaceInformationPtr &si)}}]{\setlength{\rightskip}{0pt plus 5cm}ob\+::\+Optimization\+Objective\+Ptr get\+Threshold\+Path\+Length\+Obj (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si}
+\end{DoxyParamCaption}
+)}\hypertarget{ompl__planning_8hpp_a5a0b977ed1b8de7d5c62fb36bbf60d36}{}\label{ompl__planning_8hpp_a5a0b977ed1b8de7d5c62fb36bbf60d36}
+
+
+get path length objective with threshold using the space information configured 
+
+
+\begin{DoxyParams}{Parameters}
+{\em si} & Space information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Optimization objective pointer 
+\end{DoxyReturn}

@@ -1,0 +1,41 @@
+\hypertarget{extrisnicCalib_8cpp}{}\section{src/extrisnic\+Calib.cpp File Reference}
+\label{extrisnicCalib_8cpp}\index{src/extrisnic\+Calib.\+cpp@{src/extrisnic\+Calib.\+cpp}}
+{\ttfamily \#include \char`\"{}student\+\_\+image\+\_\+elab\+\_\+interface.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}student\+\_\+planning\+\_\+interface.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$atomic$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$experimental/filesystem$>$}\\*
+Include dependency graph for extrisnic\+Calib.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extrisnicCalib_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestudent}{student}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacestudent_ab3f1d6c8dd4caa817efc0cd3c46eb2e0}{student\+::mouse\+Callback} (int event, int x, int y, int, void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Function called after every mouse click. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{namespacestudent_a01244e0e0a28d974de100ffcad7a2583}{student\+::pick\+N\+Points} (int n0, const cv\+::\+Mat \&img)
+\begin{DoxyCompactList}\small\item\em Function to pick points from image. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a6103f938ce28f8820c48c089d5f95098}{student\+::extrinsic\+Calib} (const cv\+::\+Mat \&img\+\_\+in, std\+::vector$<$ cv\+::\+Point3f $>$ object\+\_\+points, const cv\+::\+Mat \&camera\+\_\+matrix, cv\+::\+Mat \&rvec, cv\+::\+Mat \&tvec, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Function for extrinsic calibration. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_aceb2a29362b8223a9d3601d9496e1c98}{student\+::image\+Undistort} (const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&dist\+\_\+coeffs, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Function undistort the given image. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a528d33658d0d4d982a46f18b7abb4a70}{student\+::find\+Plane\+Transform} (const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&rvec, const cv\+::\+Mat \&tvec, const std\+::vector$<$ cv\+::\+Point3f $>$ \&object\+\_\+points\+\_\+plane, const std\+::vector$<$ cv\+::\+Point2f $>$ \&dest\+\_\+image\+\_\+points\+\_\+plane, cv\+::\+Mat \&plane\+\_\+transf, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Perspective projection. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a6b8caf348979f55e58a75193233c219d}{student\+::unwarp} (const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&transf, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Image unwarping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{namespacestudent_a65fee22a07178fcde6362c2482b5fa7f}{student\+::dist\+\_\+coeffs\+\_\+for\+\_\+ex}
+\end{DoxyCompactItemize}

@@ -8,6 +8,15 @@ docs/html/index.html
 ``` 
 
 
+##Libraries Used
+
+- OMPL 1.5.0 (https://github.com/ompl/ompl)
+- Clothoids (https://github.com/ebertolazzi/Clothoids)
+- Config4Cpp (http://www.config4star.org/)
+- Boost - 1.58
+- Eigen3 (veersion 3.3)
+- OpenCV -v3.3
+
 Also we can see 
 ## Image Saver
 
@@ -160,7 +169,10 @@ Function Available in:  src/findRobot.cpp
 In Plan path function, I used RRT* planner from OMPL and also I have implemented an own RRT* algorithm which can be found inside src/RRTStar/ folder. But the OMPL planner one, works better as the library is completely organized and optimized to the core.The high level motion planning is obtained using the RRT* algorithm. The local planner between the  RRT* points are using Clothoids library or dubins planner. I have chosen clothoids as major one, because the curvilinear behaviour is quite good and the curvature values can be gradually approximated for the local path, But in case of dubins planner, the curvature values are either +MAX or -MAX.
 
 > General diagram of planPath
+<<<<<<< HEAD
 
+=======
+>>>>>>> c765f3efe04de263cb134c2644c1c7f6cd3ac51c
 ![planPath Flow diagram ](imgs/blocks/generalPlanPath.jpg)
 
 Let me discuss one by one point

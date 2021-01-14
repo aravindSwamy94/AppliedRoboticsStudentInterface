@@ -1,0 +1,97 @@
+\hypertarget{classValidityChecker}{}\section{Validity\+Checker Class Reference}
+\label{classValidityChecker}\index{Validity\+Checker@{Validity\+Checker}}
+
+
+Class to check if new random state is valid or not.  
+
+
+
+
+{\ttfamily \#include $<$ompl\+\_\+planning.\+hpp$>$}
+
+
+
+Inheritance diagram for Validity\+Checker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classValidityChecker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Validity\+Checker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classValidityChecker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classValidityChecker_ada15197ab56e9e0002e2b11ccac01253}{Validity\+Checker} (const ob\+::\+Space\+Information\+Ptr \&si, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ obstacle\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classValidityChecker_aed770a601b4856c6f055a70ea752be37}{is\+Valid} (const ob\+::\+State $\ast$state) const override
+\begin{DoxyCompactList}\small\item\em to check if state is valid of not \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \hyperlink{classValidityChecker_a3680b7a8c6e1d6dbaf7833df9f86ce84}{obstacles}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to check if new random state is valid or not. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Validity\+Checker@{Validity\+Checker}!Validity\+Checker@{Validity\+Checker}}
+\index{Validity\+Checker@{Validity\+Checker}!Validity\+Checker@{Validity\+Checker}}
+\subsubsection[{\texorpdfstring{Validity\+Checker(const ob\+::\+Space\+Information\+Ptr \&si, std\+::vector$<$ Polygon $>$ obstacle\+\_\+list)}{ValidityChecker(const ob::SpaceInformationPtr &si, std::vector< Polygon > obstacle_list)}}]{\setlength{\rightskip}{0pt plus 5cm}Validity\+Checker\+::\+Validity\+Checker (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+Space\+Information\+Ptr \&}]{si, }
+\item[{std\+::vector$<$ {\bf Polygon} $>$}]{obstacle\+\_\+list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classValidityChecker_ada15197ab56e9e0002e2b11ccac01253}{}\label{classValidityChecker_ada15197ab56e9e0002e2b11ccac01253}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obstacle\+\_\+list} & Obstacle list that is obtained from map \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Validity\+Checker@{Validity\+Checker}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Validity\+Checker@{Validity\+Checker}}
+\subsubsection[{\texorpdfstring{is\+Valid(const ob\+::\+State $\ast$state) const override}{isValid(const ob::State *state) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool Validity\+Checker\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{const ob\+::\+State $\ast$}]{state}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}\hypertarget{classValidityChecker_aed770a601b4856c6f055a70ea752be37}{}\label{classValidityChecker_aed770a601b4856c6f055a70ea752be37}
+
+
+to check if state is valid of not 
+
+Check if new obatined state is inside the obstacle polygon, convert new state to boost point and also polygon to boost polygon and use boost\+::within() method to check the validity of state 
+\begin{DoxyParams}{Parameters}
+{\em state} & new state that is generated randomly by R\+RT Star algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false based on the validity of state 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Validity\+Checker@{Validity\+Checker}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!Validity\+Checker@{Validity\+Checker}}
+\subsubsection[{\texorpdfstring{obstacles}{obstacles}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Polygon}$>$ Validity\+Checker\+::obstacles}\hypertarget{classValidityChecker_a3680b7a8c6e1d6dbaf7833df9f86ce84}{}\label{classValidityChecker_a3680b7a8c6e1d6dbaf7833df9f86ce84}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ompl__planning_8hpp}{ompl\+\_\+planning.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,435 @@
+\hypertarget{dubins__local_8h}{}\section{include/dubins\+\_\+local.h File Reference}
+\label{dubins__local_8h}\index{include/dubins\+\_\+local.\+h@{include/dubins\+\_\+local.\+h}}
+
+
+Contains function declaration related to dubins planner.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\\*
+Include dependency graph for dubins\+\_\+local.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{dubins__local_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{dubins__local_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdubinsArc}{dubins\+Arc}
+\begin{DoxyCompactList}\small\item\em Structure for a Dubins arc \end{DoxyCompactList}\item 
+struct \hyperlink{structdubinsCurve}{dubins\+Curve}
+\begin{DoxyCompactList}\small\item\em Structure for a Dubins curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{dubins__local_8h_a2678c9ac5e8585534a9c5a2385169324}{sinc} (double t)
+\item 
+double \hyperlink{dubins__local_8h_a2c708c33a19d61b2cdb44cc19fc6b0d9}{mod2pi} (double ang)
+\item 
+double \hyperlink{dubins__local_8h_a77b0c223b0d9603e0d04e1e5f7a34ae7}{range\+Symm} (double const \&ang)
+\item 
+bool \hyperlink{dubins__local_8h_a335d08951d7b2832d6b94e2ed9f16aa2}{check} (double const \&s1, double const \&k0, double const \&s2, double const \&k1, double const \&s3, double const \&k2, double const \&th0, double const \&thf)
+\item 
+void \hyperlink{dubins__local_8h_a22f9f0695527862db7d80a70c45085a1}{scale\+To\+Standard} (double x0, double y0, double th0, double xf, double yf, double thf, double kmax, double \&sc\+\_\+th0, double \&sc\+\_\+thf, double \&sc\+\_\+kmax, double \&lambda)
+\item 
+void \hyperlink{dubins__local_8h_a217a3380289b2212b7d4bed290541038}{scale\+From\+Standard} (double lambda, double sc\+\_\+s1, double sc\+\_\+s2, double sc\+\_\+s3, double \&s1, double \&s2, double \&s3)
+\item 
+void \hyperlink{dubins__local_8h_a0d2c667a4f85bd138f5bbe49c21295ca}{L\+SL} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for L\+SL configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_a0bae7f9e0e9f1263038e26b339aef3d8}{R\+SR} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for R\+SR configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_a2b83bd738c98a5adbd9b2f988f83df9b}{L\+SR} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for L\+SR configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_a42faf356426f58054d755d9c4c7dfeaa}{R\+SL} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for R\+SL configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_a321ba579c7cd4b08e84fc34b1d1cdc88}{R\+LR} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for R\+LR configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_a6e4414f09fbd1b41d8879589085585c6}{L\+RL} (double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)
+\begin{DoxyCompactList}\small\item\em Compute the arcs for L\+RL configuration. \end{DoxyCompactList}\item 
+void \hyperlink{dubins__local_8h_aa84b2a5a76850d416eb5b3b238d8a0bc}{set\+\_\+dubins\+Arc} (\hyperlink{structdubinsArc}{dubins\+Arc} \&ptr, double x0, double y0, double th0, double k, double s)
+\item 
+void \hyperlink{dubins__local_8h_a70c63acda3975bd7bcabdf063fe19b05}{set\+\_\+dubins\+Curve} (\hyperlink{structdubinsCurve}{dubins\+Curve} \&curve\+\_\+ptr, double x0, double y0, double th0, double s1, double s2, double s3, double k0, double k1, double k2)
+\item 
+void \hyperlink{dubins__local_8h_ab13990cb925d60c2d636ef7ef119865e}{dubins\+\_\+shortest\+\_\+path} (\hyperlink{structdubinsCurve}{dubins\+Curve} \&curve, double const \&x0, double const \&y0, double const \&th0, double const \&xf, double const \&yf, double const \&thf, double const \&kmax)
+\begin{DoxyCompactList}\small\item\em Compute shortest path using dunins confiuration. \end{DoxyCompactList}\item 
+\hyperlink{structPath}{Path} \hyperlink{dubins__local_8h_a66f54790bf27e578ba9b864ae34de96d}{get\+Path} (\hyperlink{structdubinsCurve}{dubins\+Curve} curve, int npts)
+\begin{DoxyCompactList}\small\item\em Discretize the dubins curve to points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains function declaration related to dubins planner. 
+
+\begin{DoxyAuthor}{Author}
+Aravind Swaminathan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10-\/\+Jan-\/2020 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!check@{check}}
+\index{check@{check}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{check(double const \&s1, double const \&k0, double const \&s2, double const \&k1, double const \&s3, double const \&k2, double const \&th0, double const \&thf)}{check(double const &s1, double const &k0, double const &s2, double const &k1, double const &s3, double const &k2, double const &th0, double const &thf)}}]{\setlength{\rightskip}{0pt plus 5cm}bool check (
+\begin{DoxyParamCaption}
+\item[{double const \&}]{s1, }
+\item[{double const \&}]{k0, }
+\item[{double const \&}]{s2, }
+\item[{double const \&}]{k1, }
+\item[{double const \&}]{s3, }
+\item[{double const \&}]{k2, }
+\item[{double const \&}]{th0, }
+\item[{double const \&}]{thf}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a335d08951d7b2832d6b94e2ed9f16aa2}{}\label{dubins__local_8h_a335d08951d7b2832d6b94e2ed9f16aa2}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!dubins\+\_\+shortest\+\_\+path@{dubins\+\_\+shortest\+\_\+path}}
+\index{dubins\+\_\+shortest\+\_\+path@{dubins\+\_\+shortest\+\_\+path}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{dubins\+\_\+shortest\+\_\+path(dubins\+Curve \&curve, double const \&x0, double const \&y0, double const \&th0, double const \&xf, double const \&yf, double const \&thf, double const \&kmax)}{dubins_shortest_path(dubinsCurve &curve, double const &x0, double const &y0, double const &th0, double const &xf, double const &yf, double const &thf, double const &kmax)}}]{\setlength{\rightskip}{0pt plus 5cm}void dubins\+\_\+shortest\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf dubins\+Curve} \&}]{curve, }
+\item[{double const \&}]{x0, }
+\item[{double const \&}]{y0, }
+\item[{double const \&}]{th0, }
+\item[{double const \&}]{xf, }
+\item[{double const \&}]{yf, }
+\item[{double const \&}]{thf, }
+\item[{double const \&}]{kmax}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_ab13990cb925d60c2d636ef7ef119865e}{}\label{dubins__local_8h_ab13990cb925d60c2d636ef7ef119865e}
+
+
+Compute shortest path using dunins confiuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & Output curve \\
+\hline
+{\em x0} & Start location x \\
+\hline
+{\em y0} & Start location y \\
+\hline
+{\em th0} & Start location theta \\
+\hline
+{\em xf} & End location x \\
+\hline
+{\em yf} & End location y \\
+\hline
+{\em thf} & End location theta \\
+\hline
+{\em kmax} & Maximum curvature of the robot \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{get\+Path(dubins\+Curve curve, int npts)}{getPath(dubinsCurve curve, int npts)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path} get\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf dubins\+Curve}}]{curve, }
+\item[{int}]{npts}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a66f54790bf27e578ba9b864ae34de96d}{}\label{dubins__local_8h_a66f54790bf27e578ba9b864ae34de96d}
+
+
+Discretize the dubins curve to points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & The dubins curve obtained \\
+\hline
+{\em npts} & Number of points for the whole curve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output path structure 
+\end{DoxyReturn}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!L\+RL@{L\+RL}}
+\index{L\+RL@{L\+RL}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{L\+R\+L(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{LRL(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+RL (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a6e4414f09fbd1b41d8879589085585c6}{}\label{dubins__local_8h_a6e4414f09fbd1b41d8879589085585c6}
+
+
+Compute the arcs for L\+RL configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!L\+SL@{L\+SL}}
+\index{L\+SL@{L\+SL}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{L\+S\+L(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{LSL(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+SL (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a0d2c667a4f85bd138f5bbe49c21295ca}{}\label{dubins__local_8h_a0d2c667a4f85bd138f5bbe49c21295ca}
+
+
+Compute the arcs for L\+SL configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!L\+SR@{L\+SR}}
+\index{L\+SR@{L\+SR}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{L\+S\+R(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{LSR(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+SR (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a2b83bd738c98a5adbd9b2f988f83df9b}{}\label{dubins__local_8h_a2b83bd738c98a5adbd9b2f988f83df9b}
+
+
+Compute the arcs for L\+SR configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!mod2pi@{mod2pi}}
+\index{mod2pi@{mod2pi}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{mod2pi(double ang)}{mod2pi(double ang)}}]{\setlength{\rightskip}{0pt plus 5cm}double mod2pi (
+\begin{DoxyParamCaption}
+\item[{double}]{ang}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a2c708c33a19d61b2cdb44cc19fc6b0d9}{}\label{dubins__local_8h_a2c708c33a19d61b2cdb44cc19fc6b0d9}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!range\+Symm@{range\+Symm}}
+\index{range\+Symm@{range\+Symm}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{range\+Symm(double const \&ang)}{rangeSymm(double const &ang)}}]{\setlength{\rightskip}{0pt plus 5cm}double range\+Symm (
+\begin{DoxyParamCaption}
+\item[{double const \&}]{ang}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a77b0c223b0d9603e0d04e1e5f7a34ae7}{}\label{dubins__local_8h_a77b0c223b0d9603e0d04e1e5f7a34ae7}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!R\+LR@{R\+LR}}
+\index{R\+LR@{R\+LR}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{R\+L\+R(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{RLR(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+LR (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a321ba579c7cd4b08e84fc34b1d1cdc88}{}\label{dubins__local_8h_a321ba579c7cd4b08e84fc34b1d1cdc88}
+
+
+Compute the arcs for R\+LR configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!R\+SL@{R\+SL}}
+\index{R\+SL@{R\+SL}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{R\+S\+L(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{RSL(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+SL (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a42faf356426f58054d755d9c4c7dfeaa}{}\label{dubins__local_8h_a42faf356426f58054d755d9c4c7dfeaa}
+
+
+Compute the arcs for R\+SL configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!R\+SR@{R\+SR}}
+\index{R\+SR@{R\+SR}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{R\+S\+R(double sc\+\_\+th0, double sc\+\_\+thf, double sc\+\_\+kmax, bool \&ok, double \&sc\+\_\+s1, double \&sc\+\_\+s2, double \&sc\+\_\+s3)}{RSR(double sc_th0, double sc_thf, double sc_kmax, bool &ok, double &sc_s1, double &sc_s2, double &sc_s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+SR (
+\begin{DoxyParamCaption}
+\item[{double}]{sc\+\_\+th0, }
+\item[{double}]{sc\+\_\+thf, }
+\item[{double}]{sc\+\_\+kmax, }
+\item[{bool \&}]{ok, }
+\item[{double \&}]{sc\+\_\+s1, }
+\item[{double \&}]{sc\+\_\+s2, }
+\item[{double \&}]{sc\+\_\+s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a0bae7f9e0e9f1263038e26b339aef3d8}{}\label{dubins__local_8h_a0bae7f9e0e9f1263038e26b339aef3d8}
+
+
+Compute the arcs for R\+SR configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc\+\_\+th0} & Start theta \\
+\hline
+{\em sc\+\_\+thf} & Final theta \\
+\hline
+{\em sc\+\_\+kmax} & Curvature max \\
+\hline
+{\em ok} & Check if this configuration fits the given input \\
+\hline
+{\em sc\+\_\+s1} & Arc 1 coeff \\
+\hline
+{\em sc\+\_\+s2} & Arc 2 coeff \\
+\hline
+{\em sc\+\_\+s3} & Arc 3 coeff \\
+\hline
+\end{DoxyParams}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!scale\+From\+Standard@{scale\+From\+Standard}}
+\index{scale\+From\+Standard@{scale\+From\+Standard}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{scale\+From\+Standard(double lambda, double sc\+\_\+s1, double sc\+\_\+s2, double sc\+\_\+s3, double \&s1, double \&s2, double \&s3)}{scaleFromStandard(double lambda, double sc_s1, double sc_s2, double sc_s3, double &s1, double &s2, double &s3)}}]{\setlength{\rightskip}{0pt plus 5cm}void scale\+From\+Standard (
+\begin{DoxyParamCaption}
+\item[{double}]{lambda, }
+\item[{double}]{sc\+\_\+s1, }
+\item[{double}]{sc\+\_\+s2, }
+\item[{double}]{sc\+\_\+s3, }
+\item[{double \&}]{s1, }
+\item[{double \&}]{s2, }
+\item[{double \&}]{s3}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a217a3380289b2212b7d4bed290541038}{}\label{dubins__local_8h_a217a3380289b2212b7d4bed290541038}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!scale\+To\+Standard@{scale\+To\+Standard}}
+\index{scale\+To\+Standard@{scale\+To\+Standard}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{scale\+To\+Standard(double x0, double y0, double th0, double xf, double yf, double thf, double kmax, double \&sc\+\_\+th0, double \&sc\+\_\+thf, double \&sc\+\_\+kmax, double \&lambda)}{scaleToStandard(double x0, double y0, double th0, double xf, double yf, double thf, double kmax, double &sc_th0, double &sc_thf, double &sc_kmax, double &lambda)}}]{\setlength{\rightskip}{0pt plus 5cm}void scale\+To\+Standard (
+\begin{DoxyParamCaption}
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{th0, }
+\item[{double}]{xf, }
+\item[{double}]{yf, }
+\item[{double}]{thf, }
+\item[{double}]{kmax, }
+\item[{double \&}]{sc\+\_\+th0, }
+\item[{double \&}]{sc\+\_\+thf, }
+\item[{double \&}]{sc\+\_\+kmax, }
+\item[{double \&}]{lambda}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a22f9f0695527862db7d80a70c45085a1}{}\label{dubins__local_8h_a22f9f0695527862db7d80a70c45085a1}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!set\+\_\+dubins\+Arc@{set\+\_\+dubins\+Arc}}
+\index{set\+\_\+dubins\+Arc@{set\+\_\+dubins\+Arc}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+dubins\+Arc(dubins\+Arc \&ptr, double x0, double y0, double th0, double k, double s)}{set_dubinsArc(dubinsArc &ptr, double x0, double y0, double th0, double k, double s)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+dubins\+Arc (
+\begin{DoxyParamCaption}
+\item[{{\bf dubins\+Arc} \&}]{ptr, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{th0, }
+\item[{double}]{k, }
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_aa84b2a5a76850d416eb5b3b238d8a0bc}{}\label{dubins__local_8h_aa84b2a5a76850d416eb5b3b238d8a0bc}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!set\+\_\+dubins\+Curve@{set\+\_\+dubins\+Curve}}
+\index{set\+\_\+dubins\+Curve@{set\+\_\+dubins\+Curve}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+dubins\+Curve(dubins\+Curve \&curve\+\_\+ptr, double x0, double y0, double th0, double s1, double s2, double s3, double k0, double k1, double k2)}{set_dubinsCurve(dubinsCurve &curve_ptr, double x0, double y0, double th0, double s1, double s2, double s3, double k0, double k1, double k2)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+dubins\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf dubins\+Curve} \&}]{curve\+\_\+ptr, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{th0, }
+\item[{double}]{s1, }
+\item[{double}]{s2, }
+\item[{double}]{s3, }
+\item[{double}]{k0, }
+\item[{double}]{k1, }
+\item[{double}]{k2}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a70c63acda3975bd7bcabdf063fe19b05}{}\label{dubins__local_8h_a70c63acda3975bd7bcabdf063fe19b05}
+\index{dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}!sinc@{sinc}}
+\index{sinc@{sinc}!dubins\+\_\+local.\+h@{dubins\+\_\+local.\+h}}
+\subsubsection[{\texorpdfstring{sinc(double t)}{sinc(double t)}}]{\setlength{\rightskip}{0pt plus 5cm}double sinc (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{dubins__local_8h_a2678c9ac5e8585534a9c5a2385169324}{}\label{dubins__local_8h_a2678c9ac5e8585534a9c5a2385169324}

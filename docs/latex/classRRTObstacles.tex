@@ -1,0 +1,94 @@
+\hypertarget{classRRTObstacles}{}\section{R\+R\+T\+Obstacles Class Reference}
+\label{classRRTObstacles}\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+
+
+Obstacles class for R\+R\+T$\ast$ Star Implementation.  
+
+
+
+
+{\ttfamily \#include $<$obstacles.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRRTObstacles_a2a8b080aee81476a84987f9cc3aa6186}{R\+R\+T\+Obstacles} ()
+\item 
+void \hyperlink{classRRTObstacles_a0359d5f53c91410a35eb1bbb8920f8dc}{add\+Obstacle} (double radius, Vector2f second\+Point)
+\begin{DoxyCompactList}\small\item\em Obstacles are stored as circles. Circles is denoted by center point and radius. \end{DoxyCompactList}\item 
+bool \hyperlink{classRRTObstacles_a1bf5b6afa6aa7704584febd7b2d1550a}{is\+Segment\+In\+Obstacle} (Vector2f \&p1, Vector2f \&p2)
+\begin{DoxyCompactList}\small\item\em Check if a line segment intersects a rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ pair$<$ double, Vector2f $>$ $>$ \hyperlink{classRRTObstacles_a0bbd43d5b8ddeb2f293f689d09c26947}{obstacles}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Obstacles class for R\+R\+T$\ast$ Star Implementation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}!R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}!R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+\subsubsection[{\texorpdfstring{R\+R\+T\+Obstacles()}{RRTObstacles()}}]{\setlength{\rightskip}{0pt plus 5cm}R\+R\+T\+Obstacles\+::\+R\+R\+T\+Obstacles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTObstacles_a2a8b080aee81476a84987f9cc3aa6186}{}\label{classRRTObstacles_a2a8b080aee81476a84987f9cc3aa6186}
+
+
+\subsection{Member Function Documentation}
+\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}!add\+Obstacle@{add\+Obstacle}}
+\index{add\+Obstacle@{add\+Obstacle}!R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+\subsubsection[{\texorpdfstring{add\+Obstacle(double radius, Vector2f second\+Point)}{addObstacle(double radius, Vector2f secondPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+Obstacles\+::add\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{double}]{radius, }
+\item[{Vector2f}]{center\+Point}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTObstacles_a0359d5f53c91410a35eb1bbb8920f8dc}{}\label{classRRTObstacles_a0359d5f53c91410a35eb1bbb8920f8dc}
+
+
+Obstacles are stored as circles. Circles is denoted by center point and radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & \\
+\hline
+{\em center\+Point} & \\
+\hline
+\end{DoxyParams}
+\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}!is\+Segment\+In\+Obstacle@{is\+Segment\+In\+Obstacle}}
+\index{is\+Segment\+In\+Obstacle@{is\+Segment\+In\+Obstacle}!R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+\subsubsection[{\texorpdfstring{is\+Segment\+In\+Obstacle(\+Vector2f \&p1, Vector2f \&p2)}{isSegmentInObstacle(Vector2f &p1, Vector2f &p2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+R\+T\+Obstacles\+::is\+Segment\+In\+Obstacle (
+\begin{DoxyParamCaption}
+\item[{Vector2f \&}]{p1, }
+\item[{Vector2f \&}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTObstacles_a1bf5b6afa6aa7704584febd7b2d1550a}{}\label{classRRTObstacles_a1bf5b6afa6aa7704584febd7b2d1550a}
+
+
+Check if a line segment intersects a rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & \\
+\hline
+{\em p2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!R\+R\+T\+Obstacles@{R\+R\+T\+Obstacles}}
+\subsubsection[{\texorpdfstring{obstacles}{obstacles}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<$double, Vector2f$>$ $>$ R\+R\+T\+Obstacles\+::obstacles}\hypertarget{classRRTObstacles_a0bbd43d5b8ddeb2f293f689d09c26947}{}\label{classRRTObstacles_a0bbd43d5b8ddeb2f293f689d09c26947}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+R\+R\+T\+Star/\hyperlink{obstacles_8h}{obstacles.\+h}\item 
+src/\+R\+R\+T\+Star/\hyperlink{obstacles_8cpp}{obstacles.\+cpp}\end{DoxyCompactItemize}

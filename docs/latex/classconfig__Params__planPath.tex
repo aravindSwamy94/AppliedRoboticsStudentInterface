@@ -1,0 +1,170 @@
+\hypertarget{classconfig__Params__planPath}{}\section{config\+\_\+\+Params\+\_\+plan\+Path Class Reference}
+\label{classconfig__Params__planPath}\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+
+
+Class which reads and stores the configuration params related to plan\+Path functions.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classconfig__Params__planPath_aa0450f0e52f8134af81358873a9cca4b}{read} (const std\+::string \&\hyperlink{classconfig__Params__planPath_a03290d421ed527b13a4caed9caec2de8}{config\+\_\+folder})
+\begin{DoxyCompactList}\small\item\em read all params from config file and assign it to class variables \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classconfig__Params__planPath_a26329f440ce13957ff4c7fb643b66ced}{rrts\+\_\+scaling\+\_\+factor}
+\item 
+double \hyperlink{classconfig__Params__planPath_a5d43faedc443b4ff25dc2fd5fd27b2dd}{rrts\+\_\+step\+\_\+size}
+\item 
+int \hyperlink{classconfig__Params__planPath_ade92a1a5f3d29658d460057219f80486}{rrts\+\_\+max\+\_\+iter}
+\item 
+double \hyperlink{classconfig__Params__planPath_ab021000cd2770f4f9202396dda3aeff7}{rrts\+\_\+goal\+\_\+bias}
+\item 
+double \hyperlink{classconfig__Params__planPath_af0f84d366ab29443178fb55aa80ac23b}{rrts\+\_\+turn\+\_\+radius}
+\item 
+double \hyperlink{classconfig__Params__planPath_ab71b5c9e559f89ddea075e8012499d18}{rrts\+\_\+neighbour\+\_\+factor}
+\item 
+double \hyperlink{classconfig__Params__planPath_aeb42cb9ee0112f1bdee15ff8d5808958}{rrtsompl\+\_\+max\+\_\+solve\+\_\+time}
+\item 
+int \hyperlink{classconfig__Params__planPath_afee977505c0e321629da095f9f0f91af}{rrtsompl\+\_\+planner\+\_\+type}
+\item 
+bool \hyperlink{classconfig__Params__planPath_ad95f059b3b5a19b938a4b4bcbff73eab}{use\+\_\+rrt}
+\item 
+bool \hyperlink{classconfig__Params__planPath_a88d2ed829eea295da08035b2e337a034}{use\+\_\+rrt\+\_\+star}
+\item 
+bool \hyperlink{classconfig__Params__planPath_a75a7e08f13b232240c5e6a226e34f333}{use\+\_\+rrt\+\_\+star\+\_\+ompl}
+\item 
+int \hyperlink{classconfig__Params__planPath_a43c04821b004c31011e72c10a250b942}{border\+\_\+radius}
+\item 
+int \hyperlink{classconfig__Params__planPath_a8d467a6cae6f3afb4d3a628ea7ffa81c}{mission}
+\item 
+double \hyperlink{classconfig__Params__planPath_a4cde1927f911cd41b43b66668dda3ec9}{mission2\+\_\+threshold\+\_\+distance}
+\item 
+bool \hyperlink{classconfig__Params__planPath_a6ec518fae1a865e277b6807e87cd71b2}{save\+\_\+global\+\_\+path}
+\item 
+bool \hyperlink{classconfig__Params__planPath_ad7cdfaff92a0b04065934dc7e9f7bbbf}{save\+\_\+local\+\_\+path}
+\item 
+string \hyperlink{classconfig__Params__planPath_a7ab6118cdf2af9992ef481d1bc9d965f}{save\+\_\+path\+\_\+location}
+\item 
+string \hyperlink{classconfig__Params__planPath_a0cbbbf9e0e0830dcb6afc10ebc9d5ba6}{global\+\_\+path\+\_\+file}
+\item 
+string \hyperlink{classconfig__Params__planPath_a6d7eb54d97fd5e214392294649c867ae}{local\+\_\+path\+\_\+file}
+\item 
+int \hyperlink{classconfig__Params__planPath_addae22cbaa95dc14ffb3ec6079d21876}{offset\+\_\+radius}
+\item 
+bool \hyperlink{classconfig__Params__planPath_a3c4ddb466218ec03c2e5e94d6471f730}{use\+\_\+clothoids}
+\item 
+int \hyperlink{classconfig__Params__planPath_a9a0611f65bd2d57d59c25535c2a7f9b7}{kmax}
+\item 
+int \hyperlink{classconfig__Params__planPath_ac17efdb44431285cb264482c8e9f2007}{npts}
+\item 
+double \hyperlink{classconfig__Params__planPath_a782ea20dcd395fbc673bb8145b09dd9f}{dist\+\_\+bet\+\_\+points}
+\item 
+string \hyperlink{classconfig__Params__planPath_a03290d421ed527b13a4caed9caec2de8}{config\+\_\+folder}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which reads and stores the configuration params related to plan\+Path functions. 
+
+\subsection{Member Function Documentation}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!read@{read}}
+\index{read@{read}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{read(const std\+::string \&config\+\_\+folder)}{read(const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void config\+\_\+\+Params\+\_\+plan\+Path\+::read (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classconfig__Params__planPath_aa0450f0e52f8134af81358873a9cca4b}{}\label{classconfig__Params__planPath_aa0450f0e52f8134af81358873a9cca4b}
+
+
+read all params from config file and assign it to class variables 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+folder} & config folder where the params are available \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!border\+\_\+radius@{border\+\_\+radius}}
+\index{border\+\_\+radius@{border\+\_\+radius}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{border\+\_\+radius}{border_radius}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::border\+\_\+radius}\hypertarget{classconfig__Params__planPath_a43c04821b004c31011e72c10a250b942}{}\label{classconfig__Params__planPath_a43c04821b004c31011e72c10a250b942}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!config\+\_\+folder@{config\+\_\+folder}}
+\index{config\+\_\+folder@{config\+\_\+folder}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{config\+\_\+folder}{config_folder}}]{\setlength{\rightskip}{0pt plus 5cm}string config\+\_\+\+Params\+\_\+plan\+Path\+::config\+\_\+folder}\hypertarget{classconfig__Params__planPath_a03290d421ed527b13a4caed9caec2de8}{}\label{classconfig__Params__planPath_a03290d421ed527b13a4caed9caec2de8}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!dist\+\_\+bet\+\_\+points@{dist\+\_\+bet\+\_\+points}}
+\index{dist\+\_\+bet\+\_\+points@{dist\+\_\+bet\+\_\+points}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{dist\+\_\+bet\+\_\+points}{dist_bet_points}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::dist\+\_\+bet\+\_\+points}\hypertarget{classconfig__Params__planPath_a782ea20dcd395fbc673bb8145b09dd9f}{}\label{classconfig__Params__planPath_a782ea20dcd395fbc673bb8145b09dd9f}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!global\+\_\+path\+\_\+file@{global\+\_\+path\+\_\+file}}
+\index{global\+\_\+path\+\_\+file@{global\+\_\+path\+\_\+file}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{global\+\_\+path\+\_\+file}{global_path_file}}]{\setlength{\rightskip}{0pt plus 5cm}string config\+\_\+\+Params\+\_\+plan\+Path\+::global\+\_\+path\+\_\+file}\hypertarget{classconfig__Params__planPath_a0cbbbf9e0e0830dcb6afc10ebc9d5ba6}{}\label{classconfig__Params__planPath_a0cbbbf9e0e0830dcb6afc10ebc9d5ba6}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!kmax@{kmax}}
+\index{kmax@{kmax}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{kmax}{kmax}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::kmax}\hypertarget{classconfig__Params__planPath_a9a0611f65bd2d57d59c25535c2a7f9b7}{}\label{classconfig__Params__planPath_a9a0611f65bd2d57d59c25535c2a7f9b7}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!local\+\_\+path\+\_\+file@{local\+\_\+path\+\_\+file}}
+\index{local\+\_\+path\+\_\+file@{local\+\_\+path\+\_\+file}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{local\+\_\+path\+\_\+file}{local_path_file}}]{\setlength{\rightskip}{0pt plus 5cm}string config\+\_\+\+Params\+\_\+plan\+Path\+::local\+\_\+path\+\_\+file}\hypertarget{classconfig__Params__planPath_a6d7eb54d97fd5e214392294649c867ae}{}\label{classconfig__Params__planPath_a6d7eb54d97fd5e214392294649c867ae}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!mission@{mission}}
+\index{mission@{mission}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{mission}{mission}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::mission}\hypertarget{classconfig__Params__planPath_a8d467a6cae6f3afb4d3a628ea7ffa81c}{}\label{classconfig__Params__planPath_a8d467a6cae6f3afb4d3a628ea7ffa81c}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!mission2\+\_\+threshold\+\_\+distance@{mission2\+\_\+threshold\+\_\+distance}}
+\index{mission2\+\_\+threshold\+\_\+distance@{mission2\+\_\+threshold\+\_\+distance}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{mission2\+\_\+threshold\+\_\+distance}{mission2_threshold_distance}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::mission2\+\_\+threshold\+\_\+distance}\hypertarget{classconfig__Params__planPath_a4cde1927f911cd41b43b66668dda3ec9}{}\label{classconfig__Params__planPath_a4cde1927f911cd41b43b66668dda3ec9}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!npts@{npts}}
+\index{npts@{npts}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{npts}{npts}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::npts}\hypertarget{classconfig__Params__planPath_ac17efdb44431285cb264482c8e9f2007}{}\label{classconfig__Params__planPath_ac17efdb44431285cb264482c8e9f2007}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!offset\+\_\+radius@{offset\+\_\+radius}}
+\index{offset\+\_\+radius@{offset\+\_\+radius}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{offset\+\_\+radius}{offset_radius}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::offset\+\_\+radius}\hypertarget{classconfig__Params__planPath_addae22cbaa95dc14ffb3ec6079d21876}{}\label{classconfig__Params__planPath_addae22cbaa95dc14ffb3ec6079d21876}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+goal\+\_\+bias@{rrts\+\_\+goal\+\_\+bias}}
+\index{rrts\+\_\+goal\+\_\+bias@{rrts\+\_\+goal\+\_\+bias}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+goal\+\_\+bias}{rrts_goal_bias}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+goal\+\_\+bias}\hypertarget{classconfig__Params__planPath_ab021000cd2770f4f9202396dda3aeff7}{}\label{classconfig__Params__planPath_ab021000cd2770f4f9202396dda3aeff7}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+max\+\_\+iter@{rrts\+\_\+max\+\_\+iter}}
+\index{rrts\+\_\+max\+\_\+iter@{rrts\+\_\+max\+\_\+iter}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+max\+\_\+iter}{rrts_max_iter}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+max\+\_\+iter}\hypertarget{classconfig__Params__planPath_ade92a1a5f3d29658d460057219f80486}{}\label{classconfig__Params__planPath_ade92a1a5f3d29658d460057219f80486}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+neighbour\+\_\+factor@{rrts\+\_\+neighbour\+\_\+factor}}
+\index{rrts\+\_\+neighbour\+\_\+factor@{rrts\+\_\+neighbour\+\_\+factor}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+neighbour\+\_\+factor}{rrts_neighbour_factor}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+neighbour\+\_\+factor}\hypertarget{classconfig__Params__planPath_ab71b5c9e559f89ddea075e8012499d18}{}\label{classconfig__Params__planPath_ab71b5c9e559f89ddea075e8012499d18}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+scaling\+\_\+factor@{rrts\+\_\+scaling\+\_\+factor}}
+\index{rrts\+\_\+scaling\+\_\+factor@{rrts\+\_\+scaling\+\_\+factor}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+scaling\+\_\+factor}{rrts_scaling_factor}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+scaling\+\_\+factor}\hypertarget{classconfig__Params__planPath_a26329f440ce13957ff4c7fb643b66ced}{}\label{classconfig__Params__planPath_a26329f440ce13957ff4c7fb643b66ced}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+step\+\_\+size@{rrts\+\_\+step\+\_\+size}}
+\index{rrts\+\_\+step\+\_\+size@{rrts\+\_\+step\+\_\+size}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+step\+\_\+size}{rrts_step_size}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+step\+\_\+size}\hypertarget{classconfig__Params__planPath_a5d43faedc443b4ff25dc2fd5fd27b2dd}{}\label{classconfig__Params__planPath_a5d43faedc443b4ff25dc2fd5fd27b2dd}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrts\+\_\+turn\+\_\+radius@{rrts\+\_\+turn\+\_\+radius}}
+\index{rrts\+\_\+turn\+\_\+radius@{rrts\+\_\+turn\+\_\+radius}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrts\+\_\+turn\+\_\+radius}{rrts_turn_radius}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::rrts\+\_\+turn\+\_\+radius}\hypertarget{classconfig__Params__planPath_af0f84d366ab29443178fb55aa80ac23b}{}\label{classconfig__Params__planPath_af0f84d366ab29443178fb55aa80ac23b}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrtsompl\+\_\+max\+\_\+solve\+\_\+time@{rrtsompl\+\_\+max\+\_\+solve\+\_\+time}}
+\index{rrtsompl\+\_\+max\+\_\+solve\+\_\+time@{rrtsompl\+\_\+max\+\_\+solve\+\_\+time}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrtsompl\+\_\+max\+\_\+solve\+\_\+time}{rrtsompl_max_solve_time}}]{\setlength{\rightskip}{0pt plus 5cm}double config\+\_\+\+Params\+\_\+plan\+Path\+::rrtsompl\+\_\+max\+\_\+solve\+\_\+time}\hypertarget{classconfig__Params__planPath_aeb42cb9ee0112f1bdee15ff8d5808958}{}\label{classconfig__Params__planPath_aeb42cb9ee0112f1bdee15ff8d5808958}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!rrtsompl\+\_\+planner\+\_\+type@{rrtsompl\+\_\+planner\+\_\+type}}
+\index{rrtsompl\+\_\+planner\+\_\+type@{rrtsompl\+\_\+planner\+\_\+type}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{rrtsompl\+\_\+planner\+\_\+type}{rrtsompl_planner_type}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+\+Params\+\_\+plan\+Path\+::rrtsompl\+\_\+planner\+\_\+type}\hypertarget{classconfig__Params__planPath_afee977505c0e321629da095f9f0f91af}{}\label{classconfig__Params__planPath_afee977505c0e321629da095f9f0f91af}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!save\+\_\+global\+\_\+path@{save\+\_\+global\+\_\+path}}
+\index{save\+\_\+global\+\_\+path@{save\+\_\+global\+\_\+path}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{save\+\_\+global\+\_\+path}{save_global_path}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::save\+\_\+global\+\_\+path}\hypertarget{classconfig__Params__planPath_a6ec518fae1a865e277b6807e87cd71b2}{}\label{classconfig__Params__planPath_a6ec518fae1a865e277b6807e87cd71b2}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!save\+\_\+local\+\_\+path@{save\+\_\+local\+\_\+path}}
+\index{save\+\_\+local\+\_\+path@{save\+\_\+local\+\_\+path}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{save\+\_\+local\+\_\+path}{save_local_path}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::save\+\_\+local\+\_\+path}\hypertarget{classconfig__Params__planPath_ad7cdfaff92a0b04065934dc7e9f7bbbf}{}\label{classconfig__Params__planPath_ad7cdfaff92a0b04065934dc7e9f7bbbf}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!save\+\_\+path\+\_\+location@{save\+\_\+path\+\_\+location}}
+\index{save\+\_\+path\+\_\+location@{save\+\_\+path\+\_\+location}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{save\+\_\+path\+\_\+location}{save_path_location}}]{\setlength{\rightskip}{0pt plus 5cm}string config\+\_\+\+Params\+\_\+plan\+Path\+::save\+\_\+path\+\_\+location}\hypertarget{classconfig__Params__planPath_a7ab6118cdf2af9992ef481d1bc9d965f}{}\label{classconfig__Params__planPath_a7ab6118cdf2af9992ef481d1bc9d965f}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!use\+\_\+clothoids@{use\+\_\+clothoids}}
+\index{use\+\_\+clothoids@{use\+\_\+clothoids}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{use\+\_\+clothoids}{use_clothoids}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::use\+\_\+clothoids}\hypertarget{classconfig__Params__planPath_a3c4ddb466218ec03c2e5e94d6471f730}{}\label{classconfig__Params__planPath_a3c4ddb466218ec03c2e5e94d6471f730}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!use\+\_\+rrt@{use\+\_\+rrt}}
+\index{use\+\_\+rrt@{use\+\_\+rrt}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{use\+\_\+rrt}{use_rrt}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::use\+\_\+rrt}\hypertarget{classconfig__Params__planPath_ad95f059b3b5a19b938a4b4bcbff73eab}{}\label{classconfig__Params__planPath_ad95f059b3b5a19b938a4b4bcbff73eab}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!use\+\_\+rrt\+\_\+star@{use\+\_\+rrt\+\_\+star}}
+\index{use\+\_\+rrt\+\_\+star@{use\+\_\+rrt\+\_\+star}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{use\+\_\+rrt\+\_\+star}{use_rrt_star}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::use\+\_\+rrt\+\_\+star}\hypertarget{classconfig__Params__planPath_a88d2ed829eea295da08035b2e337a034}{}\label{classconfig__Params__planPath_a88d2ed829eea295da08035b2e337a034}
+\index{config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}!use\+\_\+rrt\+\_\+star\+\_\+ompl@{use\+\_\+rrt\+\_\+star\+\_\+ompl}}
+\index{use\+\_\+rrt\+\_\+star\+\_\+ompl@{use\+\_\+rrt\+\_\+star\+\_\+ompl}!config\+\_\+\+Params\+\_\+plan\+Path@{config\+\_\+\+Params\+\_\+plan\+Path}}
+\subsubsection[{\texorpdfstring{use\+\_\+rrt\+\_\+star\+\_\+ompl}{use_rrt_star_ompl}}]{\setlength{\rightskip}{0pt plus 5cm}bool config\+\_\+\+Params\+\_\+plan\+Path\+::use\+\_\+rrt\+\_\+star\+\_\+ompl}\hypertarget{classconfig__Params__planPath_a75a7e08f13b232240c5e6a226e34f333}{}\label{classconfig__Params__planPath_a75a7e08f13b232240c5e6a226e34f333}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{planPath_8cpp}{plan\+Path.\+cpp}\end{DoxyCompactItemize}

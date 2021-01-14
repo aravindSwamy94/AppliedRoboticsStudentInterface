@@ -1,0 +1,65 @@
+\hypertarget{processMap_8cpp}{}\section{src/process\+Map.cpp File Reference}
+\label{processMap_8cpp}\index{src/process\+Map.\+cpp@{src/process\+Map.\+cpp}}
+
+
+Contains the implementation of Obstacle detection, gate detecton , victm detection and victim recognition.  
+
+
+{\ttfamily \#include \char`\"{}student\+\_\+image\+\_\+elab\+\_\+interface.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}student\+\_\+planning\+\_\+interface.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$atomic$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$experimental/filesystem$>$}\\*
+{\ttfamily \#include $<$tesseract/baseapi.\+h$>$}\\*
+{\ttfamily \#include $<$leptonica/allheaders.\+h$>$}\\*
+{\ttfamily \#include $<$config4cpp/\+Configuration.\+h$>$}\\*
+Include dependency graph for process\+Map.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{processMap_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map}
+\begin{DoxyCompactList}\small\item\em Class which reads and stores the configuration params related to process\+Map functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestudent}{student}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespacestudent_a5ae5c8a6b753e8c2f86e2a6f70c44faf}{student\+::sort\+\_\+pair} (const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&a, const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&b)
+\item 
+bool \hyperlink{namespacestudent_a18b392b6e41e30b0e80eadf53d6d890b}{student\+::process\+Obstacles} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Obstacle detection function. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_abfb444a179b51148e9ad476a016f8fe3}{student\+::process\+Gate} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em gate detection function \end{DoxyCompactList}\item 
+int \hyperlink{namespacestudent_a4d19daafa227fb7503f8ff4111243d4d}{student\+::get\+\_\+victim\+\_\+id} (cv\+::\+Rect bounding\+Rect, cv\+::\+Mat img, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Function to get victim ID. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a6dd3cda22103f4e0c2ddb32cc68789c7}{student\+::process\+Victims} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Victim detection function along with digit recognition call. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a153a17ef667d7c10b8f33d815b9bc1bc}{student\+::process\+Map} (const cv\+::\+Mat \&img\+\_\+in, const double scale, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Main function to call process\+Obstacles, process\+Gate and process\+Victims. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{namespacestudent_aba626c3c54f4003c9c06f7fea899efc2}{student\+::debug\+\_\+image}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the implementation of Obstacle detection, gate detecton , victm detection and victim recognition. 
+
+\begin{DoxyAuthor}{Author}
+Aravind Swaminathan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10-\/\+Jan-\/2020 
+\end{DoxyDate}

@@ -1,0 +1,75 @@
+\hypertarget{planPath_8cpp}{}\section{src/plan\+Path.cpp File Reference}
+\label{planPath_8cpp}\index{src/plan\+Path.\+cpp@{src/plan\+Path.\+cpp}}
+{\ttfamily \#include \char`\"{}plan\+Path.\+hpp\char`\"{}}\\*
+Include dependency graph for plan\+Path.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{planPath_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path}
+\begin{DoxyCompactList}\small\item\em Class which reads and stores the configuration params related to plan\+Path functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestudent}{student}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{planPath_8cpp_a992f985b423725966690e4552becd32a}{print\+\_\+path} (\hyperlink{structPath}{Path} path, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params, bool global)
+\item 
+bool \hyperlink{namespacestudent_a38f4da9abe090023fe1fbf23f75b5b42}{student\+::get\+Curvature} (int step, \hyperlink{structPath}{Path} \&path)
+\item 
+bool \hyperlink{namespacestudent_abf207b6433d914c39067b7d538c2956c}{student\+::sort\+\_\+pair\+\_\+mission2} (const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&a, const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&b)
+\item 
+std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \hyperlink{namespacestudent_a962ac10ed4e3bf5be63aad206b4fc624}{student\+::obstacle\+Offsetting} (const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ ob, int offset\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Expand obstacles region to avoid collision. \end{DoxyCompactList}\item 
+\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \hyperlink{namespacestudent_a4533d2b12567821a0dbb957d0e607fc0}{student\+::resize\+Borders} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, int resize)
+\begin{DoxyCompactList}\small\item\em Resize the border for avoiding collision with border. \end{DoxyCompactList}\item 
+\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \hyperlink{namespacestudent_acf7520b9efd4309e03ec51e8cd7642b0}{student\+::sample\+\_\+borders} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders)
+\begin{DoxyCompactList}\small\item\em Sample the borders with multiple points. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \hyperlink{namespacestudent_a4bc9329b042a3a7854a08219559fb863}{student\+::get\+\_\+center} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&poly)
+\begin{DoxyCompactList}\small\item\em get centroid of any polygon \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a9c112c915d7bf1e28084673499b7d5ef}{student\+::point\+Inside\+Polygon} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} poly, \hyperlink{structPoint}{Point} pt)
+\begin{DoxyCompactList}\small\item\em function to check if a given point is inside polygon \end{DoxyCompactList}\item 
+double \hyperlink{namespacestudent_a2da434a66dc725fa325433bb9bd4e989}{student\+::compute\+\_\+angle\+\_\+gate} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} borders, double gateX, double gateY)
+\begin{DoxyCompactList}\small\item\em function to compute the gate angle \end{DoxyCompactList}\item 
+double \hyperlink{namespacestudent_ac8e0adb0fb2cb218e2410c460af2cae7}{student\+::internal\+\_\+angle} (double angle1, double angle2)
+\item 
+double \hyperlink{namespacestudent_ac51402ca51fa6c279f88cf560e32b422}{student\+::get\+\_\+angle} (\hyperlink{structPose}{Pose} first, \hyperlink{structPose}{Pose} second, \hyperlink{structPose}{Pose} third)
+\begin{DoxyCompactList}\small\item\em function to compute the approach angle between two nodes \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a7e23765e95f85572437c4f8bc2bc6d6e}{student\+::check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles} (\hyperlink{structPath}{Path} path, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} sampled\+\_\+borders, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center)
+\begin{DoxyCompactList}\small\item\em function to check if the generated path is colliding with borders and obstacles \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_ae985c265d91c51e3afdc782c70964ecd}{student\+::\+R\+R\+T\+\_\+\+Star} (const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \&local\+Goals, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&sampled\+\_\+borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of R\+RT Star function \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_ab8f6c07df2df619bef2b28d6f7ebcac7}{student\+::\+R\+R\+T\+\_\+\+Star\+\_\+ompl} (const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \&local\+Goals, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&sampled\+\_\+borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of R\+RT Star function using O\+M\+PL library \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \hyperlink{namespacestudent_a6d911d7d7118f5393eeb575e0e76cdf6}{student\+::compute\+\_\+vicitim\+\_\+mission2} (const float x, const float y, const float theta, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::pair$<$ double, double $>$ gate\+Center, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ victim\+\_\+list, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of Mission targets for mision 2 \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_acfe62076a49d23bb083f2f880fd24c77}{student\+::plan\+Path} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, const std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Plan a safe and fast path in the arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{plan\+Path.\+cpp@{plan\+Path.\+cpp}!print\+\_\+path@{print\+\_\+path}}
+\index{print\+\_\+path@{print\+\_\+path}!plan\+Path.\+cpp@{plan\+Path.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+path(\+Path path, config\+\_\+\+Params\+\_\+plan\+Path config\+\_\+params, bool global)}{print_path(Path path, config_Params_planPath config_params, bool global)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{{\bf Path}}]{path, }
+\item[{{\bf config\+\_\+\+Params\+\_\+plan\+Path}}]{config\+\_\+params, }
+\item[{bool}]{global}
+\end{DoxyParamCaption}
+)}\hypertarget{planPath_8cpp_a992f985b423725966690e4552becd32a}{}\label{planPath_8cpp_a992f985b423725966690e4552becd32a}
+Function to store the path information computed to a file. Save location hardcoded 
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ \hyperlink{structPath}{Path} struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

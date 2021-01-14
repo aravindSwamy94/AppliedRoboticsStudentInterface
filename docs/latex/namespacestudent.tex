@@ -1,0 +1,876 @@
+\hypertarget{namespacestudent}{}\section{student Namespace Reference}
+\label{namespacestudent}\index{student@{student}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacestudent_ab3f1d6c8dd4caa817efc0cd3c46eb2e0}{mouse\+Callback} (int event, int x, int y, int, void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Function called after every mouse click. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \hyperlink{namespacestudent_a01244e0e0a28d974de100ffcad7a2583}{pick\+N\+Points} (int n0, const cv\+::\+Mat \&img)
+\begin{DoxyCompactList}\small\item\em Function to pick points from image. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a6103f938ce28f8820c48c089d5f95098}{extrinsic\+Calib} (const cv\+::\+Mat \&img\+\_\+in, std\+::vector$<$ cv\+::\+Point3f $>$ object\+\_\+points, const cv\+::\+Mat \&camera\+\_\+matrix, cv\+::\+Mat \&rvec, cv\+::\+Mat \&tvec, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Function for extrinsic calibration. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_aceb2a29362b8223a9d3601d9496e1c98}{image\+Undistort} (const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&dist\+\_\+coeffs, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Function undistort the given image. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a528d33658d0d4d982a46f18b7abb4a70}{find\+Plane\+Transform} (const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&rvec, const cv\+::\+Mat \&tvec, const std\+::vector$<$ cv\+::\+Point3f $>$ \&object\+\_\+points\+\_\+plane, const std\+::vector$<$ cv\+::\+Point2f $>$ \&dest\+\_\+image\+\_\+points\+\_\+plane, cv\+::\+Mat \&plane\+\_\+transf, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Perspective projection. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a6b8caf348979f55e58a75193233c219d}{unwarp} (const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&transf, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Image unwarping. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_afd56b779672a672e15ac45dc927b8a6b}{find\+Robot} (const cv\+::\+Mat \&img\+\_\+in, const double scale, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&triangle, double \&x, double \&y, double \&theta, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em find Robot function in student interface \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a3117c968a47bf95f86bdb813a3b64e56}{load\+Image} (cv\+::\+Mat \&img\+\_\+out, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em load Image function in student interface \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a38f4da9abe090023fe1fbf23f75b5b42}{get\+Curvature} (int step, \hyperlink{structPath}{Path} \&path)
+\item 
+bool \hyperlink{namespacestudent_abf207b6433d914c39067b7d538c2956c}{sort\+\_\+pair\+\_\+mission2} (const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&a, const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&b)
+\item 
+std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \hyperlink{namespacestudent_a962ac10ed4e3bf5be63aad206b4fc624}{obstacle\+Offsetting} (const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ ob, int offset\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em Expand obstacles region to avoid collision. \end{DoxyCompactList}\item 
+\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \hyperlink{namespacestudent_a4533d2b12567821a0dbb957d0e607fc0}{resize\+Borders} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, int resize)
+\begin{DoxyCompactList}\small\item\em Resize the border for avoiding collision with border. \end{DoxyCompactList}\item 
+\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \hyperlink{namespacestudent_acf7520b9efd4309e03ec51e8cd7642b0}{sample\+\_\+borders} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders)
+\begin{DoxyCompactList}\small\item\em Sample the borders with multiple points. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \hyperlink{namespacestudent_a4bc9329b042a3a7854a08219559fb863}{get\+\_\+center} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&poly)
+\begin{DoxyCompactList}\small\item\em get centroid of any polygon \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a9c112c915d7bf1e28084673499b7d5ef}{point\+Inside\+Polygon} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} poly, \hyperlink{structPoint}{Point} pt)
+\begin{DoxyCompactList}\small\item\em function to check if a given point is inside polygon \end{DoxyCompactList}\item 
+double \hyperlink{namespacestudent_a2da434a66dc725fa325433bb9bd4e989}{compute\+\_\+angle\+\_\+gate} (\hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} borders, double gateX, double gateY)
+\begin{DoxyCompactList}\small\item\em function to compute the gate angle \end{DoxyCompactList}\item 
+double \hyperlink{namespacestudent_ac8e0adb0fb2cb218e2410c460af2cae7}{internal\+\_\+angle} (double angle1, double angle2)
+\item 
+double \hyperlink{namespacestudent_ac51402ca51fa6c279f88cf560e32b422}{get\+\_\+angle} (\hyperlink{structPose}{Pose} first, \hyperlink{structPose}{Pose} second, \hyperlink{structPose}{Pose} third)
+\begin{DoxyCompactList}\small\item\em function to compute the approach angle between two nodes \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a7e23765e95f85572437c4f8bc2bc6d6e}{check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles} (\hyperlink{structPath}{Path} path, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} sampled\+\_\+borders, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center)
+\begin{DoxyCompactList}\small\item\em function to check if the generated path is colliding with borders and obstacles \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_ae985c265d91c51e3afdc782c70964ecd}{R\+R\+T\+\_\+\+Star} (const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \&local\+Goals, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&sampled\+\_\+borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of R\+RT Star function \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_ab8f6c07df2df619bef2b28d6f7ebcac7}{R\+R\+T\+\_\+\+Star\+\_\+ompl} (const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \&local\+Goals, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&sampled\+\_\+borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ obs\+\_\+center, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of R\+RT Star function using O\+M\+PL library \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structPoint}{Point} $>$ \hyperlink{namespacestudent_a6d911d7d7118f5393eeb575e0e76cdf6}{compute\+\_\+vicitim\+\_\+mission2} (const float x, const float y, const float theta, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::pair$<$ double, double $>$ gate\+Center, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ victim\+\_\+list, \hyperlink{classconfig__Params__planPath}{config\+\_\+\+Params\+\_\+plan\+Path} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em implmentation of Mission targets for mision 2 \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_acfe62076a49d23bb083f2f880fd24c77}{plan\+Path} (const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&borders, const std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, const std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, const \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, const float x, const float y, const float theta, \hyperlink{structPath}{Path} \&path, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Plan a safe and fast path in the arena. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a5ae5c8a6b753e8c2f86e2a6f70c44faf}{sort\+\_\+pair} (const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&a, const std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&b)
+\item 
+bool \hyperlink{namespacestudent_a18b392b6e41e30b0e80eadf53d6d890b}{process\+Obstacles} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Obstacle detection function. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_abfb444a179b51148e9ad476a016f8fe3}{process\+Gate} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em gate detection function \end{DoxyCompactList}\item 
+int \hyperlink{namespacestudent_a4d19daafa227fb7503f8ff4111243d4d}{get\+\_\+victim\+\_\+id} (cv\+::\+Rect bounding\+Rect, cv\+::\+Mat img, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Function to get victim ID. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a6dd3cda22103f4e0c2ddb32cc68789c7}{process\+Victims} (const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, \hyperlink{classconfig__Params__ProcessMap}{config\+\_\+\+Params\+\_\+\+Process\+Map} config\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Victim detection function along with digit recognition call. \end{DoxyCompactList}\item 
+bool \hyperlink{namespacestudent_a153a17ef667d7c10b8f33d815b9bc1bc}{process\+Map} (const cv\+::\+Mat \&img\+\_\+in, const double scale, std\+::vector$<$ \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$ \&obstacle\+\_\+list, std\+::vector$<$ std\+::pair$<$ int, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} $>$$>$ \&victim\+\_\+list, \hyperlink{utils_8hpp_a18281038c49470960bd8f4d15b893441}{Polygon} \&gate, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Main function to call process\+Obstacles, process\+Gate and process\+Victims. \end{DoxyCompactList}\item 
+void \hyperlink{namespacestudent_a3b726e7af03a643c06dcde23057a82ea}{generic\+Image\+Listener} (const cv\+::\+Mat \&img\+\_\+in, std\+::string topic, const std\+::string \&config\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Function to save images for intrinsic calibration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{namespacestudent_a65fee22a07178fcde6362c2482b5fa7f}{dist\+\_\+coeffs\+\_\+for\+\_\+ex}
+\item 
+cv\+::\+Mat \hyperlink{namespacestudent_aba626c3c54f4003c9c06f7fea899efc2}{debug\+\_\+image}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{student@{student}!check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles@{check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles}}
+\index{check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles@{check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles}!student@{student}}
+\subsubsection[{\texorpdfstring{check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles(\+Path path, Polygon borders, Polygon sampled\+\_\+borders, std\+::vector$<$ Polygon $>$ obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ Point $>$ obs\+\_\+center)}{check_collison_with_borders_and_obstacles(Path path, Polygon borders, Polygon sampled_borders, std::vector< Polygon > obstacle_list, std::vector< double > obs_radius, std::vector< Point > obs_center)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::check\+\_\+collison\+\_\+with\+\_\+borders\+\_\+and\+\_\+obstacles (
+\begin{DoxyParamCaption}
+\item[{{\bf Path}}]{path, }
+\item[{{\bf Polygon}}]{borders, }
+\item[{{\bf Polygon}}]{sampled\+\_\+borders, }
+\item[{std\+::vector$<$ {\bf Polygon} $>$}]{obstacle\+\_\+list, }
+\item[{std\+::vector$<$ double $>$}]{obs\+\_\+radius, }
+\item[{std\+::vector$<$ {\bf Point} $>$}]{obs\+\_\+center}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a7e23765e95f85572437c4f8bc2bc6d6e}{}\label{namespacestudent_a7e23765e95f85572437c4f8bc2bc6d6e}
+
+
+function to check if the generated path is colliding with borders and obstacles 
+
+This is an additional function which checcks if the path generated by Clothoids/\+Dubins is colliding with the obstacles and borders. Here sampled borders are used to check the distance between path and borders 
+\begin{DoxyParams}{Parameters}
+{\em path} & The path generated by Clothoids/\+Dubins \\
+\hline
+{\em sampled\+\_\+borders} & the borders points which are sampled \\
+\hline
+{\em obstacle\+\_\+list} & The list of obstacle and their points \\
+\hline
+{\em obs\+\_\+radius} & Radius of each obstacle \\
+\hline
+{\em obs\+\_\+center} & Center of each obstacle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false-\/ Colliding/\+Not Colliding 
+\end{DoxyReturn}
+\index{student@{student}!compute\+\_\+angle\+\_\+gate@{compute\+\_\+angle\+\_\+gate}}
+\index{compute\+\_\+angle\+\_\+gate@{compute\+\_\+angle\+\_\+gate}!student@{student}}
+\subsubsection[{\texorpdfstring{compute\+\_\+angle\+\_\+gate(\+Polygon borders, double gate\+X, double gate\+Y)}{compute_angle_gate(Polygon borders, double gateX, double gateY)}}]{\setlength{\rightskip}{0pt plus 5cm}double student\+::compute\+\_\+angle\+\_\+gate (
+\begin{DoxyParamCaption}
+\item[{{\bf Polygon}}]{borders, }
+\item[{double}]{gateX, }
+\item[{double}]{gateY}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a2da434a66dc725fa325433bb9bd4e989}{}\label{namespacestudent_a2da434a66dc725fa325433bb9bd4e989}
+
+
+function to compute the gate angle 
+
+gate angle is very important and cannot be same as other cases. Because the recatngle of gate can be different locations(\+Left,\+Right,\+Bottom,\+Top) and oriented(\+Horizontal, Vertical) in different way. A combination of the locations and orientation are possible. 
+\begin{DoxyParams}{Parameters}
+{\em borders} & the border locations \\
+\hline
+{\em gateX} & gate center X \\
+\hline
+{\em gateY} & gate center Y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the approach angle of the final gate 
+\end{DoxyReturn}
+\index{student@{student}!compute\+\_\+vicitim\+\_\+mission2@{compute\+\_\+vicitim\+\_\+mission2}}
+\index{compute\+\_\+vicitim\+\_\+mission2@{compute\+\_\+vicitim\+\_\+mission2}!student@{student}}
+\subsubsection[{\texorpdfstring{compute\+\_\+vicitim\+\_\+mission2(const float x, const float y, const float theta, const Polygon \&borders, const std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, std\+::pair$<$ double, double $>$ gate\+Center, std\+::vector$<$ std\+::pair$<$ int, Polygon $>$$>$ victim\+\_\+list, config\+\_\+\+Params\+\_\+plan\+Path config\+\_\+params)}{compute_vicitim_mission2(const float x, const float y, const float theta, const Polygon &borders, const std::vector< Polygon > &obstacle_list, std::pair< double, double > gateCenter, std::vector< std::pair< int, Polygon >> victim_list, config_Params_planPath config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Point}$>$ student\+::compute\+\_\+vicitim\+\_\+mission2 (
+\begin{DoxyParamCaption}
+\item[{const float}]{x, }
+\item[{const float}]{y, }
+\item[{const float}]{theta, }
+\item[{const {\bf Polygon} \&}]{borders, }
+\item[{const std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{std\+::pair$<$ double, double $>$}]{gate\+Center, }
+\item[{std\+::vector$<$ std\+::pair$<$ int, {\bf Polygon} $>$$>$}]{victim\+\_\+list, }
+\item[{{\bf config\+\_\+\+Params\+\_\+plan\+Path}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a6d911d7d7118f5393eeb575e0e76cdf6}{}\label{namespacestudent_a6d911d7d7118f5393eeb575e0e76cdf6}
+
+
+implmentation of Mission targets for mision 2 
+
+This is very simple logic, where R\+R\+T$\ast$ path is generated from source and gate . And a threshold value is used to check the distance of victims from path. If the distance is high the cost is computed accordingly and that vicitm is rejected to be saved. Also the victim is then sorted based on their occurance in path direction. This helps save time for robot. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The robot location x \\
+\hline
+{\em y} & The robot location y \\
+\hline
+{\em theta} & The robot orientation theta \\
+\hline
+{\em path} & the output path variable \\
+\hline
+{\em local\+Goals} & the local goals which includes the victims and gate \\
+\hline
+{\em borders} & original borders \\
+\hline
+{\em sampled\+\_\+borders} & the borders points which are sampled \\
+\hline
+{\em obstacle\+\_\+list} & The list of obstacle and their points \\
+\hline
+{\em obs\+\_\+radius} & Radius of each obstacle \\
+\hline
+{\em obs\+\_\+center} & Center of each obstacle \\
+\hline
+{\em config\+\_\+folder} & Config folder which contains config file to get parameters realted to R\+R\+T$\ast$ \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!extrinsic\+Calib@{extrinsic\+Calib}}
+\index{extrinsic\+Calib@{extrinsic\+Calib}!student@{student}}
+\subsubsection[{\texorpdfstring{extrinsic\+Calib(const cv\+::\+Mat \&img\+\_\+in, std\+::vector$<$ cv\+::\+Point3f $>$ object\+\_\+points, const cv\+::\+Mat \&camera\+\_\+matrix, cv\+::\+Mat \&rvec, cv\+::\+Mat \&tvec, const std\+::string \&config\+\_\+folder)}{extrinsicCalib(const cv::Mat &img_in, std::vector< cv::Point3f > object_points, const cv::Mat &camera_matrix, cv::Mat &rvec, cv::Mat &tvec, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::extrinsic\+Calib (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{std\+::vector$<$ cv\+::\+Point3f $>$}]{object\+\_\+points, }
+\item[{const cv\+::\+Mat \&}]{camera\+\_\+matrix, }
+\item[{cv\+::\+Mat \&}]{rvec, }
+\item[{cv\+::\+Mat \&}]{tvec, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a6103f938ce28f8820c48c089d5f95098}{}\label{namespacestudent_a6103f938ce28f8820c48c089d5f95098}
+
+
+Function for extrinsic calibration. 
+
+Extrinsic calibration to determine the Rotational and translational matrix. Four points will be chosen in the image plane and then these 4 points will be solved using the solve\+PnP interface from opencv to solve the extrinsic problem. 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+in} & input image \\
+\hline
+{\em oject\+\_\+points} & 4 points that are chosen in image \\
+\hline
+{\em camera\+\_\+matrix} & The obtained camera matrix from intrinsic calibration \\
+\hline
+{\em rvec} & Output rotational vector \\
+\hline
+{\em tvec} & Output translational vector \\
+\hline
+{\em config\+\_\+folder} & Output folder (if file existing then function justs reads the file to get rvec and tvec) \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!find\+Plane\+Transform@{find\+Plane\+Transform}}
+\index{find\+Plane\+Transform@{find\+Plane\+Transform}!student@{student}}
+\subsubsection[{\texorpdfstring{find\+Plane\+Transform(const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&rvec, const cv\+::\+Mat \&tvec, const std\+::vector$<$ cv\+::\+Point3f $>$ \&object\+\_\+points\+\_\+plane, const std\+::vector$<$ cv\+::\+Point2f $>$ \&dest\+\_\+image\+\_\+points\+\_\+plane, cv\+::\+Mat \&plane\+\_\+transf, const std\+::string \&config\+\_\+folder)}{findPlaneTransform(const cv::Mat &cam_matrix, const cv::Mat &rvec, const cv::Mat &tvec, const std::vector< cv::Point3f > &object_points_plane, const std::vector< cv::Point2f > &dest_image_points_plane, cv::Mat &plane_transf, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::find\+Plane\+Transform (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{cam\+\_\+matrix, }
+\item[{const cv\+::\+Mat \&}]{rvec, }
+\item[{const cv\+::\+Mat \&}]{tvec, }
+\item[{const std\+::vector$<$ cv\+::\+Point3f $>$ \&}]{object\+\_\+points\+\_\+plane, }
+\item[{const std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{dest\+\_\+image\+\_\+points\+\_\+plane, }
+\item[{cv\+::\+Mat \&}]{plane\+\_\+transf, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a528d33658d0d4d982a46f18b7abb4a70}{}\label{namespacestudent_a528d33658d0d4d982a46f18b7abb4a70}
+
+
+Perspective projection. 
+
+Now to have a bird’s eye view of the image, where we need to project the 3D objects in a image plane, carry out Perspective Projection initially. This is again carried out with the opencv interfaces, project\+Points() and get\+Perspective\+Transform(). 
+\begin{DoxyParams}{Parameters}
+{\em cam\+\_\+matrix} & camera\+\_\+matrix \\
+\hline
+{\em rvec} & Output rotational vector \\
+\hline
+{\em tvec} & Output translational vector \\
+\hline
+{\em object\+\_\+points\+\_\+plane} & Object points \\
+\hline
+{\em dest\+\_\+image\+\_\+points\+\_\+plane} & destination image points plane \\
+\hline
+{\em config\+\_\+folder} & Output folder (if file existing then function justs reads the file to get rvec and tvec) \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!find\+Robot@{find\+Robot}}
+\index{find\+Robot@{find\+Robot}!student@{student}}
+\subsubsection[{\texorpdfstring{find\+Robot(const cv\+::\+Mat \&img\+\_\+in, const double scale, Polygon \&triangle, double \&x, double \&y, double \&theta, const std\+::string \&config\+\_\+folder)}{findRobot(const cv::Mat &img_in, const double scale, Polygon &triangle, double &x, double &y, double &theta, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::find\+Robot (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{const double}]{scale, }
+\item[{{\bf Polygon} \&}]{triangle, }
+\item[{double \&}]{x, }
+\item[{double \&}]{y, }
+\item[{double \&}]{theta, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_afd56b779672a672e15ac45dc927b8a6b}{}\label{namespacestudent_afd56b779672a672e15ac45dc927b8a6b}
+
+
+find Robot function in student interface 
+
+Directly utilized the function provided by the teaching assistant as I found that implementation was already in the best shape. R\+G\+B→\+H\+S\+V→blue mask→\+Contours→\+Approximate polynomial→find 3 points of polynomial→\+Find center of triangle→\+Find angle between top vertex and center(\+Orientation)→return state(x,y,ψ) 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+in} & Input Image \\
+\hline
+{\em scale} & scaling factor \\
+\hline
+{\em triangle} & The outpu triangle of robot \\
+\hline
+{\em x} & robot pose (center) x \\
+\hline
+{\em y} & robot pose (center) y \\
+\hline
+{\em theta} & robot pose (initial) theta \\
+\hline
+{\em config\+\_\+folder} & config folder if any configuration params to be loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false robot found or not 
+\end{DoxyReturn}
+\index{student@{student}!generic\+Image\+Listener@{generic\+Image\+Listener}}
+\index{generic\+Image\+Listener@{generic\+Image\+Listener}!student@{student}}
+\subsubsection[{\texorpdfstring{generic\+Image\+Listener(const cv\+::\+Mat \&img\+\_\+in, std\+::string topic, const std\+::string \&config\+\_\+folder)}{genericImageListener(const cv::Mat &img_in, std::string topic, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::generic\+Image\+Listener (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{std\+::string}]{topic, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a3b726e7af03a643c06dcde23057a82ea}{}\label{namespacestudent_a3b726e7af03a643c06dcde23057a82ea}
+
+
+Function to save images for intrinsic calibration. 
+
+Through this the images are saved from the simulator which contains checkerboard. 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+in} & Input Image \\
+\hline
+{\em topic} & topic in which the image arrives \\
+\hline
+{\em config\+\_\+folder} & config folder to store the saved images \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false robot found or not 
+\end{DoxyReturn}
+\index{student@{student}!get\+\_\+angle@{get\+\_\+angle}}
+\index{get\+\_\+angle@{get\+\_\+angle}!student@{student}}
+\subsubsection[{\texorpdfstring{get\+\_\+angle(\+Pose first, Pose second, Pose third)}{get_angle(Pose first, Pose second, Pose third)}}]{\setlength{\rightskip}{0pt plus 5cm}double student\+::get\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{{\bf Pose}}]{first, }
+\item[{{\bf Pose}}]{second, }
+\item[{{\bf Pose}}]{third}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_ac51402ca51fa6c279f88cf560e32b422}{}\label{namespacestudent_ac51402ca51fa6c279f88cf560e32b422}
+
+
+function to compute the approach angle between two nodes 
+
+The motion planning generates points betwwen source, victims and to gate. This points are then given to local planner(Clothoids/\+Dubins). This function will compute the approach angle between two points. Also a special logic to get the approach angle for victims. The logic is to use the line segment angle difference. Three points are taken, the angle between the first line segment(first and second points) and next line segments(second and third points) are used to compute thh approach angle of second point. 
+\begin{DoxyParams}{Parameters}
+{\em first} & First point \\
+\hline
+{\em second} & Second point \\
+\hline
+{\em third} & Third point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the approach angle of the second point 
+\end{DoxyReturn}
+\index{student@{student}!get\+\_\+center@{get\+\_\+center}}
+\index{get\+\_\+center@{get\+\_\+center}!student@{student}}
+\subsubsection[{\texorpdfstring{get\+\_\+center(const Polygon \&poly)}{get_center(const Polygon &poly)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$double, double$>$ student\+::get\+\_\+center (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polygon} \&}]{poly}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a4bc9329b042a3a7854a08219559fb863}{}\label{namespacestudent_a4bc9329b042a3a7854a08219559fb863}
+
+
+get centroid of any polygon 
+
+sum\+\_\+of\+\_\+all\+\_\+vertices/ size\+\_\+of\+\_\+vertices 
+\begin{DoxyParams}{Parameters}
+{\em poly} & Inpput polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+center as a std\+::pair 
+\end{DoxyReturn}
+\index{student@{student}!get\+\_\+victim\+\_\+id@{get\+\_\+victim\+\_\+id}}
+\index{get\+\_\+victim\+\_\+id@{get\+\_\+victim\+\_\+id}!student@{student}}
+\subsubsection[{\texorpdfstring{get\+\_\+victim\+\_\+id(cv\+::\+Rect bounding\+Rect, cv\+::\+Mat img, config\+\_\+\+Params\+\_\+\+Process\+Map config\+\_\+params)}{get_victim_id(cv::Rect boundingRect, cv::Mat img, config_Params_ProcessMap config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}int student\+::get\+\_\+victim\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Rect}]{bounding\+Rect, }
+\item[{cv\+::\+Mat}]{img, }
+\item[{{\bf config\+\_\+\+Params\+\_\+\+Process\+Map}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a4d19daafa227fb7503f8ff4111243d4d}{}\label{namespacestudent_a4d19daafa227fb7503f8ff4111243d4d}
+
+
+Function to get victim ID. 
+
+This is mainly done to detect the number of Victims, so that the priority to save the victims can be known to the planning algorithm. This involves template matching majorly and the templates were provided in lecture. I have used majorly the opencv template matching methods. But I also implemented the tesseract-\/ocr method,although the results were not satisfying. Template rotation was performed ,Each template will be rotated by 5 degrees and then they are set to calculate the score and the maximum of all of that will be be finalized as digits. Steps followed\+: Detect Victims→get bounding rect→mask and filter image→change background→read templates→\+Resize and filter the R\+O\+I→change different orientation of R\+O\+I→match template→return Digit 
+\begin{DoxyParams}{Parameters}
+{\em bounding\+Rect} & The bounding rectangle of the victim location \\
+\hline
+{\em img} & hsv image of the input \\
+\hline
+{\em config\+\_\+params} & configuration parameters realted to obstacle detection, includes template location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vicitm id 
+\end{DoxyReturn}
+\index{student@{student}!get\+Curvature@{get\+Curvature}}
+\index{get\+Curvature@{get\+Curvature}!student@{student}}
+\subsubsection[{\texorpdfstring{get\+Curvature(int step, Path \&path)}{getCurvature(int step, Path &path)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::get\+Curvature (
+\begin{DoxyParamCaption}
+\item[{int}]{step, }
+\item[{{\bf Path} \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a38f4da9abe090023fe1fbf23f75b5b42}{}\label{namespacestudent_a38f4da9abe090023fe1fbf23f75b5b42}
+\index{student@{student}!image\+Undistort@{image\+Undistort}}
+\index{image\+Undistort@{image\+Undistort}!student@{student}}
+\subsubsection[{\texorpdfstring{image\+Undistort(const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&cam\+\_\+matrix, const cv\+::\+Mat \&dist\+\_\+coeffs, const std\+::string \&config\+\_\+folder)}{imageUndistort(const cv::Mat &img_in, cv::Mat &img_out, const cv::Mat &cam_matrix, const cv::Mat &dist_coeffs, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::image\+Undistort (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{cv\+::\+Mat \&}]{img\+\_\+out, }
+\item[{const cv\+::\+Mat \&}]{cam\+\_\+matrix, }
+\item[{const cv\+::\+Mat \&}]{dist\+\_\+coeffs, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_aceb2a29362b8223a9d3601d9496e1c98}{}\label{namespacestudent_aceb2a29362b8223a9d3601d9496e1c98}
+
+
+Function undistort the given image. 
+
+Using the distortion coefficients obtained in the previous steps, remove the distorted effect on the image. This is done using the opencv undistort function 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+in} & input image \\
+\hline
+{\em img\+\_\+out} & output image \\
+\hline
+{\em camera\+\_\+matrix} & The obtained camera matrix from intrinsic calibration \\
+\hline
+{\em dist\+\_\+coeffs} & distortion coefficients \\
+\hline
+{\em config\+\_\+folder} & Output folder (if file existing then function justs reads the file to get rvec and tvec) \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!internal\+\_\+angle@{internal\+\_\+angle}}
+\index{internal\+\_\+angle@{internal\+\_\+angle}!student@{student}}
+\subsubsection[{\texorpdfstring{internal\+\_\+angle(double angle1, double angle2)}{internal_angle(double angle1, double angle2)}}]{\setlength{\rightskip}{0pt plus 5cm}double student\+::internal\+\_\+angle (
+\begin{DoxyParamCaption}
+\item[{double}]{angle1, }
+\item[{double}]{angle2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_ac8e0adb0fb2cb218e2410c460af2cae7}{}\label{namespacestudent_ac8e0adb0fb2cb218e2410c460af2cae7}
+\index{student@{student}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!student@{student}}
+\subsubsection[{\texorpdfstring{load\+Image(cv\+::\+Mat \&img\+\_\+out, const std\+::string \&config\+\_\+folder)}{loadImage(cv::Mat &img_out, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::load\+Image (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat \&}]{img\+\_\+out, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a3117c968a47bf95f86bdb813a3b64e56}{}\label{namespacestudent_a3117c968a47bf95f86bdb813a3b64e56}
+
+
+load Image function in student interface 
+
+Function used directly given by Teaching assistant 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+out} & Output Image \\
+\hline
+{\em config\+\_\+folder} & location where load image is stored \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!mouse\+Callback@{mouse\+Callback}}
+\index{mouse\+Callback@{mouse\+Callback}!student@{student}}
+\subsubsection[{\texorpdfstring{mouse\+Callback(int event, int x, int y, int, void $\ast$p)}{mouseCallback(int event, int x, int y, int, void *p)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::mouse\+Callback (
+\begin{DoxyParamCaption}
+\item[{int}]{event, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{, }
+\item[{void $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_ab3f1d6c8dd4caa817efc0cd3c46eb2e0}{}\label{namespacestudent_ab3f1d6c8dd4caa817efc0cd3c46eb2e0}
+
+
+Function called after every mouse click. 
+
+Function obatined from Professor interface 
+\begin{DoxyParams}{Parameters}
+{\em event} & mouse event occured \\
+\hline
+{\em x} & x-\/position of mouse event \\
+\hline
+{\em y} & y-\/position of mouse event \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!obstacle\+Offsetting@{obstacle\+Offsetting}}
+\index{obstacle\+Offsetting@{obstacle\+Offsetting}!student@{student}}
+\subsubsection[{\texorpdfstring{obstacle\+Offsetting(const std\+::vector$<$ Polygon $>$ ob, int offset\+\_\+radius)}{obstacleOffsetting(const std::vector< Polygon > ob, int offset_radius)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Polygon}$>$ student\+::obstacle\+Offsetting (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Polygon} $>$}]{ob, }
+\item[{int}]{offset\+\_\+radius}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a962ac10ed4e3bf5be63aad206b4fc624}{}\label{namespacestudent_a962ac10ed4e3bf5be63aad206b4fc624}
+
+
+Expand obstacles region to avoid collision. 
+
+Using clipper libray , the execution of enlarging the obstacles is easier with Add\+Path() and Execute () A\+PI\textquotesingle{}s 
+\begin{DoxyParams}{Parameters}
+{\em ob} & All Obstacles polygon to be expanded \\
+\hline
+{\em offet\+\_\+radius} & The radius by which the obstacle is to be expanded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exapanded obstacles with the given radius 
+\end{DoxyReturn}
+\index{student@{student}!pick\+N\+Points@{pick\+N\+Points}}
+\index{pick\+N\+Points@{pick\+N\+Points}!student@{student}}
+\subsubsection[{\texorpdfstring{pick\+N\+Points(int n0, const cv\+::\+Mat \&img)}{pickNPoints(int n0, const cv::Mat &img)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$cv\+::\+Point2f$>$ student\+::pick\+N\+Points (
+\begin{DoxyParamCaption}
+\item[{int}]{n0, }
+\item[{const cv\+::\+Mat \&}]{img}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a01244e0e0a28d974de100ffcad7a2583}{}\label{namespacestudent_a01244e0e0a28d974de100ffcad7a2583}
+
+
+Function to pick points from image. 
+
+Function obatined from Professor interface 
+\begin{DoxyParams}{Parameters}
+{\em n0} & number of points to be picked \\
+\hline
+{\em img} & the image from which the points are to be chosen \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!plan\+Path@{plan\+Path}}
+\index{plan\+Path@{plan\+Path}!student@{student}}
+\subsubsection[{\texorpdfstring{plan\+Path(const Polygon \&borders, const std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, const std\+::vector$<$ std\+::pair$<$ int, Polygon $>$$>$ \&victim\+\_\+list, const Polygon \&gate, const float x, const float y, const float theta, Path \&path, const std\+::string \&config\+\_\+folder)}{planPath(const Polygon &borders, const std::vector< Polygon > &obstacle_list, const std::vector< std::pair< int, Polygon >> &victim_list, const Polygon &gate, const float x, const float y, const float theta, Path &path, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::plan\+Path (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polygon} \&}]{borders, }
+\item[{const std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, {\bf Polygon} $>$$>$ \&}]{victim\+\_\+list, }
+\item[{const {\bf Polygon} \&}]{gate, }
+\item[{const float}]{x, }
+\item[{const float}]{y, }
+\item[{const float}]{theta, }
+\item[{{\bf Path} \&}]{path, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_acfe62076a49d23bb083f2f880fd24c77}{}\label{namespacestudent_acfe62076a49d23bb083f2f880fd24c77}
+
+
+Plan a safe and fast path in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em borders} & border of the arena \mbox{[}m\mbox{]} \\
+\hline
+{\em obstacle\+\_\+list} & list of obstacle polygon \mbox{[}m\mbox{]} \\
+\hline
+{\em victim\+\_\+list} & list of pair victim\+\_\+id and polygon \mbox{[}m\mbox{]} \\
+\hline
+{\em gate} & polygon representing the gate \mbox{[}m\mbox{]} \\
+\hline
+{\em x} & x position of the robot in the arena reference system \\
+\hline
+{\em y} & y position of the robot in the arena reference system \\
+\hline
+{\em theta} & yaw of the robot in the arena reference system \\
+\hline
+{\em config\+\_\+folder} & A custom string from config file. \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!point\+Inside\+Polygon@{point\+Inside\+Polygon}}
+\index{point\+Inside\+Polygon@{point\+Inside\+Polygon}!student@{student}}
+\subsubsection[{\texorpdfstring{point\+Inside\+Polygon(\+Polygon poly, Point pt)}{pointInsidePolygon(Polygon poly, Point pt)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::point\+Inside\+Polygon (
+\begin{DoxyParamCaption}
+\item[{{\bf Polygon}}]{poly, }
+\item[{{\bf Point}}]{pt}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a9c112c915d7bf1e28084673499b7d5ef}{}\label{namespacestudent_a9c112c915d7bf1e28084673499b7d5ef}
+
+
+function to check if a given point is inside polygon 
+
+using boost\+::within library 
+\begin{DoxyParams}{Parameters}
+{\em poly} & input polygon \\
+\hline
+{\em pt} & input point to check if this is inside the poly \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false -\/ inside\+Polygon/\+Not\+Inside\+Polygon 
+\end{DoxyReturn}
+\index{student@{student}!process\+Gate@{process\+Gate}}
+\index{process\+Gate@{process\+Gate}!student@{student}}
+\subsubsection[{\texorpdfstring{process\+Gate(const cv\+::\+Mat \&hsv\+\_\+img, const double scale, Polygon \&gate, config\+\_\+\+Params\+\_\+\+Process\+Map config\+\_\+params)}{processGate(const cv::Mat &hsv_img, const double scale, Polygon &gate, config_Params_ProcessMap config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::process\+Gate (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{hsv\+\_\+img, }
+\item[{const double}]{scale, }
+\item[{{\bf Polygon} \&}]{gate, }
+\item[{{\bf config\+\_\+\+Params\+\_\+\+Process\+Map}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_abfb444a179b51148e9ad476a016f8fe3}{}\label{namespacestudent_abfb444a179b51148e9ad476a016f8fe3}
+
+
+gate detection function 
+
+Steps followed\+: R\+G\+B→\+H\+S\+V→\+Apply Green mask→\+Contours→approximate Polynomial→detect 4 points→\+Return Gate 
+\begin{DoxyParams}{Parameters}
+{\em hsv\+\_\+img} & H\+SV Image input \\
+\hline
+{\em scale} & scaling factor \\
+\hline
+{\em gate} & Output gate polygon \\
+\hline
+{\em config\+\_\+params} & configuration parameters realted to gate detection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false Execution successful 
+\end{DoxyReturn}
+\index{student@{student}!process\+Map@{process\+Map}}
+\index{process\+Map@{process\+Map}!student@{student}}
+\subsubsection[{\texorpdfstring{process\+Map(const cv\+::\+Mat \&img\+\_\+in, const double scale, std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, std\+::vector$<$ std\+::pair$<$ int, Polygon $>$$>$ \&victim\+\_\+list, Polygon \&gate, const std\+::string \&config\+\_\+folder)}{processMap(const cv::Mat &img_in, const double scale, std::vector< Polygon > &obstacle_list, std::vector< std::pair< int, Polygon >> &victim_list, Polygon &gate, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::process\+Map (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{const double}]{scale, }
+\item[{std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{std\+::vector$<$ std\+::pair$<$ int, {\bf Polygon} $>$$>$ \&}]{victim\+\_\+list, }
+\item[{{\bf Polygon} \&}]{gate, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a153a17ef667d7c10b8f33d815b9bc1bc}{}\label{namespacestudent_a153a17ef667d7c10b8f33d815b9bc1bc}
+
+
+Main function to call process\+Obstacles, process\+Gate and process\+Victims. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounding\+Rect} & The bounding rectangle of the victim location \\
+\hline
+{\em img\+\_\+in} & rgb image of the input \\
+\hline
+{\em scale} & scaling factor \\
+\hline
+{\em obstacle\+\_\+list} & Output obstacle list \\
+\hline
+{\em victim\+\_\+list} & Output victim list pair \\
+\hline
+{\em gate} & Output gate polygon \\
+\hline
+{\em config\+\_\+folder} & config folder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false Execution successful 
+\end{DoxyReturn}
+\index{student@{student}!process\+Obstacles@{process\+Obstacles}}
+\index{process\+Obstacles@{process\+Obstacles}!student@{student}}
+\subsubsection[{\texorpdfstring{process\+Obstacles(const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, config\+\_\+\+Params\+\_\+\+Process\+Map config\+\_\+params)}{processObstacles(const cv::Mat &hsv_img, const double scale, std::vector< Polygon > &obstacle_list, config_Params_ProcessMap config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::process\+Obstacles (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{hsv\+\_\+img, }
+\item[{const double}]{scale, }
+\item[{std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{{\bf config\+\_\+\+Params\+\_\+\+Process\+Map}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a18b392b6e41e30b0e80eadf53d6d890b}{}\label{namespacestudent_a18b392b6e41e30b0e80eadf53d6d890b}
+
+
+Obstacle detection function. 
+
+Steps followed R\+G\+B→\+H\+S\+V→\+Apply red mask→\+Contours→approximate Polynomial→\+Return Obstacles 
+\begin{DoxyParams}{Parameters}
+{\em hsv\+\_\+img} & H\+SV Image input \\
+\hline
+{\em scale} & Scaling factor \\
+\hline
+{\em obstacle\+\_\+list} & Output obstacle list \\
+\hline
+{\em config\+\_\+params} & configuration parameters realted to obstacle detection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false Execution successful 
+\end{DoxyReturn}
+Steps involved in process Obstacles one by one
+
+First range of red region in H\+SV
+
+Second range of red region in H\+SV
+
+add the regions of red space in H\+SV format
+
+find all contours in the image
+
+approximate the contours
+
+create a obstacle list
+
+debug plot in seperate debug image \index{student@{student}!process\+Victims@{process\+Victims}}
+\index{process\+Victims@{process\+Victims}!student@{student}}
+\subsubsection[{\texorpdfstring{process\+Victims(const cv\+::\+Mat \&hsv\+\_\+img, const double scale, std\+::vector$<$ std\+::pair$<$ int, Polygon $>$$>$ \&victim\+\_\+list, config\+\_\+\+Params\+\_\+\+Process\+Map config\+\_\+params)}{processVictims(const cv::Mat &hsv_img, const double scale, std::vector< std::pair< int, Polygon >> &victim_list, config_Params_ProcessMap config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::process\+Victims (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{hsv\+\_\+img, }
+\item[{const double}]{scale, }
+\item[{std\+::vector$<$ std\+::pair$<$ int, {\bf Polygon} $>$$>$ \&}]{victim\+\_\+list, }
+\item[{{\bf config\+\_\+\+Params\+\_\+\+Process\+Map}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a6dd3cda22103f4e0c2ddb32cc68789c7}{}\label{namespacestudent_a6dd3cda22103f4e0c2ddb32cc68789c7}
+
+
+Victim detection function along with digit recognition call. 
+
+Steps followed\+: R\+G\+B→\+H\+S\+V→\+Apply Green mask→\+Contours→approximate Polynomial→detect more than 6 points(check circle)→ get id of victim → return Victims 
+\begin{DoxyParams}{Parameters}
+{\em hsv\+\_\+img} & H\+SV Image input \\
+\hline
+{\em scale} & scaling factor \\
+\hline
+{\em victim\+\_\+list} & Output victim list pair \\
+\hline
+{\em config\+\_\+params} & configuration parameters realted to gate detection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false Execution successful 
+\end{DoxyReturn}
+\index{student@{student}!resize\+Borders@{resize\+Borders}}
+\index{resize\+Borders@{resize\+Borders}!student@{student}}
+\subsubsection[{\texorpdfstring{resize\+Borders(const Polygon \&borders, int resize)}{resizeBorders(const Polygon &borders, int resize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Polygon} student\+::resize\+Borders (
+\begin{DoxyParamCaption}
+\item[{const {\bf Polygon} \&}]{borders, }
+\item[{int}]{resize}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a4533d2b12567821a0dbb957d0e607fc0}{}\label{namespacestudent_a4533d2b12567821a0dbb957d0e607fc0}
+
+
+Resize the border for avoiding collision with border. 
+
+manual computation of resizing borders
+
+
+\begin{DoxyParams}{Parameters}
+{\em borders} & border which is given as polygon \\
+\hline
+{\em resize} & the resizing factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resized border 
+\end{DoxyReturn}
+\index{student@{student}!R\+R\+T\+\_\+\+Star@{R\+R\+T\+\_\+\+Star}}
+\index{R\+R\+T\+\_\+\+Star@{R\+R\+T\+\_\+\+Star}!student@{student}}
+\subsubsection[{\texorpdfstring{R\+R\+T\+\_\+\+Star(const float x, const float y, const float theta, Path \&path, std\+::vector$<$ Point $>$ \&local\+Goals, const Polygon \&borders, Polygon \&sampled\+\_\+borders, const std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ Point $>$ obs\+\_\+center, config\+\_\+\+Params\+\_\+plan\+Path config\+\_\+params)}{RRT_Star(const float x, const float y, const float theta, Path &path, std::vector< Point > &localGoals, const Polygon &borders, Polygon &sampled_borders, const std::vector< Polygon > &obstacle_list, std::vector< double > obs_radius, std::vector< Point > obs_center, config_Params_planPath config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::\+R\+R\+T\+\_\+\+Star (
+\begin{DoxyParamCaption}
+\item[{const float}]{x, }
+\item[{const float}]{y, }
+\item[{const float}]{theta, }
+\item[{{\bf Path} \&}]{path, }
+\item[{std\+::vector$<$ {\bf Point} $>$ \&}]{local\+Goals, }
+\item[{const {\bf Polygon} \&}]{borders, }
+\item[{{\bf Polygon} \&}]{sampled\+\_\+borders, }
+\item[{const std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{std\+::vector$<$ double $>$}]{obs\+\_\+radius, }
+\item[{std\+::vector$<$ {\bf Point} $>$}]{obs\+\_\+center, }
+\item[{{\bf config\+\_\+\+Params\+\_\+plan\+Path}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_ae985c265d91c51e3afdc782c70964ecd}{}\label{namespacestudent_ae985c265d91c51e3afdc782c70964ecd}
+
+
+implmentation of R\+RT Star function 
+
+This is an own implementation of R\+RT Star with few references. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The robot location x \\
+\hline
+{\em y} & The robot location y \\
+\hline
+{\em theta} & The robot orientation theta \\
+\hline
+{\em path} & the output path variable \\
+\hline
+{\em local\+Goals} & the local goals which includes the victims and gate \\
+\hline
+{\em borders} & original borders \\
+\hline
+{\em sampled\+\_\+borders} & the borders points which are sampled \\
+\hline
+{\em obstacle\+\_\+list} & The list of obstacle and their points \\
+\hline
+{\em obs\+\_\+radius} & Radius of each obstacle \\
+\hline
+{\em obs\+\_\+center} & Center of each obstacle \\
+\hline
+{\em config\+\_\+folder} & Config folder which contains config file to get parameters realted to R\+R\+T$\ast$ \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!R\+R\+T\+\_\+\+Star\+\_\+ompl@{R\+R\+T\+\_\+\+Star\+\_\+ompl}}
+\index{R\+R\+T\+\_\+\+Star\+\_\+ompl@{R\+R\+T\+\_\+\+Star\+\_\+ompl}!student@{student}}
+\subsubsection[{\texorpdfstring{R\+R\+T\+\_\+\+Star\+\_\+ompl(const float x, const float y, const float theta, Path \&path, std\+::vector$<$ Point $>$ \&local\+Goals, const Polygon \&borders, Polygon \&sampled\+\_\+borders, const std\+::vector$<$ Polygon $>$ \&obstacle\+\_\+list, std\+::vector$<$ double $>$ obs\+\_\+radius, std\+::vector$<$ Point $>$ obs\+\_\+center, config\+\_\+\+Params\+\_\+plan\+Path config\+\_\+params)}{RRT_Star_ompl(const float x, const float y, const float theta, Path &path, std::vector< Point > &localGoals, const Polygon &borders, Polygon &sampled_borders, const std::vector< Polygon > &obstacle_list, std::vector< double > obs_radius, std::vector< Point > obs_center, config_Params_planPath config_params)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::\+R\+R\+T\+\_\+\+Star\+\_\+ompl (
+\begin{DoxyParamCaption}
+\item[{const float}]{x, }
+\item[{const float}]{y, }
+\item[{const float}]{theta, }
+\item[{{\bf Path} \&}]{path, }
+\item[{std\+::vector$<$ {\bf Point} $>$ \&}]{local\+Goals, }
+\item[{const {\bf Polygon} \&}]{borders, }
+\item[{{\bf Polygon} \&}]{sampled\+\_\+borders, }
+\item[{const std\+::vector$<$ {\bf Polygon} $>$ \&}]{obstacle\+\_\+list, }
+\item[{std\+::vector$<$ double $>$}]{obs\+\_\+radius, }
+\item[{std\+::vector$<$ {\bf Point} $>$}]{obs\+\_\+center, }
+\item[{{\bf config\+\_\+\+Params\+\_\+plan\+Path}}]{config\+\_\+params}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_ab8f6c07df2df619bef2b28d6f7ebcac7}{}\label{namespacestudent_ab8f6c07df2df619bef2b28d6f7ebcac7}
+
+
+implmentation of R\+RT Star function using O\+M\+PL library 
+
+This is an R\+RT Star using O\+M\+PL A\+PI\textquotesingle{}s. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The robot location x \\
+\hline
+{\em y} & The robot location y \\
+\hline
+{\em theta} & The robot orientation theta \\
+\hline
+{\em path} & the output path variable \\
+\hline
+{\em local\+Goals} & the local goals which includes the victims and gate \\
+\hline
+{\em borders} & original borders \\
+\hline
+{\em sampled\+\_\+borders} & the borders points which are sampled \\
+\hline
+{\em obstacle\+\_\+list} & The list of obstacle and their points \\
+\hline
+{\em obs\+\_\+radius} & Radius of each obstacle \\
+\hline
+{\em obs\+\_\+center} & Center of each obstacle \\
+\hline
+{\em config\+\_\+folder} & Config folder which contains config file to get parameters realted to R\+R\+T$\ast$ \\
+\hline
+\end{DoxyParams}
+\index{student@{student}!sample\+\_\+borders@{sample\+\_\+borders}}
+\index{sample\+\_\+borders@{sample\+\_\+borders}!student@{student}}
+\subsubsection[{\texorpdfstring{sample\+\_\+borders(\+Polygon \&borders)}{sample_borders(Polygon &borders)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Polygon} student\+::sample\+\_\+borders (
+\begin{DoxyParamCaption}
+\item[{{\bf Polygon} \&}]{borders}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_acf7520b9efd4309e03ec51e8cd7642b0}{}\label{namespacestudent_acf7520b9efd4309e03ec51e8cd7642b0}
+
+
+Sample the borders with multiple points. 
+
+interpolate the border points, to check if generated path is closer to sampled borders 
+\begin{DoxyParams}{Parameters}
+{\em borders} & border which is given as polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+interpolated border points 
+\end{DoxyReturn}
+\index{student@{student}!sort\+\_\+pair@{sort\+\_\+pair}}
+\index{sort\+\_\+pair@{sort\+\_\+pair}!student@{student}}
+\subsubsection[{\texorpdfstring{sort\+\_\+pair(const std\+::pair$<$ int, Polygon $>$ \&a, const std\+::pair$<$ int, Polygon $>$ \&b)}{sort_pair(const std::pair< int, Polygon > &a, const std::pair< int, Polygon > &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::sort\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ int, {\bf Polygon} $>$ \&}]{a, }
+\item[{const std\+::pair$<$ int, {\bf Polygon} $>$ \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a5ae5c8a6b753e8c2f86e2a6f70c44faf}{}\label{namespacestudent_a5ae5c8a6b753e8c2f86e2a6f70c44faf}
+\index{student@{student}!sort\+\_\+pair\+\_\+mission2@{sort\+\_\+pair\+\_\+mission2}}
+\index{sort\+\_\+pair\+\_\+mission2@{sort\+\_\+pair\+\_\+mission2}!student@{student}}
+\subsubsection[{\texorpdfstring{sort\+\_\+pair\+\_\+mission2(const std\+::pair$<$ int, Polygon $>$ \&a, const std\+::pair$<$ int, Polygon $>$ \&b)}{sort_pair_mission2(const std::pair< int, Polygon > &a, const std::pair< int, Polygon > &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool student\+::sort\+\_\+pair\+\_\+mission2 (
+\begin{DoxyParamCaption}
+\item[{const std\+::pair$<$ int, {\bf Polygon} $>$ \&}]{a, }
+\item[{const std\+::pair$<$ int, {\bf Polygon} $>$ \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_abf207b6433d914c39067b7d538c2956c}{}\label{namespacestudent_abf207b6433d914c39067b7d538c2956c}
+\index{student@{student}!unwarp@{unwarp}}
+\index{unwarp@{unwarp}!student@{student}}
+\subsubsection[{\texorpdfstring{unwarp(const cv\+::\+Mat \&img\+\_\+in, cv\+::\+Mat \&img\+\_\+out, const cv\+::\+Mat \&transf, const std\+::string \&config\+\_\+folder)}{unwarp(const cv::Mat &img_in, cv::Mat &img_out, const cv::Mat &transf, const std::string &config_folder)}}]{\setlength{\rightskip}{0pt plus 5cm}void student\+::unwarp (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{img\+\_\+in, }
+\item[{cv\+::\+Mat \&}]{img\+\_\+out, }
+\item[{const cv\+::\+Mat \&}]{transf, }
+\item[{const std\+::string \&}]{config\+\_\+folder}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacestudent_a6b8caf348979f55e58a75193233c219d}{}\label{namespacestudent_a6b8caf348979f55e58a75193233c219d}
+
+
+Image unwarping. 
+
+Image unwarping using opencv A\+PI warp\+Perspective() 
+\begin{DoxyParams}{Parameters}
+{\em img\+\_\+in} & input image \\
+\hline
+{\em img\+\_\+out} & output image \\
+\hline
+{\em transf} & tranformation matrix \\
+\hline
+{\em config\+\_\+folder} & Output folder (if file existing then function justs reads the file to get rvec and tvec) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{student@{student}!debug\+\_\+image@{debug\+\_\+image}}
+\index{debug\+\_\+image@{debug\+\_\+image}!student@{student}}
+\subsubsection[{\texorpdfstring{debug\+\_\+image}{debug_image}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat student\+::debug\+\_\+image}\hypertarget{namespacestudent_aba626c3c54f4003c9c06f7fea899efc2}{}\label{namespacestudent_aba626c3c54f4003c9c06f7fea899efc2}
+\index{student@{student}!dist\+\_\+coeffs\+\_\+for\+\_\+ex@{dist\+\_\+coeffs\+\_\+for\+\_\+ex}}
+\index{dist\+\_\+coeffs\+\_\+for\+\_\+ex@{dist\+\_\+coeffs\+\_\+for\+\_\+ex}!student@{student}}
+\subsubsection[{\texorpdfstring{dist\+\_\+coeffs\+\_\+for\+\_\+ex}{dist_coeffs_for_ex}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat student\+::dist\+\_\+coeffs\+\_\+for\+\_\+ex}\hypertarget{namespacestudent_a65fee22a07178fcde6362c2482b5fa7f}{}\label{namespacestudent_a65fee22a07178fcde6362c2482b5fa7f}
