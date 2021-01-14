@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['l',['L',['../structdubinsCurve.html#a4f52a92a56a4544b055cda0dbf7c4ad4',1,'dubinsCurve']]],
-  ['local_5fpath_5ffile',['local_path_file',['../classconfig__Params__planPath.html#a6d7eb54d97fd5e214392294649c867ae',1,'config_Params_planPath']]]
+  ['k',['k',['../structdubinsArc.html#ae3556ac95899f6a96dcb728a864c74b3',1,'dubinsArc']]],
+  ['kappa',['kappa',['../structPose.html#a4f409e1fe4ae5626042bc2942df9367a',1,'Pose']]],
+  ['kmax',['kmax',['../classconfig__Params__planPath.html#a9a0611f65bd2d57d59c25535c2a7f9b7',1,'config_Params_planPath']]]
 ];

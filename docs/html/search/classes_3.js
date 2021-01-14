@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['rrtobstacles',['RRTObstacles',['../classRRTObstacles.html',1,'']]]
+  ['path',['Path',['../structPath.html',1,'']]],
+  ['point',['Point',['../structPoint.html',1,'']]],
+  ['pose',['Pose',['../structPose.html',1,'']]]
 ];

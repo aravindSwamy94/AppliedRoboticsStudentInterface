@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['path',['Path',['../structPath.html',1,'Path'],['../structPath.html#ad51cd6da6d625dccc562c98498d4675a',1,'Path::Path(std::vector&lt; Pose &gt; const &amp;points)'],['../structPath.html#af26cfab021ddf49af73da3b2beca85ac',1,'Path::Path()']]],
+  ['parent',['parent',['../structNode.html#ad8184598cdea70e4bbdfd76f2b0f9e85',1,'Node']]],
+  ['path',['Path',['../structPath.html',1,'Path'],['../classRRTSTAR.html#a3c4afcfe867e23c36e268aedd488e062',1,'RRTSTAR::path()'],['../structPath.html#ad51cd6da6d625dccc562c98498d4675a',1,'Path::Path(std::vector&lt; Pose &gt; const &amp;points)'],['../structPath.html#af26cfab021ddf49af73da3b2beca85ac',1,'Path::Path()']]],
+  ['pathcost',['PathCost',['../classRRTSTAR.html#aec4f110bd8cf010d2c86f235306996e7',1,'RRTSTAR']]],
   ['picknpoints',['pickNPoints',['../namespacestudent.html#a01244e0e0a28d974de100ffcad7a2583',1,'student']]],
-  ['planner_5finf_5frrtstar',['PLANNER_INF_RRTSTAR',['../ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2',1,'ompl_planning.hpp']]],
+  ['planner_5fprmstar',['PLANNER_PRMSTAR',['../ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5',1,'ompl_planning.hpp']]],
   ['planner_5frrtstar',['PLANNER_RRTSTAR',['../ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9',1,'ompl_planning.hpp']]],
   ['planningobjective',['planningObjective',['../ompl__planning_8hpp.html#a536d9a9c9c364afecdce87aaed9c4435',1,'ompl_planning.hpp']]],
   ['planpath',['planPath',['../namespacestudent.html#acfe62076a49d23bb083f2f880fd24c77',1,'student']]],
@@ -13,6 +15,7 @@ var searchData=
   ['points',['points',['../structPath.html#a9847c298e904e1230b5706d22ed56c17',1,'Path']]],
   ['polygon',['Polygon',['../utils_8hpp.html#a18281038c49470960bd8f4d15b893441',1,'utils.hpp']]],
   ['pose',['Pose',['../structPose.html',1,'Pose'],['../structPose.html#a80c8e028bf0a6d815db4bbd599877f22',1,'Pose::Pose(float s, float x, float y, float theta, float kappa)'],['../structPose.html#a8a4171c8a6b09e37fb011997da9ea2ad',1,'Pose::Pose()']]],
+  ['position',['position',['../structNode.html#a4894d1352134bef767e5c1aba7aa3207',1,'Node']]],
   ['print',['print',['../classconfig__Params__ProcessMap.html#a6c1029c265112fc3337334da05eb1854',1,'config_Params_ProcessMap']]],
   ['print_5fpath',['print_path',['../planPath_8cpp.html#a992f985b423725966690e4552becd32a',1,'planPath.cpp']]],
   ['processgate',['processGate',['../namespacestudent.html#abfb444a179b51148e9ad476a016f8fe3',1,'student']]],

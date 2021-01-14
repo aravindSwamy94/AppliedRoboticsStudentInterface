@@ -1,5 +1,5 @@
 <map id="include/dubins_local.h" name="include/dubins_local.h">
 <area shape="rect" id="node2" href="$dubins__local_8cpp.html" title="Contains Function definition of dubins local planner. " alt="" coords="5,80,147,107"/>
 <area shape="rect" id="node3" href="$planPath_8hpp.html" title="Contains header inforamtion of planPath functions. " alt="" coords="170,80,313,107"/>
-<area shape="rect" id="node4" href="$planPath_8cpp.html" title="src/planPath.cpp" alt="" coords="181,155,301,181"/>
+<area shape="rect" id="node4" href="$planPath_8cpp.html" title="Contains the implementation of planPath functions. " alt="" coords="181,155,301,181"/>
 </map>

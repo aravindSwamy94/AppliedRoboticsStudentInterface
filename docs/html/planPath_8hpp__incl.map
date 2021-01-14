@@ -1,5 +1,7 @@
 <map id="include/planPath.hpp" name="include/planPath.hpp">
 <area shape="rect" id="node20" href="$dubins__local_8h.html" title="Contains function declaration related to dubins planner. " alt="" coords="635,87,741,114"/>
-<area shape="rect" id="node28" href="$ompl__planning_8hpp.html" title="Contains most of the Functions related to OMPL planer. " alt="" coords="1631,87,1761,114"/>
-<area shape="rect" id="node21" href="$utils_8hpp.html" title="utils.hpp" alt="" coords="670,177,741,203"/>
+<area shape="rect" id="node26" href="$rrtstar_8h.html" title="Contains the declation of RRT* class and RRT* Node. " alt="" coords="765,87,832,114"/>
+<area shape="rect" id="node30" href="$ompl__planning_8hpp.html" title="Contains most of the Functions related to OMPL planer. " alt="" coords="1531,87,1661,114"/>
+<area shape="rect" id="node21" href="$utils_8hpp.html" title="utils.hpp" alt="" coords="807,177,878,203"/>
+<area shape="rect" id="node27" href="$obstacles_8h.html" title="Contains the declaration of Obstacles class. " alt="" coords="605,177,694,203"/>
 </map>

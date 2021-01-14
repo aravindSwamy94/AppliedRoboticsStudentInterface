@@ -1,4 +1,4 @@
 <map id="include/ompl_planning.hpp" name="include/ompl_planning.hpp">
 <area shape="rect" id="node2" href="$planPath_8hpp.html" title="Contains header inforamtion of planPath functions. " alt="" coords="21,80,164,107"/>
-<area shape="rect" id="node3" href="$planPath_8cpp.html" title="src/planPath.cpp" alt="" coords="33,155,153,181"/>
+<area shape="rect" id="node3" href="$planPath_8cpp.html" title="Contains the implementation of planPath functions. " alt="" coords="33,155,153,181"/>
 </map>

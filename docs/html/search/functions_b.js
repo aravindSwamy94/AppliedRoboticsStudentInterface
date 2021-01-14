@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['rangesymm',['rangeSymm',['../dubins__local_8cpp.html#a77b0c223b0d9603e0d04e1e5f7a34ae7',1,'rangeSymm(double const &amp;ang):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a77b0c223b0d9603e0d04e1e5f7a34ae7',1,'rangeSymm(double const &amp;ang):&#160;dubins_local.cpp']]],
-  ['read',['read',['../classconfig__Params__planPath.html#aa0450f0e52f8134af81358873a9cca4b',1,'config_Params_planPath::read()'],['../classconfig__Params__ProcessMap.html#a31fb9d4c3cb96147d08e7b313e8e81e3',1,'config_Params_ProcessMap::read()']]],
-  ['resizeborders',['resizeBorders',['../namespacestudent.html#a4533d2b12567821a0dbb957d0e607fc0',1,'student']]],
-  ['rlr',['RLR',['../dubins__local_8cpp.html#a321ba579c7cd4b08e84fc34b1d1cdc88',1,'RLR(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a321ba579c7cd4b08e84fc34b1d1cdc88',1,'RLR(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp']]],
-  ['rrt_5fstar',['RRT_Star',['../namespacestudent.html#ae985c265d91c51e3afdc782c70964ecd',1,'student']]],
-  ['rrt_5fstar_5fompl',['RRT_Star_ompl',['../namespacestudent.html#ab8f6c07df2df619bef2b28d6f7ebcac7',1,'student']]],
-  ['rrtobstacles',['RRTObstacles',['../classRRTObstacles.html#a2a8b080aee81476a84987f9cc3aa6186',1,'RRTObstacles']]],
-  ['rsl',['RSL',['../dubins__local_8cpp.html#a42faf356426f58054d755d9c4c7dfeaa',1,'RSL(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a42faf356426f58054d755d9c4c7dfeaa',1,'RSL(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp']]],
-  ['rsr',['RSR',['../dubins__local_8cpp.html#a0bae7f9e0e9f1263038e26b339aef3d8',1,'RSR(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a0bae7f9e0e9f1263038e26b339aef3d8',1,'RSR(double sc_th0, double sc_thf, double sc_kmax, bool &amp;ok, double &amp;sc_s1, double &amp;sc_s2, double &amp;sc_s3):&#160;dubins_local.cpp']]]
+  ['path',['Path',['../structPath.html#ad51cd6da6d625dccc562c98498d4675a',1,'Path::Path(std::vector&lt; Pose &gt; const &amp;points)'],['../structPath.html#af26cfab021ddf49af73da3b2beca85ac',1,'Path::Path()']]],
+  ['pathcost',['PathCost',['../classRRTSTAR.html#aec4f110bd8cf010d2c86f235306996e7',1,'RRTSTAR']]],
+  ['picknpoints',['pickNPoints',['../namespacestudent.html#a01244e0e0a28d974de100ffcad7a2583',1,'student']]],
+  ['planpath',['planPath',['../namespacestudent.html#acfe62076a49d23bb083f2f880fd24c77',1,'student']]],
+  ['point',['Point',['../structPoint.html#a30bc8409287de4f43e160664be834636',1,'Point::Point(float x, float y)'],['../structPoint.html#ad92f2337b839a94ce97dcdb439b4325a',1,'Point::Point()']]],
+  ['pointinsidepolygon',['pointInsidePolygon',['../namespacestudent.html#a9c112c915d7bf1e28084673499b7d5ef',1,'student']]],
+  ['pose',['Pose',['../structPose.html#a80c8e028bf0a6d815db4bbd599877f22',1,'Pose::Pose(float s, float x, float y, float theta, float kappa)'],['../structPose.html#a8a4171c8a6b09e37fb011997da9ea2ad',1,'Pose::Pose()']]],
+  ['print',['print',['../classconfig__Params__ProcessMap.html#a6c1029c265112fc3337334da05eb1854',1,'config_Params_ProcessMap']]],
+  ['print_5fpath',['print_path',['../planPath_8cpp.html#a992f985b423725966690e4552becd32a',1,'planPath.cpp']]],
+  ['processgate',['processGate',['../namespacestudent.html#abfb444a179b51148e9ad476a016f8fe3',1,'student']]],
+  ['processmap',['processMap',['../namespacestudent.html#a153a17ef667d7c10b8f33d815b9bc1bc',1,'student']]],
+  ['processobstacles',['processObstacles',['../namespacestudent.html#a18b392b6e41e30b0e80eadf53d6d890b',1,'student']]],
+  ['processvictims',['processVictims',['../namespacestudent.html#a6dd3cda22103f4e0c2ddb32cc68789c7',1,'student']]]
 ];

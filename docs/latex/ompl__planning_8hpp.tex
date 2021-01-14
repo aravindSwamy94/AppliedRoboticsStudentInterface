@@ -11,7 +11,7 @@ Contains most of the Functions related to O\+M\+PL planer.
 {\ttfamily \#include $<$ompl/base/objectives/\+Maximize\+Min\+Clearance\+Objective.\+h$>$}\\*
 {\ttfamily \#include $<$ompl/base/spaces/\+Real\+Vector\+State\+Space.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}ompl/util/\+Console.\+h\char`\"{}}\\*
-{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+Informed\+R\+R\+Tstar.\+h$>$}\\*
+{\ttfamily \#include $<$ompl/geometric/planners/prm/\+P\+R\+Mstar.\+h$>$}\\*
 {\ttfamily \#include $<$ompl/geometric/planners/rrt/\+R\+R\+Tstar.\+h$>$}\\*
 {\ttfamily \#include $<$ompl/base/\+Planner\+Data\+Graph.\+h$>$}\\*
 {\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\\*
@@ -59,7 +59,7 @@ typedef boost\+::geometry\+::model\+::linestring$<$ \hyperlink{ompl__planning_8h
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}{optimal\+Planner} \{ \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}, 
+enum \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45}{optimal\+Planner} \{ \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5}{P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR}, 
 \hyperlink{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}
  \}\begin{DoxyCompactList}\small\item\em Choice of Optimal planner. \end{DoxyCompactList}
 \item 
@@ -126,9 +126,9 @@ Choice of Optimal planner.
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR}}\item[{\em 
-P\+L\+A\+N\+N\+E\+R\+\_\+\+I\+N\+F\+\_\+\+R\+R\+T\+S\+T\+AR\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2}
-}]Informed R\+RT star implementation. \index{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}}\item[{\em 
+\index{P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR}}\item[{\em 
+P\+L\+A\+N\+N\+E\+R\+\_\+\+P\+R\+M\+S\+T\+AR\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5}
+}]P\+RM S\+T\+AR implementation. \index{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}!ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}}\index{ompl\+\_\+planning.\+hpp@{ompl\+\_\+planning.\+hpp}!P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR@{P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR}}\item[{\em 
 P\+L\+A\+N\+N\+E\+R\+\_\+\+R\+R\+T\+S\+T\+AR\hypertarget{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}{}\label{ompl__planning_8hpp_a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9}
 }]R\+RT Star implementation. \end{description}
 \end{Desc}
@@ -189,7 +189,7 @@ Objective Pointer with corresponding planner
 
 Allocate planner. 
 
-only two types of planner are considered R\+R\+T$\ast$ and I\+N\+F\+O\+R\+M\+E\+D\+\_\+\+R\+R\+T$\ast$ 
+only two types of planner are considered R\+R\+T$\ast$ and P\+R\+M\+\_\+\+R\+R\+T$\ast$ 
 \begin{DoxyParams}{Parameters}
 {\em si} & Space information \\
 \hline

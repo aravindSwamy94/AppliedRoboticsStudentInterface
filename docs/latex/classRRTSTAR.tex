@@ -1,0 +1,520 @@
+\hypertarget{classRRTSTAR}{}\section{R\+R\+T\+S\+T\+AR Class Reference}
+\label{classRRTSTAR}\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+
+
+R\+R\+T\+Star Class.  
+
+
+
+
+{\ttfamily \#include $<$rrtstar.\+h$>$}
+
+
+
+Collaboration diagram for R\+R\+T\+S\+T\+AR\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classRRTSTAR__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRRTSTAR_ad9c4671d299e90158b61621959ac646f}{R\+R\+T\+S\+T\+AR} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_aba683c9684e61576e5833b2293a0c589}{initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialize root node of \hyperlink{classRRTSTAR}{R\+R\+T\+S\+T\+AR}. \end{DoxyCompactList}\item 
+\hyperlink{structNode}{Node} $\ast$ \hyperlink{classRRTSTAR_a52b217b8070afabc733451923e482c55}{get\+Random\+Node} ()
+\begin{DoxyCompactList}\small\item\em Generate a random node in the field. \end{DoxyCompactList}\item 
+\hyperlink{structNode}{Node} $\ast$ \hyperlink{classRRTSTAR_a17b8392462e01ed383e7ba01d9ff7917}{nearest} (Vector2f point)
+\begin{DoxyCompactList}\small\item\em Get nearest node from a given configuration/position. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_a206d008a7e35e8da67ba45e69dda614e}{near} (Vector2f point, float radius, vector$<$ \hyperlink{structNode}{Node} $\ast$ $>$ \&out\+\_\+nodes)
+\begin{DoxyCompactList}\small\item\em Get neighborhood nodes of a given configuration/position. \end{DoxyCompactList}\item 
+double \hyperlink{classRRTSTAR_a6b25100958bc2983c8e884e06a1781fd}{distance} (Vector2f \&p, Vector2f \&q)
+\begin{DoxyCompactList}\small\item\em Helper method to find distance between two positions. \end{DoxyCompactList}\item 
+double \hyperlink{classRRTSTAR_aff52d6be37b207ad4bef71430736fa06}{Cost} (\hyperlink{structNode}{Node} $\ast$q)
+\begin{DoxyCompactList}\small\item\em Return trajectory cost. \end{DoxyCompactList}\item 
+double \hyperlink{classRRTSTAR_aec4f110bd8cf010d2c86f235306996e7}{Path\+Cost} (\hyperlink{structNode}{Node} $\ast$q\+From, \hyperlink{structNode}{Node} $\ast$q\+To)
+\begin{DoxyCompactList}\small\item\em Compute path cost. \end{DoxyCompactList}\item 
+Vector3f \hyperlink{classRRTSTAR_a7519aad88048588ebc11bfb04a1c1b4a}{new\+Config} (\hyperlink{structNode}{Node} $\ast$q, \hyperlink{structNode}{Node} $\ast$q\+Nearest)
+\begin{DoxyCompactList}\small\item\em Find a configuration at a distance step\+\_\+size from nearest node to random node. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_a857eb7050319c4f0950724ae150e597b}{add} (\hyperlink{structNode}{Node} $\ast$q\+Nearest, \hyperlink{structNode}{Node} $\ast$q\+New)
+\begin{DoxyCompactList}\small\item\em Add a node to the tree. \end{DoxyCompactList}\item 
+bool \hyperlink{classRRTSTAR_a999e6db04aff2b7b5d3c66e50b3057b8}{reached} ()
+\begin{DoxyCompactList}\small\item\em Check if the last node is close to the end position. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_add28ae0f961e4fe1d35ebdfb95bf7365}{set\+Step\+Size} (double step)
+\item 
+void \hyperlink{classRRTSTAR_a3b0e2de2074b31567b8eb65a082de463}{set\+Max\+Iterations} (int iter)
+\item 
+void \hyperlink{classRRTSTAR_a8aa26cd3eab9eed58746ceaa5a7b68f0}{delete\+Nodes} (\hyperlink{structNode}{Node} $\ast$\hyperlink{classRRTSTAR_a93a4dad750b6a408269ca45a4b618d4e}{root})
+\begin{DoxyCompactList}\small\item\em Delete all nodes using D\+FS technique. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_a79020afd3dae6e89caca9704810db7fd}{set\+Start\+Pose} (double x, double y, double theta)
+\begin{DoxyCompactList}\small\item\em Set the Start position of robot. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_af4f27caedca02db30d70e07ec5a35a34}{set\+Goal\+Pose} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Set the Destination position. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_ac9e0362f930ea0794eb94f30a34b9147}{set\+World\+Info} (double width, double height)
+\begin{DoxyCompactList}\small\item\em Set the World information. \end{DoxyCompactList}\item 
+void \hyperlink{classRRTSTAR_a85a72ab7c47e0fcf1d464a75af1ed309}{set\+\_\+max\+\_\+iter} (int x)
+\item 
+void \hyperlink{classRRTSTAR_ad0f94ca8a2bfddd676adca784bf69c07}{set\+\_\+step\+\_\+size} (double x)
+\item 
+void \hyperlink{classRRTSTAR_a92d71705680b9cdfe3b42982168e320a}{set\+\_\+bot\+\_\+radius} (double x)
+\item 
+void \hyperlink{classRRTSTAR_a4e57768e18f20604fffd50cd5a60af8d}{set\+\_\+goal\+Bias} (double x)
+\item 
+void \hyperlink{classRRTSTAR_a1a65e27cb565f2adf789dd582252a8a6}{set\+\_\+turn\+\_\+radius} (double x)
+\item 
+void \hyperlink{classRRTSTAR_a297bbde6f019ac7ae876ce9c2608cd9b}{set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor} (double x)
+\item 
+void \hyperlink{classRRTSTAR_a6b06cbc77a08446e0c97b8da9786afd6}{set\+\_\+bot\+\_\+follow\+\_\+dubin} (bool x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRRTObstacles}{R\+R\+T\+Obstacles} $\ast$ \hyperlink{classRRTSTAR_a3d9f67d4f4efa9681148b683e7b2455c}{obstacles}
+\item 
+vector$<$ \hyperlink{structNode}{Node} $\ast$ $>$ \hyperlink{classRRTSTAR_aef5c314d28c8ec948f07efa5f4cabefe}{nodes}
+\item 
+vector$<$ \hyperlink{structNode}{Node} $\ast$ $>$ \hyperlink{classRRTSTAR_a3c4afcfe867e23c36e268aedd488e062}{path}
+\item 
+\hyperlink{structNode}{Node} $\ast$ \hyperlink{classRRTSTAR_a93a4dad750b6a408269ca45a4b618d4e}{root}
+\item 
+\hyperlink{structNode}{Node} $\ast$ \hyperlink{classRRTSTAR_a46e3d08a8bd512c4f5747cdfbea41228}{last\+Node}
+\item 
+Vector2f \hyperlink{classRRTSTAR_ab3a0269ff354a27408ae48011a0e29f8}{start\+Pos}
+\item 
+Vector2f \hyperlink{classRRTSTAR_a220f337b1e11e8308b1bb590e0ff926a}{end\+Pos}
+\item 
+double \hyperlink{classRRTSTAR_a571433cf52df263c3e866c317e0ac4e3}{start\+\_\+orient}
+\item 
+int \hyperlink{classRRTSTAR_a9831be75ba6cce1bddfba73c9639e8c4}{max\+\_\+iter}
+\item 
+double \hyperlink{classRRTSTAR_a6e49feee90b9dd0a780444ff07520512}{step\+\_\+size}
+\item 
+double \hyperlink{classRRTSTAR_adc9c88a24560ab3a537ea374672b0121}{world\+\_\+width}
+\item 
+double \hyperlink{classRRTSTAR_a03ea0b6f54575f892d24553db558ce11}{world\+\_\+height}
+\item 
+double \hyperlink{classRRTSTAR_ac630bd4c26bf038a9158f02e4af761b4}{bot\+\_\+radius}
+\item 
+double \hyperlink{classRRTSTAR_ab458943c70394087a8ddc5f8b2f0fc79}{goal\+Bias}
+\item 
+double \hyperlink{classRRTSTAR_a72f670ad016b3e6bbf4a429873362c11}{turn\+\_\+radius}
+\item 
+bool \hyperlink{classRRTSTAR_a7325b9cbe347fded3d2541e017207c9e}{bot\+\_\+follow\+\_\+dubin}
+\item 
+double \hyperlink{classRRTSTAR_acb06c8a7193ad7776cf155a10142c5c3}{rrt\+\_\+star\+\_\+neighbour\+\_\+factor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+R\+T\+Star Class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{R\+R\+T\+S\+T\+A\+R()}{RRTSTAR()}}]{\setlength{\rightskip}{0pt plus 5cm}R\+R\+T\+S\+T\+A\+R\+::\+R\+R\+T\+S\+T\+AR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_ad9c4671d299e90158b61621959ac646f}{}\label{classRRTSTAR_ad9c4671d299e90158b61621959ac646f}
+
+
+Constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!add@{add}}
+\index{add@{add}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{add(\+Node $\ast$q\+Nearest, Node $\ast$q\+New)}{add(Node *qNearest, Node *qNew)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{q\+Nearest, }
+\item[{{\bf Node} $\ast$}]{q\+New}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a857eb7050319c4f0950724ae150e597b}{}\label{classRRTSTAR_a857eb7050319c4f0950724ae150e597b}
+
+
+Add a node to the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+Nearest} & \\
+\hline
+{\em q\+New} & \\
+\hline
+\end{DoxyParams}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!Cost@{Cost}}
+\index{Cost@{Cost}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{Cost(\+Node $\ast$q)}{Cost(Node *q)}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::\+Cost (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_aff52d6be37b207ad4bef71430736fa06}{}\label{classRRTSTAR_aff52d6be37b207ad4bef71430736fa06}
+
+
+Return trajectory cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & cost of node be computed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of the node 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!delete\+Nodes@{delete\+Nodes}}
+\index{delete\+Nodes@{delete\+Nodes}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{delete\+Nodes(\+Node $\ast$root)}{deleteNodes(Node *root)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::delete\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{root}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a8aa26cd3eab9eed58746ceaa5a7b68f0}{}\label{classRRTSTAR_a8aa26cd3eab9eed58746ceaa5a7b68f0}
+
+
+Delete all nodes using D\+FS technique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & root node or the first node \\
+\hline
+\end{DoxyParams}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!distance@{distance}}
+\index{distance@{distance}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{distance(\+Vector2f \&p, Vector2f \&q)}{distance(Vector2f &p, Vector2f &q)}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::distance (
+\begin{DoxyParamCaption}
+\item[{Vector2f \&}]{p, }
+\item[{Vector2f \&}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a6b25100958bc2983c8e884e06a1781fd}{}\label{classRRTSTAR_a6b25100958bc2983c8e884e06a1781fd}
+
+
+Helper method to find distance between two positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \hyperlink{structPoint}{Point} p \\
+\hline
+{\em q} & \hyperlink{structPoint}{Point} q \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Euclidean distance between \hyperlink{structPoint}{Point} P and Q 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!get\+Random\+Node@{get\+Random\+Node}}
+\index{get\+Random\+Node@{get\+Random\+Node}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{get\+Random\+Node()}{getRandomNode()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ R\+R\+T\+S\+T\+A\+R\+::get\+Random\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a52b217b8070afabc733451923e482c55}{}\label{classRRTSTAR_a52b217b8070afabc733451923e482c55}
+
+
+Generate a random node in the field. 
+
+\begin{DoxyReturn}{Returns}
+Random \hyperlink{structNode}{Node} 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!initialize@{initialize}}
+\index{initialize@{initialize}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{initialize()}{initialize()}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_aba683c9684e61576e5833b2293a0c589}{}\label{classRRTSTAR_aba683c9684e61576e5833b2293a0c589}
+
+
+Initialize root node of \hyperlink{classRRTSTAR}{R\+R\+T\+S\+T\+AR}. 
+
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!near@{near}}
+\index{near@{near}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{near(\+Vector2f point, float radius, vector$<$ Node $\ast$ $>$ \&out\+\_\+nodes)}{near(Vector2f point, float radius, vector< Node * > &out_nodes)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::near (
+\begin{DoxyParamCaption}
+\item[{Vector2f}]{point, }
+\item[{float}]{radius, }
+\item[{vector$<$ {\bf Node} $\ast$ $>$ \&}]{out\+\_\+nodes}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a206d008a7e35e8da67ba45e69dda614e}{}\label{classRRTSTAR_a206d008a7e35e8da67ba45e69dda614e}
+
+
+Get neighborhood nodes of a given configuration/position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & point in the world \\
+\hline
+{\em radius} & radius to check for neighbors \\
+\hline
+{\em out\+\_\+nodes} & list of nodes in that radius \\
+\hline
+\end{DoxyParams}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!nearest@{nearest}}
+\index{nearest@{nearest}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{nearest(\+Vector2f point)}{nearest(Vector2f point)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ R\+R\+T\+S\+T\+A\+R\+::nearest (
+\begin{DoxyParamCaption}
+\item[{Vector2f}]{point}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a17b8392462e01ed383e7ba01d9ff7917}{}\label{classRRTSTAR_a17b8392462e01ed383e7ba01d9ff7917}
+
+
+Get nearest node from a given configuration/position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & given point in world \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nearest \hyperlink{structNode}{Node} in the node list 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!new\+Config@{new\+Config}}
+\index{new\+Config@{new\+Config}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{new\+Config(\+Node $\ast$q, Node $\ast$q\+Nearest)}{newConfig(Node *q, Node *qNearest)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3f R\+R\+T\+S\+T\+A\+R\+::new\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{q, }
+\item[{{\bf Node} $\ast$}]{q\+Nearest}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a7519aad88048588ebc11bfb04a1c1b4a}{}\label{classRRTSTAR_a7519aad88048588ebc11bfb04a1c1b4a}
+
+
+Find a configuration at a distance step\+\_\+size from nearest node to random node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & given node \\
+\hline
+{\em q\+Nearest} & nearest node in list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New config with (x,y,theta) 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!Path\+Cost@{Path\+Cost}}
+\index{Path\+Cost@{Path\+Cost}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{Path\+Cost(\+Node $\ast$q\+From, Node $\ast$q\+To)}{PathCost(Node *qFrom, Node *qTo)}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::\+Path\+Cost (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{q\+From, }
+\item[{{\bf Node} $\ast$}]{q\+To}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_aec4f110bd8cf010d2c86f235306996e7}{}\label{classRRTSTAR_aec4f110bd8cf010d2c86f235306996e7}
+
+
+Compute path cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q\+From} & from node \\
+\hline
+{\em q\+To} & to node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The path cost from \hyperlink{structNode}{Node} a to \hyperlink{structNode}{Node} b 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!reached@{reached}}
+\index{reached@{reached}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{reached()}{reached()}}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+R\+T\+S\+T\+A\+R\+::reached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a999e6db04aff2b7b5d3c66e50b3057b8}{}\label{classRRTSTAR_a999e6db04aff2b7b5d3c66e50b3057b8}
+
+
+Check if the last node is close to the end position. 
+
+\begin{DoxyReturn}{Returns}
+true/false -\/ reached destination/not reached 
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+bot\+\_\+follow\+\_\+dubin@{set\+\_\+bot\+\_\+follow\+\_\+dubin}}
+\index{set\+\_\+bot\+\_\+follow\+\_\+dubin@{set\+\_\+bot\+\_\+follow\+\_\+dubin}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+bot\+\_\+follow\+\_\+dubin(bool x)}{set_bot_follow_dubin(bool x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+bot\+\_\+follow\+\_\+dubin (
+\begin{DoxyParamCaption}
+\item[{bool}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a6b06cbc77a08446e0c97b8da9786afd6}{}\label{classRRTSTAR_a6b06cbc77a08446e0c97b8da9786afd6}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+bot\+\_\+radius@{set\+\_\+bot\+\_\+radius}}
+\index{set\+\_\+bot\+\_\+radius@{set\+\_\+bot\+\_\+radius}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+bot\+\_\+radius(double x)}{set_bot_radius(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+bot\+\_\+radius (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a92d71705680b9cdfe3b42982168e320a}{}\label{classRRTSTAR_a92d71705680b9cdfe3b42982168e320a}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+goal\+Bias@{set\+\_\+goal\+Bias}}
+\index{set\+\_\+goal\+Bias@{set\+\_\+goal\+Bias}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+goal\+Bias(double x)}{set_goalBias(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+goal\+Bias (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a4e57768e18f20604fffd50cd5a60af8d}{}\label{classRRTSTAR_a4e57768e18f20604fffd50cd5a60af8d}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+max\+\_\+iter@{set\+\_\+max\+\_\+iter}}
+\index{set\+\_\+max\+\_\+iter@{set\+\_\+max\+\_\+iter}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+max\+\_\+iter(int x)}{set_max_iter(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+max\+\_\+iter (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a85a72ab7c47e0fcf1d464a75af1ed309}{}\label{classRRTSTAR_a85a72ab7c47e0fcf1d464a75af1ed309}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor@{set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor}}
+\index{set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor@{set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor(double x)}{set_rrt_star_neighbour_factor(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+rrt\+\_\+star\+\_\+neighbour\+\_\+factor (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a297bbde6f019ac7ae876ce9c2608cd9b}{}\label{classRRTSTAR_a297bbde6f019ac7ae876ce9c2608cd9b}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+step\+\_\+size@{set\+\_\+step\+\_\+size}}
+\index{set\+\_\+step\+\_\+size@{set\+\_\+step\+\_\+size}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+step\+\_\+size(double x)}{set_step_size(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+step\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_ad0f94ca8a2bfddd676adca784bf69c07}{}\label{classRRTSTAR_ad0f94ca8a2bfddd676adca784bf69c07}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+\_\+turn\+\_\+radius@{set\+\_\+turn\+\_\+radius}}
+\index{set\+\_\+turn\+\_\+radius@{set\+\_\+turn\+\_\+radius}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+\_\+turn\+\_\+radius(double x)}{set_turn_radius(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+\_\+turn\+\_\+radius (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a1a65e27cb565f2adf789dd582252a8a6}{}\label{classRRTSTAR_a1a65e27cb565f2adf789dd582252a8a6}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+Goal\+Pose@{set\+Goal\+Pose}}
+\index{set\+Goal\+Pose@{set\+Goal\+Pose}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+Goal\+Pose(double x, double y)}{setGoalPose(double x, double y)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+Goal\+Pose (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_af4f27caedca02db30d70e07ec5a35a34}{}\label{classRRTSTAR_af4f27caedca02db30d70e07ec5a35a34}
+
+
+Set the Destination position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+Max\+Iterations@{set\+Max\+Iterations}}
+\index{set\+Max\+Iterations@{set\+Max\+Iterations}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+Max\+Iterations(int iter)}{setMaxIterations(int iter)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+Max\+Iterations (
+\begin{DoxyParamCaption}
+\item[{int}]{iter}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a3b0e2de2074b31567b8eb65a082de463}{}\label{classRRTSTAR_a3b0e2de2074b31567b8eb65a082de463}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+Start\+Pose@{set\+Start\+Pose}}
+\index{set\+Start\+Pose@{set\+Start\+Pose}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+Start\+Pose(double x, double y, double theta)}{setStartPose(double x, double y, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+Start\+Pose (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_a79020afd3dae6e89caca9704810db7fd}{}\label{classRRTSTAR_a79020afd3dae6e89caca9704810db7fd}
+
+
+Set the Start position of robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em theta} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+Step\+Size@{set\+Step\+Size}}
+\index{set\+Step\+Size@{set\+Step\+Size}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+Step\+Size(double step)}{setStepSize(double step)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+Step\+Size (
+\begin{DoxyParamCaption}
+\item[{double}]{step}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_add28ae0f961e4fe1d35ebdfb95bf7365}{}\label{classRRTSTAR_add28ae0f961e4fe1d35ebdfb95bf7365}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!set\+World\+Info@{set\+World\+Info}}
+\index{set\+World\+Info@{set\+World\+Info}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{set\+World\+Info(double width, double height)}{setWorldInfo(double width, double height)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+R\+T\+S\+T\+A\+R\+::set\+World\+Info (
+\begin{DoxyParamCaption}
+\item[{double}]{width, }
+\item[{double}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{classRRTSTAR_ac9e0362f930ea0794eb94f30a34b9147}{}\label{classRRTSTAR_ac9e0362f930ea0794eb94f30a34b9147}
+
+
+Set the World information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!bot\+\_\+follow\+\_\+dubin@{bot\+\_\+follow\+\_\+dubin}}
+\index{bot\+\_\+follow\+\_\+dubin@{bot\+\_\+follow\+\_\+dubin}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{bot\+\_\+follow\+\_\+dubin}{bot_follow_dubin}}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+R\+T\+S\+T\+A\+R\+::bot\+\_\+follow\+\_\+dubin}\hypertarget{classRRTSTAR_a7325b9cbe347fded3d2541e017207c9e}{}\label{classRRTSTAR_a7325b9cbe347fded3d2541e017207c9e}
+Robot turn radius \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!bot\+\_\+radius@{bot\+\_\+radius}}
+\index{bot\+\_\+radius@{bot\+\_\+radius}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{bot\+\_\+radius}{bot_radius}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::bot\+\_\+radius}\hypertarget{classRRTSTAR_ac630bd4c26bf038a9158f02e4af761b4}{}\label{classRRTSTAR_ac630bd4c26bf038a9158f02e4af761b4}
+World height \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!end\+Pos@{end\+Pos}}
+\index{end\+Pos@{end\+Pos}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{end\+Pos}{endPos}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f R\+R\+T\+S\+T\+A\+R\+::end\+Pos}\hypertarget{classRRTSTAR_a220f337b1e11e8308b1bb590e0ff926a}{}\label{classRRTSTAR_a220f337b1e11e8308b1bb590e0ff926a}
+Start pose \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!goal\+Bias@{goal\+Bias}}
+\index{goal\+Bias@{goal\+Bias}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{goal\+Bias}{goalBias}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::goal\+Bias}\hypertarget{classRRTSTAR_ab458943c70394087a8ddc5f8b2f0fc79}{}\label{classRRTSTAR_ab458943c70394087a8ddc5f8b2f0fc79}
+bot radius \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!last\+Node@{last\+Node}}
+\index{last\+Node@{last\+Node}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{last\+Node}{lastNode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ R\+R\+T\+S\+T\+A\+R\+::last\+Node}\hypertarget{classRRTSTAR_a46e3d08a8bd512c4f5747cdfbea41228}{}\label{classRRTSTAR_a46e3d08a8bd512c4f5747cdfbea41228}
+root node (initial pose) \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!max\+\_\+iter@{max\+\_\+iter}}
+\index{max\+\_\+iter@{max\+\_\+iter}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{max\+\_\+iter}{max_iter}}]{\setlength{\rightskip}{0pt plus 5cm}int R\+R\+T\+S\+T\+A\+R\+::max\+\_\+iter}\hypertarget{classRRTSTAR_a9831be75ba6cce1bddfba73c9639e8c4}{}\label{classRRTSTAR_a9831be75ba6cce1bddfba73c9639e8c4}
+Start orientation \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!nodes@{nodes}}
+\index{nodes@{nodes}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{nodes}{nodes}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Node} $\ast$$>$ R\+R\+T\+S\+T\+A\+R\+::nodes}\hypertarget{classRRTSTAR_aef5c314d28c8ec948f07efa5f4cabefe}{}\label{classRRTSTAR_aef5c314d28c8ec948f07efa5f4cabefe}
+obstacle information \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{obstacles}{obstacles}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+R\+T\+Obstacles}$\ast$ R\+R\+T\+S\+T\+A\+R\+::obstacles}\hypertarget{classRRTSTAR_a3d9f67d4f4efa9681148b683e7b2455c}{}\label{classRRTSTAR_a3d9f67d4f4efa9681148b683e7b2455c}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!path@{path}}
+\index{path@{path}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{path}{path}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Node} $\ast$$>$ R\+R\+T\+S\+T\+A\+R\+::path}\hypertarget{classRRTSTAR_a3c4afcfe867e23c36e268aedd488e062}{}\label{classRRTSTAR_a3c4afcfe867e23c36e268aedd488e062}
+List of nodes in explored database \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!root@{root}}
+\index{root@{root}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{root}{root}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ R\+R\+T\+S\+T\+A\+R\+::root}\hypertarget{classRRTSTAR_a93a4dad750b6a408269ca45a4b618d4e}{}\label{classRRTSTAR_a93a4dad750b6a408269ca45a4b618d4e}
+path with tracing the nodes \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!rrt\+\_\+star\+\_\+neighbour\+\_\+factor@{rrt\+\_\+star\+\_\+neighbour\+\_\+factor}}
+\index{rrt\+\_\+star\+\_\+neighbour\+\_\+factor@{rrt\+\_\+star\+\_\+neighbour\+\_\+factor}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{rrt\+\_\+star\+\_\+neighbour\+\_\+factor}{rrt_star_neighbour_factor}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::rrt\+\_\+star\+\_\+neighbour\+\_\+factor}\hypertarget{classRRTSTAR_acb06c8a7193ad7776cf155a10142c5c3}{}\label{classRRTSTAR_acb06c8a7193ad7776cf155a10142c5c3}
+\index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!start\+\_\+orient@{start\+\_\+orient}}
+\index{start\+\_\+orient@{start\+\_\+orient}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{start\+\_\+orient}{start_orient}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::start\+\_\+orient}\hypertarget{classRRTSTAR_a571433cf52df263c3e866c317e0ac4e3}{}\label{classRRTSTAR_a571433cf52df263c3e866c317e0ac4e3}
+end pose \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!start\+Pos@{start\+Pos}}
+\index{start\+Pos@{start\+Pos}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{start\+Pos}{startPos}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2f R\+R\+T\+S\+T\+A\+R\+::start\+Pos}\hypertarget{classRRTSTAR_ab3a0269ff354a27408ae48011a0e29f8}{}\label{classRRTSTAR_ab3a0269ff354a27408ae48011a0e29f8}
+last \hyperlink{structNode}{Node} of the rrt$\ast$ exploration \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!step\+\_\+size@{step\+\_\+size}}
+\index{step\+\_\+size@{step\+\_\+size}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{step\+\_\+size}{step_size}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::step\+\_\+size}\hypertarget{classRRTSTAR_a6e49feee90b9dd0a780444ff07520512}{}\label{classRRTSTAR_a6e49feee90b9dd0a780444ff07520512}
+maximum iterations \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!turn\+\_\+radius@{turn\+\_\+radius}}
+\index{turn\+\_\+radius@{turn\+\_\+radius}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{turn\+\_\+radius}{turn_radius}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::turn\+\_\+radius}\hypertarget{classRRTSTAR_a72f670ad016b3e6bbf4a429873362c11}{}\label{classRRTSTAR_a72f670ad016b3e6bbf4a429873362c11}
+goal Bias \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!world\+\_\+height@{world\+\_\+height}}
+\index{world\+\_\+height@{world\+\_\+height}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{world\+\_\+height}{world_height}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::world\+\_\+height}\hypertarget{classRRTSTAR_a03ea0b6f54575f892d24553db558ce11}{}\label{classRRTSTAR_a03ea0b6f54575f892d24553db558ce11}
+World width \index{R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}!world\+\_\+width@{world\+\_\+width}}
+\index{world\+\_\+width@{world\+\_\+width}!R\+R\+T\+S\+T\+AR@{R\+R\+T\+S\+T\+AR}}
+\subsubsection[{\texorpdfstring{world\+\_\+width}{world_width}}]{\setlength{\rightskip}{0pt plus 5cm}double R\+R\+T\+S\+T\+A\+R\+::world\+\_\+width}\hypertarget{classRRTSTAR_adc9c88a24560ab3a537ea374672b0121}{}\label{classRRTSTAR_adc9c88a24560ab3a537ea374672b0121}
+Step size(distance between points) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+R\+R\+T\+Star/\hyperlink{rrtstar_8h}{rrtstar.\+h}\item 
+src/\+R\+R\+T\+Star/\hyperlink{rrtstar_8cpp}{rrtstar.\+cpp}\end{DoxyCompactItemize}

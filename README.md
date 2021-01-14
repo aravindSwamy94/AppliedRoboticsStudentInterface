@@ -4,9 +4,8 @@
 The technical documentation of the whole code base can be found inside docs folder in html and latex format.
 
 ```
-docs/html/index.html
+[Technical documentation](https://aravindswamy94.github.io/AppliedRoboticsStudentInterface/html/index.html)
 ``` 
-
 
 ##Libraries Used
 
@@ -169,10 +168,7 @@ Function Available in:  src/findRobot.cpp
 In Plan path function, I used RRT* planner from OMPL and also I have implemented an own RRT* algorithm which can be found inside src/RRTStar/ folder. But the OMPL planner one, works better as the library is completely organized and optimized to the core.The high level motion planning is obtained using the RRT* algorithm. The local planner between the  RRT* points are using Clothoids library or dubins planner. I have chosen clothoids as major one, because the curvilinear behaviour is quite good and the curvature values can be gradually approximated for the local path, But in case of dubins planner, the curvature values are either +MAX or -MAX.
 
 > General diagram of planPath
-<<<<<<< HEAD
 
-=======
->>>>>>> c765f3efe04de263cb134c2644c1c7f6cd3ac51c
 ![planPath Flow diagram ](imgs/blocks/generalPlanPath.jpg)
 
 Let me discuss one by one point
@@ -221,7 +217,6 @@ This local planner is impleementied by solving the dubins curve problem.
 ![Dubins local  FLOW ](imgs/blocks/dubins.jpg)
 
  
-
 ##Plan Path results
 
 ### Mission 1 results
@@ -242,10 +237,7 @@ This local planner is impleementied by solving the dubins curve problem.
 ![RRT Star Results](imgs/results/planPathGlobal2.png)
 
 > Local planner path points
-<<<<<<< HEAD
 
 ![Local planner results ](imgs/results/planPathLocal2.png)
-=======
->>>>>>> 5bef54ec91dda675010f3ca62140a193910afe6b
 
 ![Local planner results ](imgs/results/planPathLocal2.png)

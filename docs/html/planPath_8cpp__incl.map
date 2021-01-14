@@ -1,6 +1,8 @@
 <map id="src/planPath.cpp" name="src/planPath.cpp">
-<area shape="rect" id="node2" href="$planPath_8hpp.html" title="Contains header inforamtion of planPath functions. " alt="" coords="2148,80,2247,107"/>
-<area shape="rect" id="node21" href="$dubins__local_8h.html" title="Contains function declaration related to dubins planner. " alt="" coords="635,162,741,189"/>
-<area shape="rect" id="node29" href="$ompl__planning_8hpp.html" title="Contains most of the Functions related to OMPL planer. " alt="" coords="1631,162,1761,189"/>
-<area shape="rect" id="node22" href="$utils_8hpp.html" title="utils.hpp" alt="" coords="670,251,741,278"/>
+<area shape="rect" id="node2" href="$planPath_8hpp.html" title="Contains header inforamtion of planPath functions. " alt="" coords="1767,80,1865,107"/>
+<area shape="rect" id="node21" href="$dubins__local_8h.html" title="Contains function declaration related to dubins planner. " alt="" coords="793,162,898,189"/>
+<area shape="rect" id="node27" href="$rrtstar_8h.html" title="Contains the declation of RRT* class and RRT* Node. " alt="" coords="584,162,651,189"/>
+<area shape="rect" id="node31" href="$ompl__planning_8hpp.html" title="Contains most of the Functions related to OMPL planer. " alt="" coords="1396,162,1527,189"/>
+<area shape="rect" id="node22" href="$utils_8hpp.html" title="utils.hpp" alt="" coords="827,251,898,278"/>
+<area shape="rect" id="node28" href="$obstacles_8h.html" title="Contains the declaration of Obstacles class. " alt="" coords="515,251,605,278"/>
 </map>

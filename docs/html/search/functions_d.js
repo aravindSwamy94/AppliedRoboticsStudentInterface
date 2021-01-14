@@ -1,4 +1,26 @@
 var searchData=
 [
-  ['unwarp',['unwarp',['../namespacestudent.html#a6b8caf348979f55e58a75193233c219d',1,'student']]]
+  ['sample_5fborders',['sample_borders',['../namespacestudent.html#acf7520b9efd4309e03ec51e8cd7642b0',1,'student']]],
+  ['scalefromstandard',['scaleFromStandard',['../dubins__local_8cpp.html#a217a3380289b2212b7d4bed290541038',1,'scaleFromStandard(double lambda, double sc_s1, double sc_s2, double sc_s3, double &amp;s1, double &amp;s2, double &amp;s3):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a217a3380289b2212b7d4bed290541038',1,'scaleFromStandard(double lambda, double sc_s1, double sc_s2, double sc_s3, double &amp;s1, double &amp;s2, double &amp;s3):&#160;dubins_local.cpp']]],
+  ['scaletostandard',['scaleToStandard',['../dubins__local_8cpp.html#a22f9f0695527862db7d80a70c45085a1',1,'scaleToStandard(double x0, double y0, double th0, double xf, double yf, double thf, double kmax, double &amp;sc_th0, double &amp;sc_thf, double &amp;sc_kmax, double &amp;lambda):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a22f9f0695527862db7d80a70c45085a1',1,'scaleToStandard(double x0, double y0, double th0, double xf, double yf, double thf, double kmax, double &amp;sc_th0, double &amp;sc_thf, double &amp;sc_kmax, double &amp;lambda):&#160;dubins_local.cpp']]],
+  ['set_5fbot_5ffollow_5fdubin',['set_bot_follow_dubin',['../classRRTSTAR.html#a6b06cbc77a08446e0c97b8da9786afd6',1,'RRTSTAR']]],
+  ['set_5fbot_5fradius',['set_bot_radius',['../classRRTSTAR.html#a92d71705680b9cdfe3b42982168e320a',1,'RRTSTAR']]],
+  ['set_5fdubinsarc',['set_dubinsArc',['../dubins__local_8cpp.html#aa84b2a5a76850d416eb5b3b238d8a0bc',1,'set_dubinsArc(dubinsArc &amp;ptr, double x0, double y0, double th0, double k, double s):&#160;dubins_local.cpp'],['../dubins__local_8h.html#aa84b2a5a76850d416eb5b3b238d8a0bc',1,'set_dubinsArc(dubinsArc &amp;ptr, double x0, double y0, double th0, double k, double s):&#160;dubins_local.cpp']]],
+  ['set_5fdubinscurve',['set_dubinsCurve',['../dubins__local_8cpp.html#a70c63acda3975bd7bcabdf063fe19b05',1,'set_dubinsCurve(dubinsCurve &amp;curve_ptr, double x0, double y0, double th0, double s1, double s2, double s3, double k0, double k1, double k2):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a70c63acda3975bd7bcabdf063fe19b05',1,'set_dubinsCurve(dubinsCurve &amp;curve_ptr, double x0, double y0, double th0, double s1, double s2, double s3, double k0, double k1, double k2):&#160;dubins_local.cpp']]],
+  ['set_5fgoalbias',['set_goalBias',['../classRRTSTAR.html#a4e57768e18f20604fffd50cd5a60af8d',1,'RRTSTAR']]],
+  ['set_5fmax_5fiter',['set_max_iter',['../classRRTSTAR.html#a85a72ab7c47e0fcf1d464a75af1ed309',1,'RRTSTAR']]],
+  ['set_5frrt_5fstar_5fneighbour_5ffactor',['set_rrt_star_neighbour_factor',['../classRRTSTAR.html#a297bbde6f019ac7ae876ce9c2608cd9b',1,'RRTSTAR']]],
+  ['set_5fstep_5fsize',['set_step_size',['../classRRTSTAR.html#ad0f94ca8a2bfddd676adca784bf69c07',1,'RRTSTAR']]],
+  ['set_5fturn_5fradius',['set_turn_radius',['../classRRTSTAR.html#a1a65e27cb565f2adf789dd582252a8a6',1,'RRTSTAR']]],
+  ['setgoalpose',['setGoalPose',['../classRRTSTAR.html#af4f27caedca02db30d70e07ec5a35a34',1,'RRTSTAR']]],
+  ['setmaxiterations',['setMaxIterations',['../classRRTSTAR.html#a3b0e2de2074b31567b8eb65a082de463',1,'RRTSTAR']]],
+  ['setpoints',['setPoints',['../structPath.html#a3e5e0ecbac2e7f869690ce9067815f5a',1,'Path']]],
+  ['setstartpose',['setStartPose',['../classRRTSTAR.html#a79020afd3dae6e89caca9704810db7fd',1,'RRTSTAR']]],
+  ['setstepsize',['setStepSize',['../classRRTSTAR.html#add28ae0f961e4fe1d35ebdfb95bf7365',1,'RRTSTAR']]],
+  ['setworldinfo',['setWorldInfo',['../classRRTSTAR.html#ac9e0362f930ea0794eb94f30a34b9147',1,'RRTSTAR']]],
+  ['sinc',['sinc',['../dubins__local_8cpp.html#a2678c9ac5e8585534a9c5a2385169324',1,'sinc(double t):&#160;dubins_local.cpp'],['../dubins__local_8h.html#a2678c9ac5e8585534a9c5a2385169324',1,'sinc(double t):&#160;dubins_local.cpp']]],
+  ['size',['size',['../structPath.html#ad6d1a267d775b7b9dcc5b6bfe1f8dd5a',1,'Path']]],
+  ['sort_5fpair',['sort_pair',['../namespacestudent.html#a5ae5c8a6b753e8c2f86e2a6f70c44faf',1,'student']]],
+  ['sort_5fpair_5fmission2',['sort_pair_mission2',['../namespacestudent.html#abf207b6433d914c39067b7d538c2956c',1,'student']]],
+  ['statecost',['stateCost',['../classClearanceObjective.html#a89162d6d3c598d323d962a2a5c510b6c',1,'ClearanceObjective']]]
 ];

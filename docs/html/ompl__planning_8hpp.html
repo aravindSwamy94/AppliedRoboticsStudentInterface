@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;ompl/base/objectives/MaximizeMinClearanceObjective.h&gt;</code><br />
 <code>#include &lt;ompl/base/spaces/RealVectorStateSpace.h&gt;</code><br />
 <code>#include &quot;ompl/util/Console.h&quot;</code><br />
-<code>#include &lt;ompl/geometric/planners/rrt/InformedRRTstar.h&gt;</code><br />
+<code>#include &lt;ompl/geometric/planners/prm/PRMstar.h&gt;</code><br />
 <code>#include &lt;ompl/geometric/planners/rrt/RRTstar.h&gt;</code><br />
 <code>#include &lt;ompl/base/PlannerDataGraph.h&gt;</code><br />
 <code>#include &lt;boost/program_options.hpp&gt;</code><br />
@@ -132,7 +132,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="ompl__planning_8hpp__dep__incl.png" border="0" usemap="#include_2ompl__planning_8hppdep" alt=""/></div>
 <map name="include_2ompl__planning_8hppdep" id="include_2ompl__planning_8hppdep">
 <area shape="rect" id="node2" href="planPath_8hpp.html" title="Contains header inforamtion of planPath functions. " alt="" coords="21,80,164,107"/>
-<area shape="rect" id="node3" href="planPath_8cpp.html" title="src/planPath.cpp" alt="" coords="33,155,153,181"/>
+<area shape="rect" id="node3" href="planPath_8cpp.html" title="Contains the implementation of planPath functions. " alt="" coords="33,155,153,181"/>
 </map>
 </div>
 </div>
@@ -157,7 +157,7 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a89a00594ef5f4a0b2ed31d9ede818e45"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45">optimalPlanner</a> { <a class="el" href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2">PLANNER_INF_RRTSTAR</a>, 
+<tr class="memitem:a89a00594ef5f4a0b2ed31d9ede818e45"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45">optimalPlanner</a> { <a class="el" href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5">PLANNER_PRMSTAR</a>, 
 <a class="el" href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9">PLANNER_RRTSTAR</a>
  }<tr class="memdesc:a89a00594ef5f4a0b2ed31d9ede818e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choice of Optimal planner.  <a href="ompl__planning_8hpp.html#a89a00594ef5f4a0b2ed31d9ede818e45">More...</a><br /></td></tr>
 </td></tr>
@@ -254,8 +254,8 @@ Functions</h2></td></tr>
 
 <p>Choice of Optimal planner. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a89a00594ef5f4a0b2ed31d9ede818e45a1dfb54a39b9b8f16343de7e35e3bdbd2"></a>PLANNER_INF_RRTSTAR&#160;</td><td class="fielddoc">
-<p>Informed RRT star implementation. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a89a00594ef5f4a0b2ed31d9ede818e45acfe4bd6b555477ccfa326ba4219e89f5"></a>PLANNER_PRMSTAR&#160;</td><td class="fielddoc">
+<p>PRM STAR implementation. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a89a00594ef5f4a0b2ed31d9ede818e45ac194e27eeaf4e914b4d4c5715c456ac9"></a>PLANNER_RRTSTAR&#160;</td><td class="fielddoc">
 <p>RRT Star implementation. </p>
@@ -354,7 +354,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allocate planner. </p>
-<p>only two types of planner are considered RRT* and INFORMED_RRT* </p><dl class="params"><dt>Parameters</dt><dd>
+<p>only two types of planner are considered RRT* and PRM_RRT* </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">si</td><td>Space information </td></tr>
     <tr><td class="paramname">plannerType</td><td>Type of planner to be used </td></tr>
