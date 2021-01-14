@@ -34,7 +34,7 @@ class config_Params_ProcessMap{
         bool use_ocr; /**OCR method of detection */
         bool use_flip; /**Flip the image input image*/
         string config_folder;
-
+        bool arena; /** Flag to check arena or simulator
         /**
         *  @brief read all params from config file and assign it to class variables
         *  @param config_folder config folder where the params are available
@@ -52,6 +52,7 @@ class config_Params_ProcessMap{
                 debug_victim_id = cfg->lookupBoolean(scope, "debug_victim_id");
                 use_ocr = cfg->lookupBoolean(scope, "use_ocr");
                 use_flip = cfg->lookupBoolean(scope, "use_flip");
+                arena = cfg->lookupBoolean(scope, "arena");
                 this->config_folder = config_folder; 
             } catch(const ConfigurationException & ex) {
                 cerr << ex.c_str() << endl;
@@ -94,13 +95,20 @@ namespace student{
     *  @return  true/false Execution successful
     */
 
-    bool processObstacles(const cv::Mat& hsv_img, const double scale, std::vector<Polygon>& obstacle_list,config_Params_ProcessMap config_params){
+    bool processObstacles(const cv::Mat& hsv_img, const double scale, std::vector<Polygon>& obstacle_list,config_Params_ProcessMap config_params, bool arena){
 
         /**Steps involved in process Obstacles one by one*/
     
-        cv::Mat red_mask_low, red_mask_high, red_mask;     
-        cv::inRange(hsv_img, cv::Scalar(0, 50, 40), cv::Scalar(40, 255, 255), red_mask_low); /** First range of red region in HSV */
-        cv::inRange(hsv_img, cv::Scalar(160, 50, 40), cv::Scalar(180, 255, 255), red_mask_high); /** Second range of red region in HSV */
+        cv::Mat red_mask_low, red_mask_high, red_mask; 
+
+        if(arena){    
+            cv::inRange(hsv_img, cv::Scalar(0, 50, 40), cv::Scalar(40, 255, 255), red_mask_low); /** First range of red region in HSV */
+            cv::inRange(hsv_img, cv::Scalar(160, 50, 40), cv::Scalar(180, 255, 255), red_mask_high); /** Second range of red region in HSV */
+        }
+        else{
+            cv::inRange(hsv_img, cv::Scalar(0, 50, 40), cv::Scalar(40, 255, 255), red_mask_low); /** First range of red region in HSV */
+            cv::inRange(hsv_img, cv::Scalar(160, 50, 40), cv::Scalar(180, 255, 255), red_mask_high); /** Second range of red region in HSV */
+        }
         cv::addWeighted(red_mask_low, 1.0, red_mask_high, 1.0, 0.0, red_mask); /** add the regions of red space in HSV format*/
         
         std::vector<std::vector<cv::Point>> contours, contours_approx;
@@ -137,11 +145,13 @@ namespace student{
     *  @return  true/false Execution successful
     */
 
-    bool processGate(const cv::Mat& hsv_img, const double scale, Polygon& gate,config_Params_ProcessMap config_params){
+    bool processGate(const cv::Mat& hsv_img, const double scale, Polygon& gate,config_Params_ProcessMap config_params, bool arena){
       
         cv::Mat green_mask;
-
-        cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
+        if(arena)
+            cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
+        else
+            cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
         
         std::vector<std::vector<cv::Point>> contours, contours_approx;
         std::vector<cv::Point> approx_curve;
@@ -340,10 +350,13 @@ namespace student{
     *  @return  true/false Execution successful
     */
 
-    bool processVictims(const cv::Mat& hsv_img, const double scale, std::vector<std::pair<int,Polygon>>& victim_list,config_Params_ProcessMap config_params){
+    bool processVictims(const cv::Mat& hsv_img, const double scale, std::vector<std::pair<int,Polygon>>& victim_list,config_Params_ProcessMap config_params,bool arena){
 
-        cv::Mat green_mask;         
-        cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
+        cv::Mat green_mask;
+        if(arena)
+            cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
+        else
+            cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
 
         std::vector<std::vector<cv::Point>> contours, contours_approx; 
         std::vector<cv::Point> approx_curve;
@@ -395,15 +408,16 @@ namespace student{
         // Convert color space from BGR to HSV
         cv::Mat hsv_img;
         cv::cvtColor(img_in, hsv_img, cv::COLOR_BGR2HSV);
+        bool arena = config_params.arena;
         
         if(config_params.find_victims_debug_plot or config_params.find_gate_debug_plot or config_params.find_obstacles_debug_plot)
             debug_image = hsv_img.clone();
 
-        const bool res1 = processObstacles(hsv_img, scale, obstacle_list, config_params); // process the Obstacles in red
+        const bool res1 = processObstacles(hsv_img, scale, obstacle_list, config_params,arena); // process the Obstacles in red
         if(!res1) std::cout << "processObstacles return false" << std::endl;
-        const bool res2 = processGate(hsv_img, scale, gate,config_params); // process the gate in green, but rectangle
+        const bool res2 = processGate(hsv_img, scale, gate,config_params,arena); // process the gate in green, but rectangle
         if(!res2) std::cout << "processGate return false" << std::endl;
-        const bool res3 = processVictims(hsv_img, scale, victim_list,config_params); // process the victims in green, but circles with digit recognition
+        const bool res3 = processVictims(hsv_img, scale, victim_list,config_params,arena); // process the victims in green, but circles with digit recognition
         if(!res3) std::cout << "processVictims return false" << std::endl;
 
         if(config_params.find_victims_debug_plot or config_params.find_gate_debug_plot or config_params.find_obstacles_debug_plot){
