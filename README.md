@@ -160,7 +160,8 @@ Function Available in:  src/findRobot.cpp
 In Plan path function, I used RRT* planner from OMPL and also I have implemented an own RRT* algorithm which can be found inside src/RRTStar/ folder. But the OMPL planner one, works better as the library is completely organized and optimized to the core.The high level motion planning is obtained using the RRT* algorithm. The local planner between the  RRT* points are using Clothoids library or dubins planner. I have chosen clothoids as major one, because the curvilinear behaviour is quite good and the curvature values can be gradually approximated for the local path, But in case of dubins planner, the curvature values are either +MAX or -MAX.
 
 > General diagram of planPath
-![planPath Flow diagram ](imgs/blocks/generalPlanPath.png)
+
+![planPath Flow diagram ](imgs/blocks/generalPlanPath.jpg)
 
 Let me discuss one by one point
 
@@ -173,6 +174,7 @@ Mission 1 involves source to all victims in priority and finally to gate
 Mission 2 requires a bit of calculation.
 
 > Mission 2 victims computation flow
+
 ![Mission 2 Flow diagram ](imgs/blocks/mission2.jpg)
 
 ### High level Motion planning(RRT* Planner)
@@ -182,24 +184,28 @@ For RRT* I have used two methods, one using the OMPL library and the other one w
 This planner is using the OMPL library and their interfaces
 
 > RRT* planner computation using OMPL
+
 ![RRT STAR OMPL FLOW ](imgs/blocks/rrtsompl.jpg)
 
 #### RRT* Implemetaion
 This planner was referred from the following link and modified accordingly (https://github.com/mpdmanash/rrt-star-dubins-sim) . The genral flow diagram of this planner can be found below
 
 > RRT* planner computation 
+
 ![RRT STAR OWN FLOW ](imgs/blocks/rrtsown.jpg)
 
 ### Clothoids Local planner
 This local planner was integrated Using the Prof Enzo Bertolazzi's Clothoids library. The planner can be found in the following link (https://github.com/ebertolazzi/Clothoids). 
 
 > Clothoids based local planner Flow 
+
 ![Clothoids local  FLOW ](imgs/blocks/clothoids.jpg)
 
 ### Dubins Local planner
 This local planner is impleementied by solving the dubins curve problem.
 
 > Dubins based local planner Flow 
+
 ![Dubins local  FLOW ](imgs/blocks/dubins.jpg)
 
  
@@ -209,17 +215,21 @@ This local planner is impleementied by solving the dubins curve problem.
 ### Mission 1 results
 
 > High level RRT* planner path points 
+
 ![RRT Star Results](imgs/results/planPathGlobal.png)
 
 > Local planner path points
+
 ![Local planner results ](imgs/results/planPathLocal.png)
 
 
 ### Mission 2 results
 
 > High level RRT* planner path points 
+
 ![RRT Star Results](imgs/results/planPathGlobal2.png)
 
 > Local planner path points
+
 ![Local planner results ](imgs/results/planPathLocal2.png)
 
