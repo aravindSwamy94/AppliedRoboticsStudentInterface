@@ -149,7 +149,7 @@ namespace student{
       
         cv::Mat green_mask;
         if(arena)
-            cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
+            cv::inRange(hsv_img, cv::Scalar(45, 45, 60), cv::Scalar(80, 255, 190), green_mask);// Green mask for the gate, which is rectangle
         else
             cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
         
@@ -354,11 +354,11 @@ namespace student{
 
         cv::Mat green_mask;
         if(arena)
-            cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
+            cv::inRange(hsv_img, cv::Scalar(40, 40, 50), cv::Scalar(75, 230, 160), green_mask);// get green mask to detect victim circles
         else
             cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
 
-        std::vector<std::vector<cv::Point>> contours, contours_approx; 
+        std::vector<std::vector<cv::Point>> contours, contours_approx;
         std::vector<cv::Point> approx_curve;
 
         cv::findContours(green_mask, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE); // find contours in the imagge
