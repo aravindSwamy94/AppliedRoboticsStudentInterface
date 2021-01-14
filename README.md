@@ -8,6 +8,15 @@ docs/html/index.html
 ``` 
 
 
+##Libraries Used
+
+- OMPL 1.5.0 (https://github.com/ompl/ompl)
+- Clothoids (https://github.com/ebertolazzi/Clothoids)
+- Config4Cpp (http://www.config4star.org/)
+- Boost - 1.58
+- Eigen3 (veersion 3.3)
+- OpenCV -v3.3
+
 Also we can see 
 ## Image Saver
 
