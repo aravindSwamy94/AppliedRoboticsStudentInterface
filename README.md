@@ -6,7 +6,7 @@ The technical documentation of the whole code base can be found inside docs fold
 Technical documentation link:(https://aravindswamy94.github.io/AppliedRoboticsStudentInterface/html/index.html)
 
 
-##Libraries Used
+## Libraries Used
 
 - OMPL 1.5.0 (https://github.com/ompl/ompl)
 - Clothoids (https://github.com/ebertolazzi/Clothoids)
@@ -15,7 +15,10 @@ Technical documentation link:(https://aravindswamy94.github.io/AppliedRoboticsSt
 - Eigen3 (veersion 3.3)
 - OpenCV -v3.3
 
-Also we can see 
+## Requirements before running the simulator
+
+Place the config_params.cfg and template/ folder inside /tmp/ folder
+
 ## Image Saver
 
 To do the intrinsic calibration , the steps to be followed are by running the AR_simulator_calibration and AR_pipeline_img_saver. Through this the images are saved from the simulator which contains checkerboard . Result of this function will be intrinsic parameters. To save the image, the function in genericImageListener in the student_interface.cpp was changed acccordingly.
@@ -61,7 +64,7 @@ Function Available in:  src/extrisnicCalib.cpp
 Reference for implementation:  professor_interface.cpp and opencv library
 Directly Copied functions: mouseCallback() and pickNPoints()
 ```
-##Perspective Projection and Unwarping
+## Perspective Projection and Unwarping
 
 Now to have a bird's eye view of the image, where we need to project the 3D objects in a image plane, I carried out Perspective Projection and Unwarping of image. This is again carried out the opencv interfaces. First, findPlaneTransform() has to caarried through which we get a perspective projection matrix, through which we can unwarp the image
 
@@ -216,7 +219,7 @@ This local planner is impleementied by solving the dubins curve problem.
 ![Dubins local  FLOW ](imgs/blocks/dubins.jpg)
 
  
-##Plan Path results
+## Plan Path results
 
 ### Mission 1 results
 

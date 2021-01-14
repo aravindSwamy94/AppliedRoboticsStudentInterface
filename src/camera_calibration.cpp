@@ -1,8 +1,3 @@
-// camera_calibration.cpp:
-// Tool to find the camera matrix and distortion coefficients from a set of
-// images containing a chessboard pattern.
-// Taken from: samples/cpp/tutorial_code/calib3d/camera_calibration
-// Takes as input a configuration file (see calib_config.xml)
 
 #include <iostream>
 #include <sstream>
@@ -28,13 +23,13 @@ static void help()
          <<  "Near the sample file you'll find the configuration file, which has detailed help of "
              "how to edit it.  It may be any OpenCV supported file format XML/YAML." << endl;
 }
+
 class Settings
 {
 public:
     Settings() : goodInput(false) {}
     enum Pattern { NOT_EXISTING, CHESSBOARD, CIRCLES_GRID, ASYMMETRIC_CIRCLES_GRID };
     enum InputType { INVALID, CAMERA, VIDEO_FILE, IMAGE_LIST };
-
     void write(FileStorage& fs) const                        //Write serialization for this class
     {
         fs << "{"
@@ -58,6 +53,7 @@ public:
                   << "Input" << input
            << "}";
     }
+
     void read(const FileNode& node)                          //Read serialization for this class
     {
         node["BoardSize_Width" ] >> boardSize.width;

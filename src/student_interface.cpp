@@ -1,3 +1,9 @@
+/** 
+ *  @file   student_interface.cpp
+ *  @brief  Contains the implementation of genericImageListener Function.Other functions are moved out in other files 
+ *  @author Aravind Swaminathan
+ *  @date   10-Jan-2020 
+ ***********************************************/
 
 #include "student_image_elab_interface.hpp"
 #include "student_planning_interface.hpp"
@@ -9,13 +15,17 @@
 #include <sstream>
 #include <experimental/filesystem>
 
+
 namespace student {
 
-/*
- void loadImage(cv::Mat& img_out, const std::string& config_folder){  
-   throw std::logic_error( "STUDENT FUNCTION - LOAD IMAGE - NOT IMPLEMENTED" );
- }
-*/
+  /**
+  *  @brief Function to save images for intrinsic calibration
+  *  @details Through this the images are saved from the simulator which contains checkerboard. 
+  *  @param img_in Input Image
+  *  @param topic topic in which the image arrives
+  *  @param config_folder config folder to store the saved images
+  *  @return  true/false robot found or not
+  */
 
  void genericImageListener(const cv::Mat& img_in, std::string topic, const std::string& config_folder){
 
@@ -45,6 +55,5 @@ namespace student {
         std::cout << "Saved image " << img_file.str() << std::endl;
     }
   }
-
 }
 

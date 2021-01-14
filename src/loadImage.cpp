@@ -1,3 +1,9 @@
+/** 
+ *  @file   loadImage.cpp
+ *  @brief  Contains the implementation of loadImage Function 
+ *  @author Aravind Swaminathan
+ *  @date   10-Jan-2020 
+ ***********************************************/
 #pragma once
 #include "student_image_elab_interface.hpp"
 #include "student_planning_interface.hpp"
@@ -9,6 +15,12 @@
 #include <sstream>
 #include <experimental/filesystem>
 namespace student{
+    /**
+    *  @brief load Image function in student interface
+    *  @details Function used directly given by Teaching assistant 
+    *  @param img_out Output Image
+    *  @param config_folder location where load image is stored
+    */
 
     void loadImage(cv::Mat& img_out, const std::string& config_folder){  
         static bool initialized = false;
