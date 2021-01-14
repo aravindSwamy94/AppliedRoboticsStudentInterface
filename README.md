@@ -173,7 +173,7 @@ Mission 1 involves source to all victims in priority and finally to gate
 Mission 2 requires a bit of calculation.
 
 > Mission 2 victims computation flow
-![Mission 2 Flow diagram ](imgs/blocks/mission2.png)
+![Mission 2 Flow diagram ](imgs/blocks/mission2.jpg)
 
 ### High level Motion planning(RRT* Planner)
 For RRT* I have used two methods, one using the OMPL library and the other one was referred from an online source and modified accordingly. Although OMPL one performs better.
@@ -182,25 +182,25 @@ For RRT* I have used two methods, one using the OMPL library and the other one w
 This planner is using the OMPL library and their interfaces
 
 > RRT* planner computation using OMPL
-![RRT STAR OMPL FLOW ](imgs/blocks/rrtsompl.png)
+![RRT STAR OMPL FLOW ](imgs/blocks/rrtsompl.jpg)
 
 #### RRT* Implemetaion
 This planner was referred from the following link and modified accordingly (https://github.com/mpdmanash/rrt-star-dubins-sim) . The genral flow diagram of this planner can be found below
 
 > RRT* planner computation 
-![RRT STAR OWN FLOW ](imgs/blocks/rrtsown.png)
+![RRT STAR OWN FLOW ](imgs/blocks/rrtsown.jpg)
 
 ### Clothoids Local planner
 This local planner was integrated Using the Prof Enzo Bertolazzi's Clothoids library. The planner can be found in the following link (https://github.com/ebertolazzi/Clothoids). 
 
 > Clothoids based local planner Flow 
-![Clothoids local  FLOW ](imgs/blocks/clothoids.png)
+![Clothoids local  FLOW ](imgs/blocks/clothoids.jpg)
 
 ### Dubins Local planner
 This local planner is impleementied by solving the dubins curve problem.
 
 > Dubins based local planner Flow 
-![Dubins local  FLOW ](imgs/blocks/dubins.png)
+![Dubins local  FLOW ](imgs/blocks/dubins.jpg)
 
  
 
