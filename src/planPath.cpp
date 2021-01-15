@@ -703,9 +703,16 @@ namespace student{
 
         // Construct a space information instance for this state space
         auto si(std::make_shared<ob::SpaceInformation>(space));
+        vector<Polygon> new_obstacle_list;
+        for(int iter=0 ; iter<obstacle_list.size();iter++)
+        {
+            if(obstacle_list[iter].size())
+                new_obstacle_list.emplace_back(obstacle_list[iter]);
+            cout<<endl;
+        }
 
         // Set the object used to check which states in the space are valid
-        si->setStateValidityChecker(std::make_shared<ValidityChecker>(si,obstacle_list));
+        si->setStateValidityChecker(std::make_shared<ValidityChecker>(si,new_obstacle_list));
 
         si->setup();
 
@@ -735,6 +742,7 @@ namespace student{
             goal->as<ob::RealVectorStateSpace::StateType>()->values[0] = localGoals[goal_iter].x;
             goal->as<ob::RealVectorStateSpace::StateType>()->values[1] = localGoals[goal_iter].y;
 
+
             // Create a problem instance
             auto pdef(std::make_shared<ob::ProblemDefinition>(si));
 
@@ -743,14 +751,14 @@ namespace student{
 
             // Set the start and goal states
             pdef->setStartAndGoalStates(start, goal);
-
+            
             ob::PlannerPtr optimizingPlanner;
             // Construct the optimal planner specified by us in config file.
             if(config_params.rrtsompl_planner_type == 1)
                 optimizingPlanner = allocatePlanner(si, PLANNER_PRMSTAR);
             else if (config_params.rrtsompl_planner_type==2)
                 optimizingPlanner = allocatePlanner(si, PLANNER_RRTSTAR);
-
+			
             // Set the problem instance for our planner to solve
             optimizingPlanner->setProblemDefinition(pdef);
             optimizingPlanner->setup();
@@ -861,7 +869,14 @@ namespace student{
         auto stop_lp = high_resolution_clock::now();
         auto duration_lp = duration_cast<milliseconds>(stop_lp - start_lp); 
         cout <<"Local Planner Planning time " << duration_lp.count() << endl;
-
+        if(config_params.use_clothoids){
+            path.points.pop_back();
+            path.points.pop_back();
+            path.points.pop_back();
+        }
+        else{
+            path.points.pop_back();
+        }
         if(config_params.save_local_path)
             print_path(path,config_params,false); // print path to path file
 
@@ -901,9 +916,17 @@ namespace student{
 
         // Construct a space information instance for this state space
         auto si(std::make_shared<ob::SpaceInformation>(space));
+        vector<Polygon> new_obstacle_list;
+        for(int iter=0 ; iter<obstacle_list.size();iter++)
+        {
+            cout<<"Obstacle size is "<< obstacle_list[iter].size()<<endl;
+            if(obstacle_list[iter].size())
+                new_obstacle_list.emplace_back(obstacle_list[iter]);
+            cout<<endl;
+        }
 
         // Set the object used to check which states in the space are valid
-        si->setStateValidityChecker(std::make_shared<ValidityChecker>(si,obstacle_list));
+        si->setStateValidityChecker(std::make_shared<ValidityChecker>(si,new_obstacle_list));
 
         si->setup();
 
@@ -1104,3 +1127,4 @@ namespace student{
     }
 
 }
+
