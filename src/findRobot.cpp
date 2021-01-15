@@ -54,7 +54,7 @@ namespace student{
         //cv::inRange(hsv_img, cv::Scalar(80, 140, 150), cv::Scalar(140, 255, 255), blue_mask); /*apply blue mask for the robot detection, given robot will be a blue triangle*/
 
         if(arena)
-            cv::inRange(hsv_img, cv::Scalar(80, 70, 60), cv::Scalar(135, 255, 255), blue_mask);
+            cv::inRange(hsv_img, cv::Scalar(90, 50, 50), cv::Scalar(140, 255, 255), blue_mask);
         else
             cv::inRange(hsv_img, cv::Scalar(100, 120, 150), cv::Scalar(135, 255, 255), blue_mask);
         std::vector<std::vector<cv::Point>> contours;

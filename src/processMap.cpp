@@ -34,7 +34,8 @@ class config_Params_ProcessMap{
         bool use_ocr; /**OCR method of detection */
         bool use_flip; /**Flip the image input image*/
         string config_folder;
-        bool arena; /** Flag to check arena or simulator
+        bool light_green_gate;
+        bool arena; /** Flag to check arena or simulator*/
         /**
         *  @brief read all params from config file and assign it to class variables
         *  @param config_folder config folder where the params are available
@@ -52,6 +53,8 @@ class config_Params_ProcessMap{
                 debug_victim_id = cfg->lookupBoolean(scope, "debug_victim_id");
                 use_ocr = cfg->lookupBoolean(scope, "use_ocr");
                 use_flip = cfg->lookupBoolean(scope, "use_flip");
+
+                light_green_gate = cfg->lookupBoolean(scope, "light_green_gate");
                 arena = cfg->lookupBoolean(scope, "arena");
                 this->config_folder = config_folder; 
             } catch(const ConfigurationException & ex) {
@@ -148,10 +151,15 @@ namespace student{
     bool processGate(const cv::Mat& hsv_img, const double scale, Polygon& gate,config_Params_ProcessMap config_params, bool arena){
       
         cv::Mat green_mask;
-        if(arena)
-            cv::inRange(hsv_img, cv::Scalar(40, 40, 50), cv::Scalar(75, 230, 160), green_mask);// get green mask to detect victim circles
+        if(arena){
+            if(config_params.light_green_gate)
+                cv::inRange(hsv_img, cv::Scalar(20, 50, 62), cv::Scalar(51, 255, 162), green_mask);// get green mask to detect victim circles
+            else
+                cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask);// get green mask to detect victim circles
+      
+        }
         else
-            cv::inRange(hsv_img, cv::Scalar(45, 50, 50), cv::Scalar(75, 255, 255), green_mask);// Green mask for the gate, which is rectangle
+            cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
         
         std::vector<std::vector<cv::Point>> contours, contours_approx;
         std::vector<cv::Point> approx_curve;
@@ -161,7 +169,7 @@ namespace student{
 
         for( auto& contour : contours){
             const double area = cv::contourArea(contour);
-            //if (area > 500){ // What is the reason of this?
+            if (area > 500){ // What is the reason of this?
             approxPolyDP(contour, approx_curve, 30, true); // approximate the contour 
 
             if(approx_curve.size()!=4) continue; // check if it is a rectangle with 4 points
@@ -177,7 +185,7 @@ namespace student{
 
             res = true; // gate found
             break;
-            //}      
+            }      
         }
 
         return res;
@@ -210,6 +218,7 @@ namespace student{
             // Find green regions
             cv::Mat green_mask; 
             cv::inRange(img, cv::Scalar(40, 30, 40), cv::Scalar(85, 255, 180), green_mask); // green mask for victims
+
 
             // Apply some filtering
             cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((1*2) + 1, (1*2)+1)); // Filter the green areas
@@ -296,7 +305,7 @@ namespace student{
             cv::resize(processROI, processROI, cv::Size(200, 200)); // resize the ROI
             cv::threshold(processROI, processROI, 100, 255, 0);   // threshold and binarize the image, to suppress some noise
             cv::erode(processROI, processROI, kernel); // apply some filtering
-            cv::GaussianBlur(processROI, processROI, cv::Size(5, 5), 2, 2); 
+            cv::GaussianBlur(processROI, processROI, cv::Size(5, 5), 2, 2);
             cv::erode(processROI, processROI, kernel); 
 	
             double maxScore = 0;
@@ -323,7 +332,7 @@ namespace student{
                       maxScore = score;
                       maxIdx = j;
                   }
-              }          
+              }
 
             }
 
@@ -358,6 +367,11 @@ namespace student{
         else
             cv::inRange(hsv_img, cv::Scalar(45, 50, 26), cv::Scalar(100, 255, 255), green_mask); // get green mask to detect victim circles
 
+        cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size((1*2) + 1, (1*2)+1));
+        // Dilate using the generated kernel
+        cv::dilate(green_mask, green_mask, kernel);
+        // Erode using the generated kernel
+        cv::erode(green_mask,  green_mask, kernel);
         std::vector<std::vector<cv::Point>> contours, contours_approx;
         std::vector<cv::Point> approx_curve;
 
@@ -422,7 +436,7 @@ namespace student{
 
         if(config_params.find_victims_debug_plot or config_params.find_gate_debug_plot or config_params.find_obstacles_debug_plot){
             cv::imshow("processMap", debug_image); // debug the process map image
-            cv::waitKey(20);            
+            cv::waitKey(0);            
         }
 
 
