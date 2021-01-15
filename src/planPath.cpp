@@ -706,7 +706,7 @@ namespace student{
         vector<Polygon> new_obstacle_list;
         for(int iter=0 ; iter<obstacle_list.size();iter++)
         {
-            if(obstacle_list[iter].size())
+            if(obstacle_list[iter].size()>0)
                 new_obstacle_list.emplace_back(obstacle_list[iter]);
             cout<<endl;
         }
@@ -919,8 +919,7 @@ namespace student{
         vector<Polygon> new_obstacle_list;
         for(int iter=0 ; iter<obstacle_list.size();iter++)
         {
-            cout<<"Obstacle size is "<< obstacle_list[iter].size()<<endl;
-            if(obstacle_list[iter].size())
+            if(obstacle_list[iter].size()>0)
                 new_obstacle_list.emplace_back(obstacle_list[iter]);
             cout<<endl;
         }
