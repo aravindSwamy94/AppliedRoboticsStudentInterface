@@ -44,16 +44,20 @@ namespace student{
         cfg->parse(configFile);
         bool find_robot_debug_plot = cfg->lookupBoolean(scope, "find_robot_debug_plot");
         //cout<<"find_robot_debug_plot "<<find_robot_debug_plot<<endl;
-
+        bool arena = cfg->lookupBoolean(scope, "arena");
         cv::Mat hsv_img;
         cv::cvtColor(img_in, hsv_img,cv::COLOR_BGR2HSV); /* convert the input image to hsv image*/
 
         cv::Mat blue_mask;    
     //cv::inRange(hsv_img, cv::Scalar(100, 120, 150), cv::Scalar(135, 255, 255), blue_mask);
-
+        //cv::inRange(hsv_img, cv::Scalar(90, 80, 70), cv::Scalar(130, 255, 255), blue_mask);
         //cv::inRange(hsv_img, cv::Scalar(80, 140, 150), cv::Scalar(140, 255, 255), blue_mask); /*apply blue mask for the robot detection, given robot will be a blue triangle*/
-        cv::inRange(hsv_img, cv::Scalar(90, 80, 70), cv::Scalar(130, 255, 255), blue_mask);
-        std::vector<std::vector<cv::Point>> contours;    
+
+        if(arena)
+            cv::inRange(hsv_img, cv::Scalar(80, 70, 60), cv::Scalar(135, 255, 255), blue_mask);
+        else
+            cv::inRange(hsv_img, cv::Scalar(100, 120, 150), cv::Scalar(135, 255, 255), blue_mask);
+        std::vector<std::vector<cv::Point>> contours;
         cv::findContours(blue_mask, contours,cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE); /* find contours to detect the contours on the image*/
         cv::Mat contours_img;
         if(find_robot_debug_plot){
